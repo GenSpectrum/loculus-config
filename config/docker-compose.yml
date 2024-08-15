@@ -1,0 +1,385 @@
+services:
+
+  keycloak-db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: unsecure
+      POSTGRES_DB: keycloak
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0
+    restart: unless-stopped
+    depends_on:
+      - keycloak-db
+    environment:
+      KC_DB: postgres
+      KC_DB_URL_HOST: "keycloak-db"
+      KC_DB_URL_PORT: "5432"
+      KC_DB_URL_DATABASE: "keycloak"
+      KC_DB_USERNAME: "postgres"
+      KC_DB_PASSWORD: "unsecure"
+      KEYCLOAK_ADMIN: "admin"
+      KEYCLOAK_ADMIN_PASSWORD: "unsecure"
+      KC_PROXY: "edge"
+      PROXY_ADDRESS_FORWARDING: "true"
+      KC_HEALTH_ENABLED: "true"
+      KC_HOSTNAME_URL: "http://localhost:8083"
+      KC_HOSTNAME_ADMIN_URL: "http://localhost:8083"
+      KC_FEATURES: "declarative-user-profile"
+      KC_RUN_IN_CONTAINER: "true"
+    ports:
+      - "127.0.0.1:9083:8080"
+    volumes:
+      - ./keycloak:/opt/keycloak/data/import
+    command:
+      - start
+      - --import-realm
+      - --cache=local
+
+  loculus-db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: unsecure
+      POSTGRES_DB: loculus
+    ports:
+      - "127.0.0.1:9432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  backend:
+    image: ghcr.io/loculus-project/backend
+    restart: unless-stopped
+    depends_on:
+      - loculus-db
+      - keycloak
+    command:
+      - "--spring.datasource.url=jdbc:postgresql://loculus-db:5432/loculus"
+      - "--spring.datasource.username=postgres"
+      - "--spring.datasource.password=unsecure"
+      - "--loculus.debug-mode=false"
+      - "--spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8080/realms/loculus/protocol/openid-connect/certs"
+      - "--keycloak.user=backend"
+      - "--keycloak.password=backend"
+      - "--keycloak.realm=loculus"
+      - "--keycloak.client=backend-client"
+      - "--keycloak.url=http://keycloak:8080"
+    volumes:
+       - ./backend:/config
+    ports:
+      - "127.0.0.1:9079:8079"
+
+  ingest-rsv-a:
+    image: ghcr.io/loculus-project/ingest:latest
+    restart: unless-stopped
+    depends_on:
+      - backend
+    volumes:
+      - ./ingest/rsv-a/config.yaml:/package/config/config.yaml
+    command:
+      - snakemake
+      - results/approved
+      - results/submitted
+      - results/revised
+      - --all-temp
+    environment:
+      KEYCLOAK_INGEST_PASSWORD: "unsecure"
+
+  processing-rsv-a:
+    image: ghcr.io/loculus-project/preprocessing-nextclade
+    restart: unless-stopped
+    depends_on:
+      - backend
+    command:
+      - "prepro"
+      - "--backend-host=http://backend:8079/rsv-a"
+      - "--keycloak-host=http://keycloak:8080"
+      - "--pipeline-version=1"
+      - "--keycloak-password=unsecure"
+      - "--config=/etc/config/preprocessing-config.yaml"
+    volumes:
+      - ./processing/rsv-a:/etc/config
+
+  silo-preprocessing-rsv-a:
+    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      BACKEND_BASE_URL: "http://backend:8079/rsv-a"
+      KEYCLOAK_TOKEN_URL: "http://keycloak:8080/realms/loculus/protocol/openid-connect/token"
+      KEYCLOAK_CLIENT_ID: "backend-client"
+      IMPORT_JOB_USER: "silo_import_job"
+      IMPORT_JOB_USER_PASSWORD: "unsecure"
+      SPDLOG_LEVEL: "debug"
+    volumes:
+      - ./silo-lapis/silo_import_job.sh:/silo_import_job.sh
+      - ./silo-lapis/silo_import_wrapper.sh:/silo_import_wrapper.sh
+      - ./silo-lapis/rsv-a/database_config.yaml:/app/database_config.yaml
+      - ./silo-lapis/rsv-a/preprocessing_config.yaml:/app/preprocessing_config.yaml
+      - ./silo-lapis/rsv-a/input:/preprocessing/input
+      - ./silo-lapis/rsv-a/output:/preprocessing/output
+    entrypoint:
+      - "sh"
+      - "/silo_import_wrapper.sh"
+
+  silo-rsv-a:
+    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    restart: unless-stopped
+    command:
+      - "--api"
+    volumes:
+      - ./silo-lapis/rsv-a/output:/data
+    ports:
+      - "127.0.0.1:9081:8081"
+
+  lapis-rsv-a:
+    image: ghcr.io/genspectrum/lapis:{{ lapis_version }}
+    restart: unless-stopped
+    environment:
+      JVM_OPTS: "-XX:+UseContainerSupport -XX:+UseG1GC -XX:MaxHeapFreeRatio=5 -XX:MinHeapFreeRatio=2 -XX:MaxGCPauseMillis=100"
+    command:
+      - "--silo.url=http://silo-rsv-a:8081"
+    volumes:
+      - ./silo-lapis/rsv-a/database_config.yaml:/workspace/database_config.yaml
+      - ./silo-lapis/rsv-a/input/reference_genomes.json:/workspace/reference_genomes.json
+    ports:
+      - "9080:8080"
+
+  ingest-rsv-b:
+    image: ghcr.io/loculus-project/ingest:latest
+    restart: unless-stopped
+    depends_on:
+      - backend
+    volumes:
+      - ./ingest/rsv-b/config.yaml:/package/config/config.yaml
+    command:
+      - snakemake
+      - results/approved
+      - results/submitted
+      - results/revised
+      - --all-temp
+    environment:
+      KEYCLOAK_INGEST_PASSWORD: "unsecure"
+
+  processing-rsv-b:
+    image: ghcr.io/loculus-project/preprocessing-nextclade
+    restart: unless-stopped
+    depends_on:
+      - backend
+    command:
+      - "prepro"
+      - "--backend-host=http://backend:8079/rsv-b"
+      - "--keycloak-host=http://keycloak:8080"
+      - "--pipeline-version=1"
+      - "--keycloak-password=unsecure"
+      - "--config=/etc/config/preprocessing-config.yaml"
+    volumes:
+      - ./processing/rsv-b:/etc/config
+
+  silo-preprocessing-rsv-b:
+    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      BACKEND_BASE_URL: "http://backend:8079/rsv-b"
+      KEYCLOAK_TOKEN_URL: "http://keycloak:8080/realms/loculus/protocol/openid-connect/token"
+      KEYCLOAK_CLIENT_ID: "backend-client"
+      IMPORT_JOB_USER: "silo_import_job"
+      IMPORT_JOB_USER_PASSWORD: "unsecure"
+      SPDLOG_LEVEL: "debug"
+    volumes:
+      - ./silo-lapis/silo_import_job.sh:/silo_import_job.sh
+      - ./silo-lapis/silo_import_wrapper.sh:/silo_import_wrapper.sh
+      - ./silo-lapis/rsv-b/database_config.yaml:/app/database_config.yaml
+      - ./silo-lapis/rsv-b/preprocessing_config.yaml:/app/preprocessing_config.yaml
+      - ./silo-lapis/rsv-b/input:/preprocessing/input
+      - ./silo-lapis/rsv-b/output:/preprocessing/output
+    entrypoint:
+      - "sh"
+      - "/silo_import_wrapper.sh"
+
+  silo-rsv-b:
+    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    restart: unless-stopped
+    command:
+      - "--api"
+    volumes:
+      - ./silo-lapis/rsv-b/output:/data
+    ports:
+      - "127.0.0.1:9091:8081"
+
+  lapis-rsv-b:
+    image: ghcr.io/genspectrum/lapis:{{ lapis_version }}
+    restart: unless-stopped
+    environment:
+      JVM_OPTS: "-XX:+UseContainerSupport -XX:+UseG1GC -XX:MaxHeapFreeRatio=5 -XX:MinHeapFreeRatio=2 -XX:MaxGCPauseMillis=100"
+    command:
+      - "--silo.url=http://silo-rsv-b:8081"
+    volumes:
+      - ./silo-lapis/rsv-b/database_config.yaml:/workspace/database_config.yaml
+      - ./silo-lapis/rsv-b/input/reference_genomes.json:/workspace/reference_genomes.json
+    ports:
+      - "9090:8080"
+
+  ingest-mpox:
+    image: ghcr.io/loculus-project/ingest:latest
+    restart: unless-stopped
+    depends_on:
+      - backend
+    volumes:
+      - ./ingest/mpox/config.yaml:/package/config/config.yaml
+    command:
+      - snakemake
+      - results/approved
+      - results/submitted
+      - results/revised
+      - --all-temp
+    environment:
+      KEYCLOAK_INGEST_PASSWORD: "unsecure"
+
+  processing-mpox:
+    image: ghcr.io/loculus-project/preprocessing-nextclade
+    restart: unless-stopped
+    depends_on:
+      - backend
+    command:
+      - "prepro"
+      - "--backend-host=http://backend:8079/mpox"
+      - "--keycloak-host=http://keycloak:8080"
+      - "--pipeline-version=1"
+      - "--keycloak-password=unsecure"
+      - "--config=/etc/config/preprocessing-config.yaml"
+    volumes:
+      - ./processing/mpox:/etc/config
+
+  silo-preprocessing-mpox:
+    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      BACKEND_BASE_URL: "http://backend:8079/mpox"
+      KEYCLOAK_TOKEN_URL: "http://keycloak:8080/realms/loculus/protocol/openid-connect/token"
+      KEYCLOAK_CLIENT_ID: "backend-client"
+      IMPORT_JOB_USER: "silo_import_job"
+      IMPORT_JOB_USER_PASSWORD: "unsecure"
+      SPDLOG_LEVEL: "debug"
+    volumes:
+      - ./silo-lapis/silo_import_job.sh:/silo_import_job.sh
+      - ./silo-lapis/silo_import_wrapper.sh:/silo_import_wrapper.sh
+      - ./silo-lapis/mpox/database_config.yaml:/app/database_config.yaml
+      - ./silo-lapis/mpox/preprocessing_config.yaml:/app/preprocessing_config.yaml
+      - ./silo-lapis/mpox/input:/preprocessing/input
+      - ./silo-lapis/mpox/output:/preprocessing/output
+    entrypoint:
+      - "sh"
+      - "/silo_import_wrapper.sh"
+
+  silo-mpox:
+    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    restart: unless-stopped
+    command:
+      - "--api"
+    volumes:
+      - ./silo-lapis/mpox/output:/data
+    ports:
+      - "127.0.0.1:9101:8081"
+
+  lapis-mpox:
+    image: ghcr.io/genspectrum/lapis:{{ lapis_version }}
+    restart: unless-stopped
+    environment:
+      JVM_OPTS: "-XX:+UseContainerSupport -XX:+UseG1GC -XX:MaxHeapFreeRatio=5 -XX:MinHeapFreeRatio=2 -XX:MaxGCPauseMillis=100"
+    command:
+      - "--silo.url=http://silo-mpox:8081"
+    volumes:
+      - ./silo-lapis/mpox/database_config.yaml:/workspace/database_config.yaml
+      - ./silo-lapis/mpox/input/reference_genomes.json:/workspace/reference_genomes.json
+    ports:
+      - "9100:8080"
+
+  ingest-h5n1:
+    image: ghcr.io/loculus-project/ingest:latest
+    restart: unless-stopped
+    depends_on:
+      - backend
+    volumes:
+      - ./ingest/h5n1/config.yaml:/package/config/config.yaml
+    command:
+      - snakemake
+      - results/approved
+      - results/submitted
+      - results/revised
+      - --all-temp
+    environment:
+      KEYCLOAK_INGEST_PASSWORD: "unsecure"
+
+  processing-h5n1:
+    image: ghcr.io/loculus-project/preprocessing-nextclade
+    restart: unless-stopped
+    depends_on:
+      - backend
+    command:
+      - "prepro"
+      - "--backend-host=http://backend:8079/h5n1"
+      - "--keycloak-host=http://keycloak:8080"
+      - "--pipeline-version=1"
+      - "--keycloak-password=unsecure"
+      - "--config=/etc/config/preprocessing-config.yaml"
+    volumes:
+      - ./processing/h5n1:/etc/config
+
+  silo-preprocessing-h5n1:
+    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      BACKEND_BASE_URL: "http://backend:8079/h5n1"
+      KEYCLOAK_TOKEN_URL: "http://keycloak:8080/realms/loculus/protocol/openid-connect/token"
+      KEYCLOAK_CLIENT_ID: "backend-client"
+      IMPORT_JOB_USER: "silo_import_job"
+      IMPORT_JOB_USER_PASSWORD: "unsecure"
+      SPDLOG_LEVEL: "debug"
+    volumes:
+      - ./silo-lapis/silo_import_job.sh:/silo_import_job.sh
+      - ./silo-lapis/silo_import_wrapper.sh:/silo_import_wrapper.sh
+      - ./silo-lapis/h5n1/database_config.yaml:/app/database_config.yaml
+      - ./silo-lapis/h5n1/preprocessing_config.yaml:/app/preprocessing_config.yaml
+      - ./silo-lapis/h5n1/input:/preprocessing/input
+      - ./silo-lapis/h5n1/output:/preprocessing/output
+    entrypoint:
+      - "sh"
+      - "/silo_import_wrapper.sh"
+
+  silo-h5n1:
+    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    restart: unless-stopped
+    command:
+      - "--api"
+    volumes:
+      - ./silo-lapis/h5n1/output:/data
+    ports:
+      - "127.0.0.1:9111:8081"
+
+  lapis-h5n1:
+    image: ghcr.io/genspectrum/lapis:{{ lapis_version }}
+    restart: unless-stopped
+    environment:
+      JVM_OPTS: "-XX:+UseContainerSupport -XX:+UseG1GC -XX:MaxHeapFreeRatio=5 -XX:MinHeapFreeRatio=2 -XX:MaxGCPauseMillis=100"
+    command:
+      - "--silo.url=http://silo-h5n1:8081"
+    volumes:
+      - ./silo-lapis/h5n1/database_config.yaml:/workspace/database_config.yaml
+      - ./silo-lapis/h5n1/input/reference_genomes.json:/workspace/reference_genomes.json
+    ports:
+      - "9110:8080"
+
+volumes:
+  postgres-data:

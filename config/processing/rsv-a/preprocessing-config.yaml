@@ -1,0 +1,174 @@
+batch_size: 100
+genes:
+  - "F"
+  - "G"
+  - "L"
+  - "M"
+  - "N"
+  - "NS1"
+  - "NS2"
+  - "P"
+  - "SH"
+log_level: DEBUG
+nextclade_dataset_name: nextstrain/rsv/a
+processing_spec:
+  author_affiliations:
+    function: identity
+    inputs:
+      input: author_affiliations
+  authors:
+    function: identity
+    inputs:
+      input: authors
+  bioproject_accessions:
+    function: identity
+    inputs:
+      input: bioproject_accessions
+  biosample_accession:
+    function: identity
+    inputs:
+      input: biosample_accession
+  completeness:
+    args:
+      type: float
+    function: identity
+    inputs:
+      input: nextclade.coverage
+  frame_shifts:
+    function: identity
+    inputs:
+      input: nextclade.frameShifts
+  geo_loc_admin_1:
+    function: identity
+    inputs:
+      input: geo_loc_admin_1
+  geo_loc_country:
+    function: identity
+    inputs:
+      input: geo_loc_country
+  host_name_scientific:
+    function: identity
+    inputs:
+      input: host_name_scientific
+  host_taxon_id:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: host_taxon_id
+  insdc_accession_base:
+    function: identity
+    inputs:
+      input: insdc_accession_base
+  insdc_accession_full:
+    function: identity
+    inputs:
+      input: insdc_accession_full
+  insdc_version:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: insdc_version
+  length:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: length
+  lineage:
+    function: identity
+    inputs:
+      input: nextclade.clade
+  ncbi_completeness:
+    function: identity
+    inputs:
+      input: ncbi_completeness
+  ncbi_protein_count:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: ncbi_protein_count
+  ncbi_release_date:
+    function: parse_timestamp
+    inputs:
+      timestamp: ncbi_release_date
+  ncbi_sourcedb:
+    function: identity
+    inputs:
+      input: ncbi_sourcedb
+  ncbi_update_date:
+    function: parse_timestamp
+    inputs:
+      timestamp: ncbi_update_date
+  ncbi_virus_name:
+    function: identity
+    inputs:
+      input: ncbi_virus_name
+  ncbi_virus_tax_id:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: ncbi_virus_tax_id
+  sample_collection_date:
+    function: process_date
+    inputs:
+      date: sample_collection_date
+      release_date: ncbi_release_date
+  specimen_collector_sample_id:
+    function: identity
+    inputs:
+      input: specimen_collector_sample_id
+  sra_run_accession:
+    function: identity
+    inputs:
+      input: sra_run_accession
+  stop_codons:
+    function: identity
+    inputs:
+      input: nextclade.qc.stopCodons.stopCodons
+  total_ambiguous_nucs:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: nextclade.totalNonACGTNs
+  total_deleted_nucs:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: nextclade.totalDeletions
+  total_frame_shifts:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: nextclade.totalFrameShifts
+  total_inserted_nucs:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: nextclade.totalInsertions
+  total_snps:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: nextclade.totalSubstitutions
+  total_stop_codons:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: nextclade.qc.stopCodons.totalStopCodons
+  total_unknown_nucs:
+    args:
+      type: int
+    function: identity
+    inputs:
+      input: nextclade.totalMissing
+organism: rsv-a

@@ -1,0 +1,86 @@
+schema:
+  instanceName: "Mpox Virus"
+  opennessLevel: OPEN
+  metadata:
+    - name: author_affiliations
+      type: string
+      generateIndex: true
+    - name: authors
+      type: string
+    - name: bioproject_accessions
+      type: string
+    - name: biosample_accession
+      type: string
+    - name: clade
+      type: string
+      generateIndex: true
+    - name: completeness
+      type: float
+    - name: frame_shifts
+      type: string
+    - name: geo_loc_admin_1
+      type: string
+      generateIndex: true
+    - name: geo_loc_country
+      type: string
+      generateIndex: true
+    - name: host_name_scientific
+      type: string
+      generateIndex: true
+    - name: host_taxon_id
+      type: int
+    - name: insdc_accession_base
+      type: string
+    - name: insdc_accession_full
+      type: string
+    - name: insdc_version
+      type: int
+    - name: is_lab_host
+      type: string
+      generateIndex: true
+    - name: length
+      type: int
+    - name: lineage
+      type: string
+      generateIndex: true
+    - name: ncbi_protein_count
+      type: int
+    - name: ncbi_release_date
+      type: date
+    - name: ncbi_sourcedb
+      type: string
+      generateIndex: true
+    - name: ncbi_update_date
+      type: date
+    - name: ncbi_virus_name
+      type: string
+      generateIndex: true
+    - name: ncbi_virus_tax_id
+      type: int
+    - name: outbreak
+      type: string
+      generateIndex: true
+    - name: sample_collection_date
+      type: date
+    - name: specimen_collector_sample_id
+      type: string
+    - name: sra_run_accession
+      type: string
+    - name: stop_codons
+      type: string
+    - name: total_ambiguous_nucs
+      type: int
+    - name: total_deleted_nucs
+      type: int
+    - name: total_frame_shifts
+      type: int
+    - name: total_inserted_nucs
+      type: int
+    - name: total_snps
+      type: int
+    - name: total_stop_codons
+      type: int
+    - name: total_unknown_nucs
+      type: int
+  primaryKey: insdc_accession_full
+  dateToSortBy: sample_collection_date

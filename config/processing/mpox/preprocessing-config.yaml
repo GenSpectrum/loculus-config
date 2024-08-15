@@ -1,0 +1,201 @@
+organism: mpox
+batch_size: 5
+genes:
+  - OPG001
+log_level: DEBUG
+nextclade_dataset_name: nextstrain/mpox/all-clades
+processing_spec:
+  author_affiliations:
+    function: identity
+    inputs:
+      input: author_affiliations
+    args: null
+  authors:
+    function: identity
+    inputs:
+      input: authors
+    args:
+      type: authors
+  bioproject_accessions:
+    function: identity
+    inputs:
+      input: bioproject_accessions
+    args: null
+  biosample_accession:
+    function: identity
+    inputs:
+      input: biosample_accession
+    args: null
+  clade:
+    function: identity
+    inputs:
+      input: nextclade.clade
+    args: null
+  completeness:
+    function: identity
+    inputs:
+      input: nextclade.coverage
+    args:
+      type: float
+  frame_shifts:
+    function: identity
+    inputs:
+      input: nextclade.frameShifts
+    args: null
+  geo_loc_admin_1:
+    function: identity
+    inputs:
+      input: geo_loc_admin_1
+    args: null
+  geo_loc_country:
+    function: identity
+    inputs:
+      input: geo_loc_country
+    args: null
+    required: true
+  host_name_scientific:
+    function: identity
+    inputs:
+      input: host_name_scientific
+    args: null
+  host_taxon_id:
+    function: identity
+    inputs:
+      input: host_taxon_id
+    args:
+      type: int
+  insdc_accession_base:
+    function: identity
+    inputs:
+      input: insdc_accession_base
+    args: null
+  insdc_accession_full:
+    function: identity
+    inputs:
+      input: insdc_accession_full
+    args: null
+  insdc_version:
+    function: identity
+    inputs:
+      input: insdc_version
+    args:
+      type: int
+  is_lab_host:
+    function: identity
+    inputs:
+      input: is_lab_host
+    args: null
+  length:
+    function: identity
+    inputs:
+      input: length
+    args:
+      type: int
+  lineage:
+    function: identity
+    inputs:
+      input: nextclade.customNodeAttributes.lineage
+    args: null
+  ncbi_protein_count:
+    function: identity
+    inputs:
+      input: ncbi_protein_count
+    args:
+      type: int
+  ncbi_release_date:
+    function: parse_timestamp
+    inputs:
+      timestamp: ncbi_release_date
+    args:
+      type: date
+  ncbi_sourcedb:
+    function: identity
+    inputs:
+      input: ncbi_sourcedb
+    args: null
+  ncbi_update_date:
+    function: parse_timestamp
+    inputs:
+      timestamp: ncbi_update_date
+    args:
+      type: date
+  ncbi_virus_name:
+    function: identity
+    inputs:
+      input: ncbi_virus_name
+    args: null
+  ncbi_virus_tax_id:
+    function: identity
+    inputs:
+      input: ncbi_virus_tax_id
+    args:
+      type: int
+  outbreak:
+    function: identity
+    inputs:
+      input: nextclade.customNodeAttributes.outbreak
+    args: null
+  sample_collection_date:
+    function: process_date
+    inputs:
+      date: sample_collection_date
+    args:
+      type: date
+    required: true
+  specimen_collector_sample_id:
+    function: identity
+    inputs:
+      input: specimen_collector_sample_id
+    args: null
+  sra_run_accession:
+    function: identity
+    inputs:
+      input: sra_run_accession
+    args: null
+  stop_codons:
+    function: identity
+    inputs:
+      input: nextclade.qc.stopCodons.stopCodons
+    args: null
+  total_ambiguous_nucs:
+    function: identity
+    inputs:
+      input: nextclade.totalNonACGTNs
+    args:
+      type: int
+  total_deleted_nucs:
+    function: identity
+    inputs:
+      input: nextclade.totalDeletions
+    args:
+      type: int
+  total_frame_shifts:
+    function: identity
+    inputs:
+      input: nextclade.totalFrameShifts
+    args:
+      type: int
+  total_inserted_nucs:
+    function: identity
+    inputs:
+      input: nextclade.totalInsertions
+    args:
+      type: int
+  total_snps:
+    function: identity
+    inputs:
+      input: nextclade.totalSubstitutions
+    args:
+      type: int
+  total_stop_codons:
+    function: identity
+    inputs:
+      input: nextclade.qc.stopCodons.totalStopCodons
+    args:
+      type: int
+  total_unknown_nucs:
+    function: identity
+    inputs:
+      input: nextclade.totalMissing
+    args:
+      type: int
