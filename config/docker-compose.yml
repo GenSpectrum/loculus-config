@@ -105,7 +105,7 @@ services:
       - ./processing/rsv-a:/etc/config
 
   silo-preprocessing-rsv-a:
-    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    image: ghcr.io/genspectrum/lapis-silo
     restart: unless-stopped
     depends_on:
       - backend
@@ -128,7 +128,7 @@ services:
       - "/silo_import_wrapper.sh"
 
   silo-rsv-a:
-    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    image: ghcr.io/genspectrum/lapis-silo
     restart: unless-stopped
     command:
       - "--api"
@@ -138,7 +138,7 @@ services:
       - "127.0.0.1:9081:8081"
 
   lapis-rsv-a:
-    image: ghcr.io/genspectrum/lapis:{{ lapis_version }}
+    image: ghcr.io/genspectrum/lapis
     restart: unless-stopped
     environment:
       JVM_OPTS: "-XX:+UseContainerSupport -XX:+UseG1GC -XX:MaxHeapFreeRatio=5 -XX:MinHeapFreeRatio=2 -XX:MaxGCPauseMillis=100"
@@ -182,7 +182,7 @@ services:
       - ./processing/rsv-b:/etc/config
 
   silo-preprocessing-rsv-b:
-    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    image: ghcr.io/genspectrum/lapis-silo
     restart: unless-stopped
     depends_on:
       - backend
@@ -205,7 +205,7 @@ services:
       - "/silo_import_wrapper.sh"
 
   silo-rsv-b:
-    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    image: ghcr.io/genspectrum/lapis-silo
     restart: unless-stopped
     command:
       - "--api"
@@ -215,7 +215,7 @@ services:
       - "127.0.0.1:9091:8081"
 
   lapis-rsv-b:
-    image: ghcr.io/genspectrum/lapis:{{ lapis_version }}
+    image: ghcr.io/genspectrum/lapis
     restart: unless-stopped
     environment:
       JVM_OPTS: "-XX:+UseContainerSupport -XX:+UseG1GC -XX:MaxHeapFreeRatio=5 -XX:MinHeapFreeRatio=2 -XX:MaxGCPauseMillis=100"
@@ -259,7 +259,7 @@ services:
       - ./processing/mpox:/etc/config
 
   silo-preprocessing-mpox:
-    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    image: ghcr.io/genspectrum/lapis-silo
     restart: unless-stopped
     depends_on:
       - backend
@@ -282,7 +282,7 @@ services:
       - "/silo_import_wrapper.sh"
 
   silo-mpox:
-    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    image: ghcr.io/genspectrum/lapis-silo
     restart: unless-stopped
     command:
       - "--api"
@@ -292,7 +292,7 @@ services:
       - "127.0.0.1:9101:8081"
 
   lapis-mpox:
-    image: ghcr.io/genspectrum/lapis:{{ lapis_version }}
+    image: ghcr.io/genspectrum/lapis
     restart: unless-stopped
     environment:
       JVM_OPTS: "-XX:+UseContainerSupport -XX:+UseG1GC -XX:MaxHeapFreeRatio=5 -XX:MinHeapFreeRatio=2 -XX:MaxGCPauseMillis=100"
@@ -336,7 +336,7 @@ services:
       - ./processing/h5n1:/etc/config
 
   silo-preprocessing-h5n1:
-    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    image: ghcr.io/genspectrum/lapis-silo
     restart: unless-stopped
     depends_on:
       - backend
@@ -359,7 +359,7 @@ services:
       - "/silo_import_wrapper.sh"
 
   silo-h5n1:
-    image: ghcr.io/genspectrum/lapis-silo:{{ lapis_silo_version }}
+    image: ghcr.io/genspectrum/lapis-silo
     restart: unless-stopped
     command:
       - "--api"
@@ -369,7 +369,7 @@ services:
       - "127.0.0.1:9111:8081"
 
   lapis-h5n1:
-    image: ghcr.io/genspectrum/lapis:{{ lapis_version }}
+    image: ghcr.io/genspectrum/lapis
     restart: unless-stopped
     environment:
       JVM_OPTS: "-XX:+UseContainerSupport -XX:+UseG1GC -XX:MaxHeapFreeRatio=5 -XX:MinHeapFreeRatio=2 -XX:MaxGCPauseMillis=100"
