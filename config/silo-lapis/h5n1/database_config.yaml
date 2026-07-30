@@ -1,263 +1,285 @@
 schema:
-  instanceName: "Influenza A/H5N1"
-  opennessLevel: "OPEN"
+  instanceName: Influenza A/H5N1
+  opennessLevel: OPEN
   metadata:
-    - name: author_affiliations
-      type: string
-      generateIndex: true
-    - name: authors
-      type: string
-    - name: completeness_seg1
-      type: float
-    - name: completeness_seg2
-      type: float
-    - name: completeness_seg3
-      type: float
-    - name: completeness_seg4
-      type: float
-    - name: completeness_seg5
-      type: float
-    - name: completeness_seg6
-      type: float
-    - name: completeness_seg7
-      type: float
-    - name: completeness_seg8
-      type: float
-    - name: frame_shifts_seg1
-      type: string
-    - name: frame_shifts_seg2
-      type: string
-    - name: frame_shifts_seg3
-      type: string
-    - name: frame_shifts_seg4
-      type: string
-    - name: frame_shifts_seg5
-      type: string
-    - name: frame_shifts_seg6
-      type: string
-    - name: frame_shifts_seg7
-      type: string
-    - name: frame_shifts_seg8
-      type: string
-    - name: geo_loc_admin_1
-      type: string
-      generateIndex: true
-    - name: geo_loc_country
-      type: string
-      generateIndex: true
-    - name: host_name_scientific
-      type: string
-      generateIndex: true
-    - name: host_taxon_id
-      type: int
-    - name: insdc_accession_base_seg1
-      type: string
-    - name: insdc_accession_base_seg2
-      type: string
-    - name: insdc_accession_base_seg3
-      type: string
-    - name: insdc_accession_base_seg4
-      type: string
-    - name: insdc_accession_base_seg5
-      type: string
-    - name: insdc_accession_base_seg6
-      type: string
-    - name: insdc_accession_base_seg7
-      type: string
-    - name: insdc_accession_base_seg8
-      type: string
-    - name: insdc_accession_full_seg1
-      type: string
-    - name: insdc_accession_full_seg2
-      type: string
-    - name: insdc_accession_full_seg3
-      type: string
-    - name: insdc_accession_full_seg4
-      type: string
-    - name: insdc_accession_full_seg5
-      type: string
-    - name: insdc_accession_full_seg6
-      type: string
-    - name: insdc_accession_full_seg7
-      type: string
-    - name: insdc_accession_full_seg8
-      type: string
-    - name: insdc_version_seg1
-      type: int
-    - name: insdc_version_seg2
-      type: int
-    - name: insdc_version_seg3
-      type: int
-    - name: insdc_version_seg4
-      type: int
-    - name: insdc_version_seg5
-      type: int
-    - name: insdc_version_seg6
-      type: int
-    - name: insdc_version_seg7
-      type: int
-    - name: insdc_version_seg8
-      type: int
-    - name: is_lab_host
-      type: string
-      generateIndex: true
-    - name: length_seg1
-      type: int
-    - name: length_seg2
-      type: int
-    - name: length_seg3
-      type: int
-    - name: length_seg4
-      type: int
-    - name: length_seg5
-      type: int
-    - name: length_seg6
-      type: int
-    - name: length_seg7
-      type: int
-    - name: length_seg8
-      type: int
-    - name: ncbi_release_date
-      type: date
-    - name: ncbi_sourcedb
-      type: string
-      generateIndex: true
-    - name: ncbi_update_date_seg1
-      type: date
-    - name: ncbi_update_date_seg2
-      type: date
-    - name: ncbi_update_date_seg3
-      type: date
-    - name: ncbi_update_date_seg4
-      type: date
-    - name: ncbi_update_date_seg5
-      type: date
-    - name: ncbi_update_date_seg6
-      type: date
-    - name: ncbi_update_date_seg7
-      type: date
-    - name: ncbi_update_date_seg8
-      type: date
-    - name: ncbi_virus_name
-      type: string
-      generateIndex: true
-    - name: ncbi_virus_tax_id_seg1
-      type: int
-    - name: ncbi_virus_tax_id_seg2
-      type: int
-    - name: ncbi_virus_tax_id_seg3
-      type: int
-    - name: ncbi_virus_tax_id_seg4
-      type: int
-    - name: ncbi_virus_tax_id_seg5
-      type: int
-    - name: ncbi_virus_tax_id_seg6
-      type: int
-    - name: ncbi_virus_tax_id_seg7
-      type: int
-    - name: ncbi_virus_tax_id_seg8
-      type: int
-    - name: sample_collection_date
-      type: date
-    - name: specimen_collector_sample_id
-      type: string
-    - name: submissionId
-      type: string
-    - name: total_ambiguous_nucs_seg1
-      type: int
-    - name: total_ambiguous_nucs_seg2
-      type: int
-    - name: total_ambiguous_nucs_seg3
-      type: int
-    - name: total_ambiguous_nucs_seg4
-      type: int
-    - name: total_ambiguous_nucs_seg5
-      type: int
-    - name: total_ambiguous_nucs_seg6
-      type: int
-    - name: total_ambiguous_nucs_seg7
-      type: int
-    - name: total_ambiguous_nucs_seg8
-      type: int
-    - name: total_deleted_nucs_seg1
-      type: int
-    - name: total_deleted_nucs_seg2
-      type: int
-    - name: total_deleted_nucs_seg3
-      type: int
-    - name: total_deleted_nucs_seg4
-      type: int
-    - name: total_deleted_nucs_seg5
-      type: int
-    - name: total_deleted_nucs_seg6
-      type: int
-    - name: total_deleted_nucs_seg7
-      type: int
-    - name: total_deleted_nucs_seg8
-      type: int
-    - name: total_frame_shifts_seg1
-      type: int
-    - name: total_frame_shifts_seg2
-      type: int
-    - name: total_frame_shifts_seg3
-      type: int
-    - name: total_frame_shifts_seg4
-      type: int
-    - name: total_frame_shifts_seg5
-      type: int
-    - name: total_frame_shifts_seg6
-      type: int
-    - name: total_frame_shifts_seg7
-      type: int
-    - name: total_frame_shifts_seg8
-      type: int
-    - name: total_inserted_nucs_seg1
-      type: int
-    - name: total_inserted_nucs_seg2
-      type: int
-    - name: total_inserted_nucs_seg3
-      type: int
-    - name: total_inserted_nucs_seg4
-      type: int
-    - name: total_inserted_nucs_seg5
-      type: int
-    - name: total_inserted_nucs_seg6
-      type: int
-    - name: total_inserted_nucs_seg7
-      type: int
-    - name: total_inserted_nucs_seg8
-      type: int
-    - name: total_snps_seg1
-      type: int
-    - name: total_snps_seg2
-      type: int
-    - name: total_snps_seg3
-      type: int
-    - name: total_snps_seg4
-      type: int
-    - name: total_snps_seg5
-      type: int
-    - name: total_snps_seg6
-      type: int
-    - name: total_snps_seg7
-      type: int
-    - name: total_snps_seg8
-      type: int
-    - name: total_unknown_nucs_seg1
-      type: int
-    - name: total_unknown_nucs_seg2
-      type: int
-    - name: total_unknown_nucs_seg3
-      type: int
-    - name: total_unknown_nucs_seg4
-      type: int
-    - name: total_unknown_nucs_seg5
-      type: int
-    - name: total_unknown_nucs_seg6
-      type: int
-    - name: total_unknown_nucs_seg7
-      type: int
-    - name: total_unknown_nucs_seg8
-      type: int
-  primaryKey: submissionId
-  dateToSortBy: sample_collection_date
+  - type: string
+    name: accessionVersion
+  - type: string
+    name: accession
+  - type: int
+    name: version
+  - type: string
+    name: submissionId
+  - type: boolean
+    name: isRevocation
+  - type: string
+    generateIndex: true
+    name: submitter
+  - type: string
+    generateIndex: true
+    name: groupName
+  - type: int
+    name: groupId
+  - type: int
+    name: submittedAtTimestamp
+  - type: string
+    generateIndex: true
+    name: submittedDate
+  - type: int
+    name: releasedAtTimestamp
+  - type: string
+    generateIndex: true
+    name: releasedDate
+  - type: string
+    generateIndex: true
+    name: dataUseTerms
+  - type: date
+    name: dataUseTermsRestrictedUntil
+  - type: date
+    name: dataBecameOpenAt
+  - type: string
+    name: dataUseTermsUrl
+  - type: string
+    name: versionStatus
+  - type: int
+    name: pipelineVersion
+  - type: string
+    name: authorAffiliations
+  - type: string
+    name: authors
+  - type: float
+    name: completeness_seg1
+  - type: float
+    name: completeness_seg2
+  - type: float
+    name: completeness_seg3
+  - type: float
+    name: completeness_seg4
+  - type: float
+    name: completeness_seg5
+  - type: float
+    name: completeness_seg6
+  - type: float
+    name: completeness_seg7
+  - type: float
+    name: completeness_seg8
+  - type: string
+    name: frameShifts_seg1
+  - type: string
+    name: frameShifts_seg2
+  - type: string
+    name: frameShifts_seg3
+  - type: string
+    name: frameShifts_seg4
+  - type: string
+    name: frameShifts_seg5
+  - type: string
+    name: frameShifts_seg6
+  - type: string
+    name: frameShifts_seg7
+  - type: string
+    name: frameShifts_seg8
+  - type: string
+    generateIndex: true
+    name: geoLocAdmin1
+  - type: string
+    generateIndex: true
+    name: geoLocCountry
+  - type: string
+    generateIndex: true
+    name: hostNameScientific
+  - type: string
+    name: hostTaxonId
+  - type: string
+    name: insdcAccessionBase_seg1
+  - type: string
+    name: insdcAccessionBase_seg2
+  - type: string
+    name: insdcAccessionBase_seg3
+  - type: string
+    name: insdcAccessionBase_seg4
+  - type: string
+    name: insdcAccessionBase_seg5
+  - type: string
+    name: insdcAccessionBase_seg6
+  - type: string
+    name: insdcAccessionBase_seg7
+  - type: string
+    name: insdcAccessionBase_seg8
+  - type: string
+    name: insdcAccessionFull_seg1
+  - type: string
+    name: insdcAccessionFull_seg2
+  - type: string
+    name: insdcAccessionFull_seg3
+  - type: string
+    name: insdcAccessionFull_seg4
+  - type: string
+    name: insdcAccessionFull_seg5
+  - type: string
+    name: insdcAccessionFull_seg6
+  - type: string
+    name: insdcAccessionFull_seg7
+  - type: string
+    name: insdcAccessionFull_seg8
+  - type: int
+    name: insdcVersion_seg1
+  - type: int
+    name: insdcVersion_seg2
+  - type: int
+    name: insdcVersion_seg3
+  - type: int
+    name: insdcVersion_seg4
+  - type: int
+    name: insdcVersion_seg5
+  - type: int
+    name: insdcVersion_seg6
+  - type: int
+    name: insdcVersion_seg7
+  - type: int
+    name: insdcVersion_seg8
+  - type: boolean
+    name: isLabHost
+  - type: int
+    name: length_seg1
+  - type: int
+    name: length_seg2
+  - type: int
+    name: length_seg3
+  - type: int
+    name: length_seg4
+  - type: int
+    name: length_seg5
+  - type: int
+    name: length_seg6
+  - type: int
+    name: length_seg7
+  - type: int
+    name: length_seg8
+  - type: date
+    name: ncbiReleaseDate
+  - type: string
+    generateIndex: true
+    name: ncbiSourceDb
+  - type: date
+    name: ncbiUpdateDate_seg1
+  - type: date
+    name: ncbiUpdateDate_seg2
+  - type: date
+    name: ncbiUpdateDate_seg3
+  - type: date
+    name: ncbiUpdateDate_seg4
+  - type: date
+    name: ncbiUpdateDate_seg5
+  - type: date
+    name: ncbiUpdateDate_seg6
+  - type: date
+    name: ncbiUpdateDate_seg7
+  - type: date
+    name: ncbiUpdateDate_seg8
+  - type: string
+    generateIndex: true
+    name: ncbiVirusName
+  - type: string
+    name: sampleCollectionDate
+  - type: string
+    name: specimenCollectorSampleId
+  - type: int
+    name: totalAmbiguousNucs_seg1
+  - type: int
+    name: totalAmbiguousNucs_seg2
+  - type: int
+    name: totalAmbiguousNucs_seg3
+  - type: int
+    name: totalAmbiguousNucs_seg4
+  - type: int
+    name: totalAmbiguousNucs_seg5
+  - type: int
+    name: totalAmbiguousNucs_seg6
+  - type: int
+    name: totalAmbiguousNucs_seg7
+  - type: int
+    name: totalAmbiguousNucs_seg8
+  - type: int
+    name: totalDeletedNucs_seg1
+  - type: int
+    name: totalDeletedNucs_seg2
+  - type: int
+    name: totalDeletedNucs_seg3
+  - type: int
+    name: totalDeletedNucs_seg4
+  - type: int
+    name: totalDeletedNucs_seg5
+  - type: int
+    name: totalDeletedNucs_seg6
+  - type: int
+    name: totalDeletedNucs_seg7
+  - type: int
+    name: totalDeletedNucs_seg8
+  - type: int
+    name: totalFrameShifts_seg1
+  - type: int
+    name: totalFrameShifts_seg2
+  - type: int
+    name: totalFrameShifts_seg3
+  - type: int
+    name: totalFrameShifts_seg4
+  - type: int
+    name: totalFrameShifts_seg5
+  - type: int
+    name: totalFrameShifts_seg6
+  - type: int
+    name: totalFrameShifts_seg7
+  - type: int
+    name: totalFrameShifts_seg8
+  - type: int
+    name: totalInsertedNucs_seg1
+  - type: int
+    name: totalInsertedNucs_seg2
+  - type: int
+    name: totalInsertedNucs_seg3
+  - type: int
+    name: totalInsertedNucs_seg4
+  - type: int
+    name: totalInsertedNucs_seg5
+  - type: int
+    name: totalInsertedNucs_seg6
+  - type: int
+    name: totalInsertedNucs_seg7
+  - type: int
+    name: totalInsertedNucs_seg8
+  - type: int
+    name: totalSnps_seg1
+  - type: int
+    name: totalSnps_seg2
+  - type: int
+    name: totalSnps_seg3
+  - type: int
+    name: totalSnps_seg4
+  - type: int
+    name: totalSnps_seg5
+  - type: int
+    name: totalSnps_seg6
+  - type: int
+    name: totalSnps_seg7
+  - type: int
+    name: totalSnps_seg8
+  - type: int
+    name: totalUnknownNucs_seg1
+  - type: int
+    name: totalUnknownNucs_seg2
+  - type: int
+    name: totalUnknownNucs_seg3
+  - type: int
+    name: totalUnknownNucs_seg4
+  - type: int
+    name: totalUnknownNucs_seg5
+  - type: int
+    name: totalUnknownNucs_seg6
+  - type: int
+    name: totalUnknownNucs_seg7
+  - type: int
+    name: totalUnknownNucs_seg8
+  primaryKey: accessionVersion
+  features:
+  - name: generalizedAdvancedQuery

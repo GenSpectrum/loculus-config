@@ -1,0 +1,2798 @@
+{
+  "referenceGenomes": [
+    {
+      "name": "seg1",
+      "references": [
+        {
+          "genes": [
+            {
+              "name": "PB2",
+              "sequence": "MERIKELRDLMSQSRTREILTKTTVDHMAIIKKYTSGRQEKNPALRMKWMMAMKYPITADKRIMEMIPERNEQGQTLWSKTNDAGSDRVMVSPLAVTWWNRNGPTTSTVHYPKVYKTYFEKVERLKHGTFGPVHFRNQVKIRRRVDINPGHADLSAKEAQDVIMEVVFPNEVGARILTSESQLTITKEKKEELQDCKIAPLMVAYMLERELVRKTRFLPVAGGTSSVYIEVLHLTQGTCWEQMYTPGGEVRNDDVDQSLIIAARNIVRRATVSADPLASLLEMCHSTQIGGIRMVDILRQNPTEEQAVDICKAAMGLRISSSFSFGGFTFKRTNGSSVKKEEEVLTGNLQTLKIKVHEGYEEFTMVGRRATAILRKATRRLIQLIVSGRDEQSIAEAIIVAMVFSQEDCMIKAVRGDLNFVNRANQRLNPMHQLLRHFQKDAKVLFQNWGIEPIDNVMGMIGILPDMTPSAEMSLRGVRVSKMGVDEYSSTERVVVSIDRFLRVRDQQGNVLLSPEEVSETQGTEKLTITYSSSMMWEINGPESVLVNTYQWIIRNWETVKIQWSQDPTMLYNKMEFESFQSLVPKAARSQYSGFVRTLFQQMRDVLGTFDTVQIIKLLPFAAAPPEPSRMQFSSLTVNVRGSGMRILVRGNSPVFNYNKATKRLTVLGKDAGALTEDPDEGTAGVESAVLRGFLILGREDKRYGPALSINELSNLAKGEKANVLIMQGDVVLVMKRKRDFSILTDSQTATKRIRMAIN*"
+            }
+          ],
+          "name": "singleReference",
+          "sequence": "AGCAAAAGCAGGTCAATTATATTCAATATGGAAAGAATAAAAGAACTAAGAGATCTAATGTCGCAGTCCCGCACTCGCGAGATACTAACAAAAACCACTGTGGATCATATGGCCATAATCAAGAAATACACATCAGGAAGACAAGAGAAGAACCCTGCTCTCAGAATGAAATGGATGATGGCAATGAAATATCCAATCACAGCAGACAAGAGAATAATGGAGATGATTCCTGAAAGGAATGAGCAAGGACAAACGCTTTGGAGCAAGACAAATGATGCTGGGTCGGACAGAGTGATGGTGTCTCCCCTAGCTGTAACTTGGTGGAACAGGAATGGGCCGACAACAAGTACAGTCCATTATCCAAAGGTTTACAAAACATACTTTGAGAAGGTTGAAAGGTTAAAACATGGAACCTTCGGTCCCGTTCATTTCCGAAACCAAGTTAAAATACGTCGCCGGGTGGATATAAACCCGGGCCATGCAGATCTCAGTGCTAAAGAAGCACAAGATGTTATCATGGAGGTCGTTTTCCCAAATGAAGTGGGAGCTAGAATATTGACATCAGAGTCGCAATTGACAATAACAAAAGAGAAGAAAGAAGAGCTCCAGGATTGTAAAATTGCTCCTTTAATGGTGGCATACATGTTGGAAAGAGAACTGGTCCGCAAAACCAGATTTCTACCGGTAGCAGGCGGAACAAGCAGTGTGTACATTGAGGTATTGCATTTGACTCAAGGGACCTGTTGGGAACAGATGTACACTCCCGGCGGAGAAGTAAGAAATGATGATGTTGACCAGAGTTTGATCATCGCTGCCAGAAACATTGTTAGGAGAGCAACAGTATCAGCGGACCCACTGGCATCACTCTTGGAGATGTGTCACAGCACACAAATTGGGGGAATAAGGATGGTGGACATCCTTAGGCAAAACCCAACTGAGGAGCAAGCTGTGGATATATGCAAAGCAGCAATGGGTTTGAGGATCAGTTCATCCTTTAGCTTTGGAGGCTTCACTTTCAAAAGAACAAATGGATCATCCGTCAAGAAGGAAGAGGAAGTGCTTACAGGCAACCTCCAAACATTGAAAATAAAAGTACATGAGGGGTATGAAGAATTCACAATGGTTGGGCGGAGAGCAACAGCTATCCTGAGGAAAGCAACTAGAAGGCTGATTCAGTTGATAGTAAGTGGAAGAGATGAACAATCAATCGCTGAAGCGATCATTGTAGCAATGGTGTTCTCACAGGAGGATTGCATGATAAAGGCAGTCCGAGGCGATCTGAATTTCGTGAACAGAGCAAACCAAAGATTGAACCCCATGCATCAACTCCTGAGGCACTTCCAAAAAGATGCAAAAGTGCTGTTTCAGAACTGGGGAATTGAACCTATTGACAATGTCATGGGGATGATCGGAATATTACCTGACATGACTCCAAGCGCAGAGATGTCACTGAGAGGAGTGAGAGTTAGTAAGATGGGAGTAGATGAATATTCCAGCACGGAGAGAGTGGTGGTGAGTATTGACCGTTTCTTGAGGGTCCGAGATCAGCAGGGGAACGTACTCTTATCTCCTGAAGAGGTTAGTGAAACACAGGGAACAGAGAAGTTGACAATAACATATTCATCCTCAATGATGTGGGAAATCAACGGTCCTGAGTCAGTGCTTGTTAACACTTATCAATGGATCATCAGGAATTGGGAGACTGTAAAGATTCAATGGTCTCAAGATCCCACAATGCTGTACAATAAGATGGAGTTTGAATCGTTCCAATCCTTGGTGCCAAAGGCTGCCAGAAGCCAATATAGTGGATTTGTGAGAACACTATTCCAACAGATGCGTGATGTTTTGGGGACATTTGATACTGTCCAAATAATCAAGCTGCTACCATTTGCAGCAGCCCCACCGGAGCCGAGCAGAATGCAGTTTTCTTCTCTAACTGTGAATGTGAGAGGCTCAGGAATGAGAATACTCGTGAGGGGTAACTCCCCCGTGTTCAACTACAACAAGGCAACCAAAAGGCTTACAGTCCTCGGAAAGGACGCAGGTGCATTAACAGAAGATCCAGACGAGGGAACAGCCGGGGTGGAATCTGCAGTATTGAGGGGATTCCTAATTCTAGGCAGAGAGGACAAAAGATATGGACCCGCATTGAGCATCAATGAACTGAGCAATCTTGCAAAAGGGGAGAAGGCTAATGTATTGATAATGCAAGGAGACGTGGTGTTGGTAATGAAACGGAAACGGGACTTTAGCATACTTACTGACAGCCAGACAGCGACCAAAAGAATTCGGATGGCCATCAATTAGTGTTGAATAGTTTAAAAACGACCTTGTTTCTACT"
+        }
+      ]
+    },
+    {
+      "name": "seg2",
+      "references": [
+        {
+          "genes": [
+            {
+              "name": "PB1",
+              "sequence": "MDVNPTLLFLKVPAQNAISTTFPYTGDPPYSHGTGTGYTMDTVNRTHQYSEKGKWTTNTETGAPQLNPIDGPLPEDNEPSGYAQTDCVLEAMAFLEESHPGIFENSCLETMEVVQQTRVDKLTQGRQTYDWTLKRNQPAATALANTIEVFRSNGLTANESGRLIDFLKDVMESMDKGEMEIITHFQRKRRVRDNMTKKMVTQRTIGKKKQRLNKRSYLIRALTLNTMTKDAERGKLKRRAIATPGMQIRGFVYFVETLARSICEKLEQSGLPVGGNEKKAKLANVVRKMMTNSQDTELSFTITGDNTKWNENQNPRMFLAMITYITRNQPEWFRNVLSIAPIMFSNKMARLGKGYMFESKSMKLRTQIPAEMLASIDLKYFNESTRKKIEKIRPLLIDGTASLSPGMMMGMFNMLSTVLGVSILNLGQKRYTKTTYWWDGLQSSDDFALIVNAPNHEGIEAGVDRFYRTCKLVGINMTKKKSYINRTGTCEFTSFFYRYGFVANFSMELPSFGVSGINESADMSIGVTVIKNNMMDNDLGPATAQMALQLFIKDYRYPYRCHRGDTQIQTRRSFELKKLWEQTRSKAGLLVSDGGPNPYNIRNLHIPEAGLKWELMDEDYQGRLCNPLNPFVSHKEIESVNNAVVMPAHGPAKSMEYDAVATTHSWIPKRNRSILNTSQRGILEDEQMYQKCCNLFEKFFPSSSYRRPVGISSMVEAMVSRARIDARIDFESGRIKKEEFAEIMKICSTIEELGRQK*"
+            }
+          ],
+          "name": "singleReference",
+          "sequence": "AGCAAAAGCAGGCAAACCATTTGAATGGATGTCAATCCGACTTTACTTTTCTTAAAAGTGCCAGCGCAAAATGCTATAAGTACCACATTCCCTTATACTGGAGATCCTCCATACAGCCATGGAACAGGAACAGGATACACCATGGACACAGTCAACAGAACACATCAATATTCAGAAAAGGGGAAATGGACAACGAACACAGAGACTGGAGCACCCCAACTCAATCCGATTGATGGACCACTACCTGAGGATAATGAGCCGAGTGGGTATGCACAAACAGATTGTGTATTGGAAGCAATGGCTTTCCTTGAAGAATCCCACCCAGGGATCTTTGAAAACTCGTGTCTTGAAACGATGGAAGTTGTTCAGCAAACAAGAGTGGATAAGCTGACCCAAGGTCGCCAAACCTATGACTGGACATTGAAAAGAAACCAGCCGGCTGCAACCGCTTTGGCCAACACTATAGAGGTCTTCAGATCGAATGGTCTAACAGCCAATGAATCGGGAAGGCTAATAGATTTCCTCAAAGACGTGATGGAATCAATGGATAAGGGAGAAATGGAAATAATAACACATTTCCAGAGAAAGAGAAGAGTGAGGGACAACATGACCAAGAAAATGGTCACACAAAGAACAATAGGGAAGAAAAAACAAAGGCTGAACAAAAGGAGCTACCTAATAAGAGCACTGACACTGAACACAATGACAAAAGACGCAGAAAGAGGCAAATTGAAGAGGCGGGCAATTGCAACACCCGGGATGCAAATCAGAGGATTCGTGTACTTTGTCGAAACACTAGCGAGGAGTATCTGTGAGAAACTTGAGCAATCTGGACTCCCCGTCGGAGGGAATGAAAAGAAGGCTAAATTGGCAAATGTCGTGAGGAAGATGATGACTAACTCACAAGATACAGAGCTCTCTTTTACAATTACTGGAGACAACACCAAATGGAATGAGAATCAGAACCCTCGGATGTTTCTAGCAATGATAACATACATCACAAGGAACCAACCTGAATGGTTTAGAAATGTCTTAAGCATTGCTCCTATAATGTTCTCAAACAAGATGGCAAGATTAGGGAAAGGATACATGTTCGAAAGTAAGAGCATGAAGCTACGGACACAAATACCAGCAGAAATGCTTGCAAGCATTGACTTGAAATACTTCAACGAATCAACGAGAAAGAAAATCGAGAAAATAAGACCTCTACTAATAGATGGCACAGCCTCATTGAGTCCTGGAATGATGATGGGCATGTTCAATATGCTGAGTACAGTCTTAGGAGTTTCAATCCTGAATCTTGGGCAGAAGAGGTACACCAAAACCACATACTGGTGGGACGGACTCCAATCCTCTGATGATTTCGCTCTCATAGTGAATGCACCAAATCATGAGGGAATAGAAGCAGGGGTGGATAGGTTCTATAGGACTTGCAAACTAGTTGGAATCAATATGACCAAGAAGAAGTCTTACATAAATCGGACAGGAACATGTGAATTCACAAGCTTCTTCTACCGCTATGGGTTCGTAGCCAACTTCAGTATGGAGCTGCCCAGCTTTGGAGTGTCTGGGATTAATGAATCGGCTGACATGAGCATTGGTGTTACAGTGATAAAGAACAATATGATGGACAACGACCTTGGACCAGCAACAGCTCAGATGGCTCTTCAGCTATTCATTAAGGACTACAGATACCCATACCGATGCCACAGGGGGGATACACAAATCCAAACGAGGAGATCATTCGAGCTGAAGAAGCTGTGGGAGCAGACCCGCTCAAAGGCAGGACTGTTGGTTTCAGATGGAGGACCAAACCCATACAATATCCGGAATCTCCACATTCCGGAGGCTGGCTTGAAGTGGGAATTGATGGATGAAGACTACCAGGGCAGACTGTGTAATCCTCTGAACCCGTTTGTTAGTCATAAGGAAATTGAGTCTGTCAACAATGCTGTGGTAATGCCAGCTCATGGCCCAGCCAAGAGCATGGAATATGATGCAGTTGCGACTACACATTCATGGATTCCCAAGAGGAATCGTTCCATTCTCAACACCAGCCAAAGGGGGATTCTTGAGGATGAACAGATGTATCAGAAGTGCTGCAATCTATTCGAGAAATTCTTCCCTAGCAGTTCATATCGGAGGCCAGTTGGAATTTCCAGCATGGTGGAGGCCATGGTGTCTAGGGCCCGAATTGATGCACGAATTGACTTCGAGTCTGGAAGGATTAAGAAAGAAGAGTTTGCTGAGATCATGAAGATCTGTTCCACCATTGAAGAGCTCGGACGGCAAAAATAGTGAATTTAGCTTGTCCTTCATGAAAAAATGCCTTGTTTCTACT"
+        }
+      ]
+    },
+    {
+      "name": "seg3",
+      "references": [
+        {
+          "genes": [
+            {
+              "name": "PA",
+              "sequence": "MEDFVRQCFNPMIVELAEKAMKEYGEDPKIETNKFAAICTHLEVCFMYSDFHFIDERGESTIIESGDPNALLKHRFEIIEGRDRTMAWTVVNSICNTTGVEKPKFLPDLYDYKENRFIEIGVTRREVHTYYLEKANKIKSEKTHIHIFSFTGEEMATKADYTLDEESRARIKTRLFTIRQEMASRGLWDSFRQSERGEETVEERFEITGTMCRLADQSLPPNFSSLEKFRAYVDGFEPNGCIEGKLSQMSKEVNARIEPFLKTTPRPLRLPDGPPCSQRSKFLLMDALKLSIEDPSHEGEGIPLYDAIKCMKTFFGWKEPNIVKPHEKGINPNYLLAWKQVLAELQDIENEEKIPKTKNMRKTSQLKWALGENMAPEKVDFEDCKDVSDLRQYDSDEPKPRSLASWIQSEFNKACELTDSSWIELDEIGEDVAPIEHIASMRRNYFTAEVSHCRATEYIMKGVYINTALLNASCAAMDDFQLIPMISKCRTKEGRRKTNLYGFLIKGRSHLRNDTDVVNFVSMEFSLTDPRLEPHRWEKYCVLRIGDMLLRTEIGQVSRPMFLYVRTNGTSKIKMKWGMEMRRCPFQSLQQIESMIEAESSVKEKDMTKEFFENKSETWPIGESPKGVEEGSIGKVCRTLLAKSVFNSLYASPQLEGFSAESRKLLLIVQALRDNLEPGTFDLGGLYEAIEECLINDPWVLLNASWFNSFLTHALR*"
+            },
+            {
+              "name": "PAX",
+              "sequence": "MEDFVRQCFNPMIVELAEKAMKEYGEDPKIETNKFAAICTHLEVCFMYSDFHFIDERGESTIIESGDPNALLKHRFEIIEGRDRTMAWTVVNSICNTTGVEKPKFLPDLYDYKENRFIEIGVTRREVHTYYLEKANKIKSEKTHIHIFSFTGEEMATKADYTLDEESRARIKTRLFTIRQEMASRGLWDSFVSPREAKRQLKKDLKSQGLCAGLPTKVSHLISPALKNLEPMWMDSNRTAALRASFLKCRKK*"
+            }
+          ],
+          "name": "singleReference",
+          "sequence": "AGCAAAAGCAGGTACTGATCCAAAATGGAAGACTTTGTGCGACAATGCTTCAATCCAATGATTGTCGAGCTTGCGGAAAAGGCAATGAAAGAATATGGGGAAGATCCGAAAATCGAAACGAACAAATTTGCCGCAATATGCACGCACTTAGAAGTCTGTTTCATGTATTCAGATTTCCACTTTATTGATGAACGGGGCGAATCAACAATTATAGAATCTGGCGATCCCAATGCATTATTGAAACACCGGTTTGAAATAATCGAAGGGAGGGACCGAACAATGGCCTGGACAGTGGTGAATAGTATCTGCAACACCACAGGAGTTGAGAAGCCTAAATTTCTCCCAGATTTGTATGACTACAAGGAGAACCGATTTATTGAAATTGGAGTGACACGGAGGGAAGTTCACACATACTATCTAGAAAAAGCCAACAAGATAAAATCTGAGAAGACACACATTCACATATTCTCATTCACTGGAGAGGAAATGGCCACCAAAGCGGACTACACCCTTGATGAAGAAAGCAGGGCCCGAATCAAAACCAGGCTGTTCACTATAAGGCAGGAAATGGCCAGTAGGGGTTTATGGGATTCCTTTCGTCAGTCCGAGAGAGGCGAAGAGACAGTTGAAGAAAGATTTGAAATCACAGGGACTATGTGCAGGCTTGCCGACCAAAGTCTCCCACCTAATTTCTCCAGCCTTGAAAAATTTAGAGCCTATGTGGATGGATTCGAACCGAACGGCTGCATTGAGGGCAAGCTTTCTCAAATGTCGAAAGAAGTAAACGCCAGAATTGAGCCATTTCTGAAGACAACACCACGCCCTCTTAGATTACCTGATGGGCCTCCCTGCTCTCAGCGGTCGAAGTTTTTGCTGATGGATGCCCTTAAATTAAGCATCGAAGACCCGAGTCATGAGGGGGAGGGGATACCGCTATATGATGCAATCAAATGCATGAAAACATTTTTCGGCTGGAAAGAGCCCAACATTGTAAAACCACATGAAAAAGGCATAAACCCCAATTACCTCCTGGCTTGGAAGCAGGTGCTGGCAGAGCTCCAAGATATTGAAAACGAGGAGAAAATTCCAAAGACAAAGAACATGAGGAAAACAAGCCAATTGAAGTGGGCACTTGGTGAGAATATGGCACCAGAGAAAGTAGACTTTGAGGATTGCAAAGATGTTAGCGATCTAAGGCAGTATGACAGTGATGAACCAAAGCCTAGATCACTAGCAAGCTGGATCCAGAGTGAATTCAACAAGGCATGCGAATTGACAGATTCAAGTTGGATTGAACTTGATGAAATAGGGGAAGACGTTGCTCCAATTGAGCACATTGCAAGTATGAGAAGGAACTATTTCACAGCGGAAGTATCCCATTGCAGGGCTACTGAATACATAATGAAGGGAGTGTACATAAACACAGCTTTGTTGAATGCATCCTGTGCAGCCATGGATGACTTCCAACTGATCCCAATGATAAGCAAATGCAGAACCAAAGAAGGAAGACGGAAAACTAACCTGTATGGATTCCTTATAAAAGGAAGATCCCATTTGAGAAATGACACCGATGTGGTAAACTTTGTGAGTATGGAATTCTCTCTTACTGATCCGAGGCTGGAGCCACACAGATGGGAAAAGTACTGCGTTCTTCGGATAGGAGACATGCTCTTACGGACTGAAATAGGCCAAGTGTCAAGGCCCATGTTTCTTTATGTGAGAACCAATGGAACCTCCAAGATCAAGATGAAATGGGGCATGGAAATGAGGCGATGCCCTTTTCAATCCCTTCAACAGATTGAGAGCATGATTGAGGCCGAGTCTTCTGTCAAAGAAAAAGACATGACTAAAGAATTCTTTGAAAACAAATCAGAAACATGGCCAATTGGAGAATCACCCAAGGGAGTGGAGGAAGGCTCCATCGGGAAGGTGTGCAGAACCTTACTGGCTAAATCTGTTTTCAACAGTCTATATGCATCTCCACAACTCGAGGGGTTTTCAGCTGAATCAAGAAAATTGCTTCTCATTGTTCAGGCACTTAGGGACAACCTGGAACCTGGAACCTTCGATCTTGGGGGGCTATATGAAGCAATTGAGGAGTGCCTGATTAATGATCCCTGGGTTTTGCTTAATGCATCTTGGTTCAACTCCTTCCTCACACATGCACTAAGATAGTTGTGGCAATGCTACTATTTGCTATCCATACTGTCCAAAAAAGTACCTTGTTTCTACT"
+        }
+      ]
+    },
+    {
+      "name": "seg4",
+      "references": [
+        {
+          "genes": [
+            {
+              "name": "HA",
+              "sequence": "MEKIVLLLAIVSLVKSDQICIGYHANNSTEQVDTIMEKNVTVTHAQDILEKTHNGKLCDLNGVKPLILRDCSVAGWLLGNPMCDEFINVPEWSYIVEKASPANDLCYPGDFNDYEELKHLLSRTNHFEKIQIIPKSSWSNHDASSGVSSACPYHGRSSFFRNVVWLIKKNSAYPTIKRSYNNTNQEDLLVLWGIHHPNDAAEQTKLYQNPTTYISVGTSTLNQRLVPEIATRPKVNGQSGRMEFFWTILKPNDAINFESNGNFIAPEYAYKIVKKGDSAIMKSELEYGNCNTKCQTPMGAINSSMPFHNIHPLTIGECPKYVKSNRLVLATGLRNTPQRERRRKKRGLFGAIAGFIEGGWQGMVDGWYGYHHSNEQGSGYAADKESTQKAIDGVTNKVNSIIDKMNTQFEAVGREFNNLERRIENLNKQMEDGFLDVWTYNAELLVLMENERTLDFHDSNVKNLYDKVRLQLRDNAKELGNGCFEFYHKCDNECMESVKNGTYDYPQYSEEARLNREEISGVKLESMGTYQILSIYSTVASSLALAIMVAGLSLWMCSNGSLQCRICI*"
+            }
+          ],
+          "name": "singleReference",
+          "sequence": "GCAGGGGTATAATCTGTCAAAATGGAGAAAATAGTGCTTCTTCTTGCAATAGTCAGTCTTGTCAAAAGTGATCAGATTTGCATTGGTTACCATGCAAACAACTCGACAGAGCAGGTTGACACAATAATGGAAAAGAACGTTACTGTTACACATGCCCAAGACATACTGGAAAAGACACACAATGGGAAGCTCTGCGATCTAAATGGAGTGAAGCCTCTCATTTTGAGAGATTGTAGTGTAGCTGGATGGCTCCTCGGAAACCCTATGTGTGACGAATTCATCAATGTGCCGGAATGGTCTTACATAGTGGAGAAGGCCAGTCCAGCCAATGACCTCTGTTACCCAGGGGATTTCAACGACTATGAAGAACTGAAACACCTATTGAGCAGAACAAACCATTTTGAGAAAATTCAGATCATCCCCAAAAGTTCTTGGTCCAATCATGATGCCTCATCAGGGGTGAGCTCAGCATGTCCATACCATGGGAGGTCCTCCTTTTTCAGAAATGTGGTATGGCTTATCAAAAAGAACAGTGCATACCCAACAATAAAGAGGAGCTACAATAATACCAACCAAGAAGATCTTTTAGTACTGTGGGGGATTCACCATCCTAATGATGCGGCAGAGCAGACAAAGCTCTATCAAAACCCAACCACTTACATTTCCGTTGGAACATCAACACTGAACCAGAGATTGGTTCCAGAAATAGCTACTAGACCCAAAGTAAACGGGCAAAGTGGAAGAATGGAGTTCTTCTGGACAATTTTAAAGCCGAATGATGCCATCAATTTCGAGAGTAATGGAAATTTCATTGCTCCAGAATATGCATACAAAATTGTCAAGAAAGGGGACTCAGCAATTATGAAAAGTGAATTGGAATATGGTAACTGCAACACCAAGTGTCAAACTCCAATGGGGGCGATAAACTCTAGTATGCCATTCCACAACATACACCCCCTCACCATCGGGGAATGCCCCAAATATGTGAAATCAAACAGATTAGTCCTTGCGACTGGACTCAGAAATACCCCTCAGAGAGAGAGAAGAAGAAAAAAGAGAGGACTATTTGGAGCTATAGCAGGTTTTATAGAGGGAGGATGGCAGGGAATGGTAGATGGTTGGTATGGGTACCACCATAGCAATGAGCAGGGGAGTGGATACGCTGCAGACAAAGAATCCACTCAAAAGGCAATAGATGGAGTCACCAATAAGGTCAACTCGATCATTGACAAAATGAACACTCAGTTTGAGGCCGTTGGAAGGGAATTTAATAACTTGGAAAGGAGGATAGAGAATTTAAACAAGCAGATGGAAGACGGATTCCTAGATGTCTGGACTTATAATGCTGAACTTCTGGTTCTCATGGAAAATGAGAGAACTCTAGACTTTCATGACTCAAATGTCAAGAACCTTTATGACAAGGTCCGACTACAGCTTAGGGATAATGCAAAGGAGCTGGGTAATGGTTGTTTCGAGTTCTATCACAAATGTGATAATGAATGTATGGAAAGTGTAAAAAACGGAACGTATGACTACCCGCAGTATTCAGAAGAAGCAAGACTAAACAGAGAGGAAATAAGTGGAGTAAAATTGGAATCAATGGGAACTTACCAAATACTGTCAATTTATTCAACAGTGGCGAGTTCCCTAGCACTGGCAATCATGGTAGCTGGTCTATCTTTATGGATGTGCTCCAATGGATCGTTACAATGCAGAATTTGCATTTAAATTTGTGAGTTCAGATTGTAGTTAAAAACACC"
+        }
+      ]
+    },
+    {
+      "name": "seg5",
+      "references": [
+        {
+          "genes": [
+            {
+              "name": "NP",
+              "sequence": "MASQGTKRSYEQMETGGERQNATEIRASVGRMVGGIGRFYIQMCTELKLSDYEGRLIQNSITIERMVLSAFDERRNKYLEEHPSAGKDPKKTGGPIYRRRDGKWVRELILYDKEEIRRIWRQANNGEDATAGLTHMMIWHSNLNDATYQRTRALVRTGMDPRMCSLMQGSTLPRRSGAAGAAVKGVGTMVMELIRMIKRGINDRNFWRGENGRRTRIAYERMCNILKGKFQTAAQRAMMDQVRESRNPGNAEIEDLIFLARSALILRGSVAHKSCLPACVYGLAVASGYDFEREGYSLVGIDPFRLLQNSQVFSLIRPNENPAHKSQLVWMACHSAAFEDLRVSSFIRGTRVAPRGQLSTRGVQIASNENMETMDSSTLELRSRYWAIRTRSGGNTNQQRASAGQISVQPTFSVQRNLPFERATIMAAFTGNTEGRTSDMRTEIIRMMESSRPEDVSFQGRGVFELSDEKATNPIVPSFDMSNEGSYFFGDNAEEYDN*"
+            }
+          ],
+          "name": "singleReference",
+          "sequence": "AGCAAAAGCAGGGTAGATAATCACTCACTGAGTGACATCAACATCATGGCGTCTCAGGGCACCAAACGATCTTATGAACAGATGGAAACTGGTGGAGAACGCCAGAATGCTACTGAGATCAGAGCATCTGTTGGAAGAATGGTTGGTGGAATTGGGAGGTTTTATATACAGATGTGCACTGAACTCAAACTCAGCGACTATGAAGGAAGGCTGATTCAGAACAGCATAACAATAGAGAGAATGGTTCTCTCTGCATTTGATGAAAGGAGGAACAAATACCTGGAAGAACATCCCAGTGCGGGGAAGGACCCAAAGAAAACTGGAGGTCCAATCTACCGAAGAAGAGACGGAAAATGGGTGAGAGAGCTGATTCTGTATGACAAAGAGGAGATCAGGAGAATTTGGCGTCAAGCGAACAATGGAGAAGATGCAACTGCTGGTCTCACTCACATGATGATCTGGCATTCCAATCTAAATGATGCCACATACCAGAGAACAAGAGCTCTCGTGCGTACTGGGATGGACCCTAGAATGTGCTCTCTGATGCAAGGATCAACTCTCCCGAGGAGATCTGGAGCTGCTGGTGCGGCAGTAAAGGGAGTCGGAACGATGGTGATGGAACTAATTCGGATGATAAAGCGAGGGATTAACGATCGGAATTTCTGGAGAGGTGAAAATGGGCGAAGAACAAGAATTGCATATGAGAGAATGTGCAACATCCTCAAAGGGAAATTCCAAACAGCAGCACAAAGAGCAATGATGGATCAGGTACGGGAAAGCAGAAATCCTGGGAATGCTGAGATTGAAGATCTCATATTTCTGGCACGGTCTGCACTCATCCTGAGAGGATCAGTGGCCCACAAGTCCTGCTTGCCTGCTTGTGTGTACGGGCTTGCCGTGGCCAGTGGATATGACTTTGAGAGAGAAGGGTACTCTCTGGTCGGGATTGATCCTTTCCGTCTGCTGCAAAACAGCCAGGTCTTTAGTCTAATTAGACCAAATGAGAATCCAGCACATAAAAGTCAATTGGTGTGGATGGCATGCCATTCTGCAGCATTTGAAGATCTGAGAGTCTCAAGCTTCATCAGAGGGACAAGAGTGGCCCCAAGGGGACAACTATCTACTAGAGGAGTTCAAATTGCTTCAAATGAGAACATGGAAACAATGGACTCCAGCACTCTTGAACTGAGAAGCAGATATTGGGCTATAAGGACCAGGAGTGGAGGAAACACCAACCAGCAGAGAGCATCTGCAGGACAAATCAGTGTGCAGCCTACTTTCTCGGTACAGAGAAATCTTCCCTTCGAAAGAGCGACCATTATGGCGGCATTCACAGGGAATACAGAGGGCAGAACATCTGACATGAGGACTGAAATCATAAGGATGATGGAAAGCTCCAGACCAGAAGATGTGTCTTTCCAGGGGCGGGGAGTCTTCGAGCTCTCGGACGAAAAGGCAACGAACCCGATCGTGCCTTCCTTTGACATGAGTAATGAAGGATCTTATTTCTTCGGAGACAATGCAGAGGAATATGACAATTGAAGAAAAATACCCTTGTTTCTACT"
+        }
+      ]
+    },
+    {
+      "name": "seg6",
+      "references": [
+        {
+          "genes": [
+            {
+              "name": "NA",
+              "sequence": "MNPNQKIITIGSICMVVGIISLMLQIGNIISIWVSHSIQTGNQHQAEPCNQSIITYENNTWVNQTYVNISNTNFLTEKAVASVTLAGNSSLCPISGWAVHSKDNGIRIGSKGDVFVIREPFISCSHLECRTFFLTQGALLNDKHSNGTVKDRSPHRTLMSCPVGEAPSPYNSRFESVAWSASACHDGTSWLTIGISGPDNGAVAVLKYNGIITDTIKSWRNNILRTQESECACVNGSCFTVMTDGPSNGQASYKIFKMEKGKVVKSVELNAPNYHYEECSCYPDAGEITCVCRDNWHGSNRPWVSFNQNLEYQIGYICSGVFGDNPRPNDGTGSCGPVSPNGAYGVKGFSFKYGNGVWIGRTKSTNSRSGFEMIWDPNGWTGTDSSFSVKQDIVAITDWSGYSGSFVQHPELTGLDCIRPCFWVELIRGRPKESTIWTSGSSISFCGVNSDTVGWSWPDDAELPFTIDK*"
+            }
+          ],
+          "name": "singleReference",
+          "sequence": "AGCAAAAGCAGGAGATTAAAATGAATCCAAATCAGAAGATAATAACCATTGGATCAATCTGTATGGTAGTTGGGATAATTAGCTTGATGTTACAAATTGGGAACATAATCTCAATATGGGTCAGTCATTCAATTCAGACAGGGAATCAACACCAAGCTGAACCATGCAATCAAAGCATTATTACTTATGAAAACAACACCTGGGTAAATCAAACATATGTCAACATCAGCAATACCAATTTTCTTACTGAAAAAGCTGTGGCTTCAGTAACATTAGCGGGCAATTCATCTCTTTGCCCCATTAGCGGATGGGCTGTACACAGTAAGGACAACGGTATAAGAATCGGTTCCAAGGGGGATGTGTTTGTTATAAGAGAGCCGTTCATCTCATGCTCCCACTTGGAATGCAGAACTTTCTTTTTGACTCAGGGAGCCTTGCTGAATGACAAGCACTCCAATGGGACCGTCAAAGACAGAAGCCCTCACAGAACATTGATGAGTTGTCCTGTGGGTGAGGCTCCCTCCCCATATAACTCAAGGTTTGAGTCTGTTGCTTGGTCGGCAAGTGCTTGCCATGATGGCACCAGTTGGTTGACAATTGGAATTTCTGGCCCAGACAATGGGGCTGTGGCTGTATTGAAATACAACGGCATAATAACAGACACTATCAAGAGTTGGAGGAACAACATACTGAGAACTCAAGAGTCTGAATGTGCATGTGTAAATGGCTCTTGCTTTACTGTAATGACTGACGGACCAAGTAATGGGCAGGCCTCATATAAGATCTTCAAAATGGAAAAAGGGAAAGTAGTTAAATCAGTCGAATTGAATGCCCCTAATTATCACTATGAGGAGTGCTCCTGTTATCCTGATGCTGGCGAAATCACATGTGTGTGCAGGGATAATTGGCATGGCTCAAATCGGCCATGGGTATCTTTCAATCAAAATTTGGAGTATCAAATAGGATATATATGCAGTGGAGTTTTCGGAGACAATCCACGCCCCAATGATGGAACAGGCAGTTGTGGTCCGGTGTCCCCTAACGGGGCATATGGAGTAAAAGGGTTTTCATTTAAATACGGCAATGGTGTTTGGATCGGGAGAACCAAAAGCACTAATTCCAGGAGCGGCTTTGAAATGATTTGGGATCCAAATGGGTGGACTGGAACGGACAGTAGCTTCTCGGTGAAACAAGATATCGTAGCAATAACTGATTGGTCAGGATATAGCGGGAGTTTTGTCCAGCATCCAGAACTGACAGGATTAGATTGCATAAGACCTTGTTTCTGGGTTGAGCTAATCAGAGGGCGGCCCAAAGAGAGCACAATTTGGACTAGTGGGAGCAGCATATCTTTTTGTGGTGTAAATAGTGACACTGTGGGTTGGTCTTGGCCAGACGATGCCGAGTTGCCATTCACCATTGACAAGTAGTTTGTTCAAAAAACTCCTTGTTTCTACT"
+        }
+      ]
+    },
+    {
+      "name": "seg7",
+      "references": [
+        {
+          "genes": [
+            {
+              "name": "M1",
+              "sequence": "MSLLTEVETYVLSIVPSGPLKAEIAQRLEDVFAGKNTDLEALMEWLKTRPILSPLTKGILGFVFTLTVPSERGLQRRRFVQNALNGNGDPNNMDRAVKLYKKLKREITFHGAKEVALSYSTGALASCMGLIYNRMGTVTTEVAFGLVCATCEQIADSQHRSHRQMATTTNPLIRHENRMVLASTTAKAMEQMAGSSEQAAEAMEVASQARQMVQAMRTIGTHPSSSAGLKDNLLENLQAYQKRMGVQMQRFK*"
+            },
+            {
+              "name": "M2",
+              "sequence": "MSLLTEVETPTKNEWECKCSDSSDPLVVAASIIGILHLILWILDRLFFKCIYRRLKYGLKRGPSTEGVPESMREEYRQEQQSAVDVDDGHFVNIELE*"
+            }
+          ],
+          "name": "singleReference",
+          "sequence": "AGCAAAAGCAGGTAGATATTGAAAAATGAGTCTTCTAACCGAGGTCGAAACGTACGTTCTCTCTATCGTCCCGTCAGGCCCCCTCAAAGCCGAGATCGCGCAGAGACTTGAGGATGTCTTTGCAGGAAAGAACACCGATCTCGAGGCTCTCATGGAATGGCTAAAGACAAGACCAATCCTGTCACCTCTGACTAAAGGGATTTTAGGATTTGTGTTCACGCTCACCGTGCCCAGTGAGCGAGGACTGCAGCGTAGACGCTTTGTCCAGAATGCCTTAAATGGAAATGGAGATCCAAACAATATGGATAGGGCAGTTAAGCTATACAAGAAGCTGAAAAGAGAAATAACATTCCATGGGGCTAAGGAGGTCGCACTCAGCTACTCAACCGGTGCACTTGCCAGTTGTATGGGTCTCATATACAACAGGATGGGAACGGTGACCACAGAAGTGGCTTTTGGCCTAGTGTGTGCCACTTGTGAGCAGATTGCAGATTCACAGCATCGGTCTCACAGACAGATGGCAACTACCACCAACCCACTAATCAGGCATGAGAACAGAATGGTGCTGGCCAGCACTACAGCTAAGGCTATGGAGCAGATGGCTGGATCGAGTGAGCAGGCAGCGGAAGCCATGGAGGTTGCTAGTCAGGCTAGGCAGATGGTGCAGGCAATGAGGACAATTGGGACTCATCCTAGCTCCAGTGCCGGTCTGAAAGATAATCTTCTTGAAAATTTGCAGGCCTACCAAAAACGAATGGGAGTGCAAATGCAGCGATTCAAGTGATCCTCTTGTTGTTGCCGCAAGTATCATTGGGATACTGCACTTGATATTGTGGATTCTTGATCGTCTTTTCTTCAAATGCATTTATCGTCGCCTTAAATACGGTTTGAAAAGAGGGCCTTCTACGGAAGGGGTACCTGAGTCTATGAGGGAAGAGTATCGGCAGGAACAGCAGAGTGCTGTGGATGTTGACGATGGTCATTTTGTCAACATAGAGCTGGAGTAAAAAACTACCTTGTTTCTACT"
+        }
+      ]
+    },
+    {
+      "name": "seg8",
+      "references": [
+        {
+          "genes": [
+            {
+              "name": "NS1",
+              "sequence": "MDSNTITSFQVDCYLWHIRKLLSMRDMCDAPFDDRLRRDQKALKGRGSTLGLDLRVATMEGKKIVEDILKSETNENLKIAIASSPAPRYITDMSIEEMSREWYMLMPRQKITGGLMVKMDQAIMDKRIILKANFSVLFDQLETLVSLRAFTESGAIVAEIFPIPSVPGHFTEDVKNAIGILIGGLEWNDNSIRASENIQRFAWGIHDENGGPSLPPKQKRYMAKRVESEV*"
+            },
+            {
+              "name": "NS2",
+              "sequence": "MDSNTITSFQDILQRMSKMQLESSSVDLNGMITQFERLKIYRDSLGESMMRMGDLHSLQNRNATWRNELSQKFEEIRWLIAECRNILTKTENSFEQITFLQALQLLLEVESEIRTFSFQLI*"
+            }
+          ],
+          "name": "singleReference",
+          "sequence": "GTGACAAAGACATAATGGATTCCAACACGATAACCTCGTTTCAGGTAGATTGTTATCTATGGCACATAAGAAAGCTACTCAGTATGAGAGACATGTGTGATGCCCCCTTTGATGACAGGCTCCGAAGAGACCAAAAGGCATTAAAGGGAAGAGGCAGCACACTTGGACTCGATTTAAGAGTGGCTACAATGGAGGGGAAAAAGATCGTTGAGGACATCCTGAAGAGTGAGACAAATGAAAACCTCAAAATAGCCATTGCTTCCAGTCCTGCTCCTCGGTATATCACCGATATGAGCATAGAGGAGATGAGCCGAGAATGGTACATGCTGATGCCTAGGCAGAAAATAACTGGAGGCCTTATGGTGAAAATGGACCAAGCCATAATGGATAAAAGAATTATCCTTAAAGCAAATTTCTCAGTTCTATTTGATCAACTAGAGACATTAGTCTCTCTGAGGGCATTCACAGAAAGTGGTGCTATTGTGGCTGAAATATTTCCCATTCCCTCCGTACCAGGACATTTTACAGAGGATGTCAAAAATGCAATTGGAATCCTCATCGGTGGACTTGAATGGAATGATAACTCAATTCGAGCGTCTGAAAATATACAGAGATTCGCTTGGGGAATCCATGATGAGAATGGGGGACCTTCACTCCCTCCAAAACAGAAACGCTACATGGCGAAACGAGTTGAGTCAGAAGTTTGAAGAGATCAGATGGCTCATTGCTGAATGTAGAAATATACTGACAAAGACTGAAAATAGCTTTGAACAGATAACATTTTTGCAAGCATTGCAACTCTTACTTGAAGTTGAGAGTGAGATAAGGACCTTCTCTTTTCAGCTTATTTAATACTAAAAAACAC"
+        }
+      ]
+    }
+  ],
+  "schema": {
+    "defaultOrder": "descending",
+    "defaultOrderBy": "sampleCollectionDate",
+    "inputFields": [
+      {
+        "definition": "Your sample identifier. (If no `fastaIds` column is provided, this sample ID will be used to associate the metadata with the sequence.)",
+        "displayName": "ID",
+        "example": "GJP123",
+        "name": "id",
+        "noEdit": true,
+        "required": true
+      },
+      {
+        "definition": "List of author affiliations.",
+        "desired": true,
+        "displayName": "Author affiliations",
+        "example": "EVE Group, MPI Department, Swiss TPH, Basel, Switzerland; Anderson Group, IEB Department, School of Biology, University of Edinburgh, Edinburgh, Scotland",
+        "guidance": "If multiple affiliations exist, create a semi-colon separated list in the same order as authors with one entry per author.",
+        "name": "authorAffiliations"
+      },
+      {
+        "definition": "List of authors who should be listed on the sample.",
+        "desired": true,
+        "displayName": "Authors",
+        "example": "Smith, Anna; Perez, Tom J.; Xu,;",
+        "guidance": "Authors should be separated by semi-colons. Each author's name should be in the format `last name, first name;`. Last name(s) is mandatory, only ASCII alphabetical characters A-Z are allowed.",
+        "name": "authors"
+      },
+      {
+        "definition": "A local administrative region from which the sample was collected (ex: Province, State, Canton).",
+        "desired": true,
+        "displayName": "Collection subdivision level 1",
+        "example": "Ontario",
+        "name": "geoLocAdmin1"
+      },
+      {
+        "definition": "The country from which the sample was collected.",
+        "displayName": "Collection country",
+        "example": "Canada",
+        "guidance": "Please choose a country or ocean/sea from the list of options defined by INSDC standards.",
+        "name": "geoLocCountry",
+        "options": [
+          {
+            "name": "Afghanistan"
+          },
+          {
+            "name": "Albania"
+          },
+          {
+            "name": "Algeria"
+          },
+          {
+            "name": "American Samoa"
+          },
+          {
+            "name": "Andorra"
+          },
+          {
+            "name": "Angola"
+          },
+          {
+            "name": "Anguilla"
+          },
+          {
+            "name": "Antarctica"
+          },
+          {
+            "name": "Antigua and Barbuda"
+          },
+          {
+            "name": "Arctic Ocean"
+          },
+          {
+            "name": "Argentina"
+          },
+          {
+            "name": "Armenia"
+          },
+          {
+            "name": "Aruba"
+          },
+          {
+            "name": "Ashmore and Cartier Islands"
+          },
+          {
+            "name": "Atlantic Ocean"
+          },
+          {
+            "name": "Australia"
+          },
+          {
+            "name": "Austria"
+          },
+          {
+            "name": "Azerbaijan"
+          },
+          {
+            "name": "Bahamas"
+          },
+          {
+            "name": "Bahrain"
+          },
+          {
+            "name": "Baltic Sea"
+          },
+          {
+            "name": "Baker Island"
+          },
+          {
+            "name": "Bangladesh"
+          },
+          {
+            "name": "Barbados"
+          },
+          {
+            "name": "Bassas da India"
+          },
+          {
+            "name": "Belarus"
+          },
+          {
+            "name": "Belgium"
+          },
+          {
+            "name": "Belize"
+          },
+          {
+            "name": "Benin"
+          },
+          {
+            "name": "Bermuda"
+          },
+          {
+            "name": "Bhutan"
+          },
+          {
+            "name": "Bolivia"
+          },
+          {
+            "name": "Borneo"
+          },
+          {
+            "name": "Bosnia and Herzegovina"
+          },
+          {
+            "name": "Botswana"
+          },
+          {
+            "name": "Bouvet Island"
+          },
+          {
+            "name": "Brazil"
+          },
+          {
+            "name": "British Virgin Islands"
+          },
+          {
+            "name": "Brunei"
+          },
+          {
+            "name": "Bulgaria"
+          },
+          {
+            "name": "Burkina Faso"
+          },
+          {
+            "name": "Burundi"
+          },
+          {
+            "name": "Cambodia"
+          },
+          {
+            "name": "Cameroon"
+          },
+          {
+            "name": "Canada"
+          },
+          {
+            "name": "Cape Verde"
+          },
+          {
+            "name": "Cayman Islands"
+          },
+          {
+            "name": "Central African Republic"
+          },
+          {
+            "name": "Chad"
+          },
+          {
+            "name": "Chile"
+          },
+          {
+            "name": "China"
+          },
+          {
+            "name": "Christmas Island"
+          },
+          {
+            "name": "Clipperton Island"
+          },
+          {
+            "name": "Cocos Islands"
+          },
+          {
+            "name": "Colombia"
+          },
+          {
+            "name": "Comoros"
+          },
+          {
+            "name": "Cook Islands"
+          },
+          {
+            "name": "Coral Sea Islands"
+          },
+          {
+            "name": "Costa Rica"
+          },
+          {
+            "name": "Cote d'Ivoire"
+          },
+          {
+            "name": "Croatia"
+          },
+          {
+            "name": "Cuba"
+          },
+          {
+            "name": "Curacao"
+          },
+          {
+            "name": "Cyprus"
+          },
+          {
+            "name": "Czechia"
+          },
+          {
+            "name": "Democratic Republic of the Congo"
+          },
+          {
+            "name": "Denmark"
+          },
+          {
+            "name": "Djibouti"
+          },
+          {
+            "name": "Dominica"
+          },
+          {
+            "name": "Dominican Republic"
+          },
+          {
+            "name": "Ecuador"
+          },
+          {
+            "name": "Egypt"
+          },
+          {
+            "name": "El Salvador"
+          },
+          {
+            "name": "Equatorial Guinea"
+          },
+          {
+            "name": "Eritrea"
+          },
+          {
+            "name": "Estonia"
+          },
+          {
+            "name": "Eswatini"
+          },
+          {
+            "name": "Ethiopia"
+          },
+          {
+            "name": "Europa Island"
+          },
+          {
+            "name": "Falkland Islands (Islas Malvinas)"
+          },
+          {
+            "name": "Faroe Islands"
+          },
+          {
+            "name": "Fiji"
+          },
+          {
+            "name": "Finland"
+          },
+          {
+            "name": "France"
+          },
+          {
+            "name": "French Guiana"
+          },
+          {
+            "name": "French Polynesia"
+          },
+          {
+            "name": "French Southern and Antarctic Lands"
+          },
+          {
+            "name": "Gabon"
+          },
+          {
+            "name": "Gambia"
+          },
+          {
+            "name": "Gaza Strip"
+          },
+          {
+            "name": "Georgia"
+          },
+          {
+            "name": "Germany"
+          },
+          {
+            "name": "Ghana"
+          },
+          {
+            "name": "Gibraltar"
+          },
+          {
+            "name": "Glorioso Islands"
+          },
+          {
+            "name": "Greece"
+          },
+          {
+            "name": "Greenland"
+          },
+          {
+            "name": "Grenada"
+          },
+          {
+            "name": "Guadeloupe"
+          },
+          {
+            "name": "Guam"
+          },
+          {
+            "name": "Guatemala"
+          },
+          {
+            "name": "Guernsey"
+          },
+          {
+            "name": "Guinea"
+          },
+          {
+            "name": "Guinea-Bissau"
+          },
+          {
+            "name": "Guyana"
+          },
+          {
+            "name": "Haiti"
+          },
+          {
+            "name": "Heard Island and McDonald Islands"
+          },
+          {
+            "name": "Honduras"
+          },
+          {
+            "name": "Hong Kong"
+          },
+          {
+            "name": "Howland Island"
+          },
+          {
+            "name": "Hungary"
+          },
+          {
+            "name": "Iceland"
+          },
+          {
+            "name": "India"
+          },
+          {
+            "name": "Indian Ocean"
+          },
+          {
+            "name": "Indonesia"
+          },
+          {
+            "name": "Iran"
+          },
+          {
+            "name": "Iraq"
+          },
+          {
+            "name": "Ireland"
+          },
+          {
+            "name": "Isle of Man"
+          },
+          {
+            "name": "Israel"
+          },
+          {
+            "name": "Italy"
+          },
+          {
+            "name": "Jamaica"
+          },
+          {
+            "name": "Jan Mayen"
+          },
+          {
+            "name": "Japan"
+          },
+          {
+            "name": "Jarvis Island"
+          },
+          {
+            "name": "Jersey"
+          },
+          {
+            "name": "Johnston Atoll"
+          },
+          {
+            "name": "Jordan"
+          },
+          {
+            "name": "Juan de Nova Island"
+          },
+          {
+            "name": "Kazakhstan"
+          },
+          {
+            "name": "Kenya"
+          },
+          {
+            "name": "Kerguelen Archipelago"
+          },
+          {
+            "name": "Kingman Reef"
+          },
+          {
+            "name": "Kiribati"
+          },
+          {
+            "name": "Kosovo"
+          },
+          {
+            "name": "Kuwait"
+          },
+          {
+            "name": "Kyrgyzstan"
+          },
+          {
+            "name": "Laos"
+          },
+          {
+            "name": "Latvia"
+          },
+          {
+            "name": "Lebanon"
+          },
+          {
+            "name": "Lesotho"
+          },
+          {
+            "name": "Liberia"
+          },
+          {
+            "name": "Libya"
+          },
+          {
+            "name": "Liechtenstein"
+          },
+          {
+            "name": "Line Islands"
+          },
+          {
+            "name": "Lithuania"
+          },
+          {
+            "name": "Luxembourg"
+          },
+          {
+            "name": "Macau"
+          },
+          {
+            "name": "Madagascar"
+          },
+          {
+            "name": "Malawi"
+          },
+          {
+            "name": "Malaysia"
+          },
+          {
+            "name": "Maldives"
+          },
+          {
+            "name": "Mali"
+          },
+          {
+            "name": "Malta"
+          },
+          {
+            "name": "Marshall Islands"
+          },
+          {
+            "name": "Martinique"
+          },
+          {
+            "name": "Mauritania"
+          },
+          {
+            "name": "Mauritius"
+          },
+          {
+            "name": "Mayotte"
+          },
+          {
+            "name": "Mediterranean Sea"
+          },
+          {
+            "name": "Mexico"
+          },
+          {
+            "name": "Micronesia, Federated States of"
+          },
+          {
+            "name": "Midway Islands"
+          },
+          {
+            "name": "Moldova"
+          },
+          {
+            "name": "Monaco"
+          },
+          {
+            "name": "Mongolia"
+          },
+          {
+            "name": "Montenegro"
+          },
+          {
+            "name": "Montserrat"
+          },
+          {
+            "name": "Morocco"
+          },
+          {
+            "name": "Mozambique"
+          },
+          {
+            "name": "Myanmar"
+          },
+          {
+            "name": "Namibia"
+          },
+          {
+            "name": "Nauru"
+          },
+          {
+            "name": "Navassa Island"
+          },
+          {
+            "name": "Nepal"
+          },
+          {
+            "name": "Netherlands"
+          },
+          {
+            "name": "New Caledonia"
+          },
+          {
+            "name": "New Zealand"
+          },
+          {
+            "name": "Nicaragua"
+          },
+          {
+            "name": "Niger"
+          },
+          {
+            "name": "Nigeria"
+          },
+          {
+            "name": "Niue"
+          },
+          {
+            "name": "Norfolk Island"
+          },
+          {
+            "name": "North Korea"
+          },
+          {
+            "name": "North Macedonia"
+          },
+          {
+            "name": "North Sea"
+          },
+          {
+            "name": "Northern Mariana Islands"
+          },
+          {
+            "name": "Norway"
+          },
+          {
+            "name": "Oman"
+          },
+          {
+            "name": "Pacific Ocean"
+          },
+          {
+            "name": "Pakistan"
+          },
+          {
+            "name": "Palau"
+          },
+          {
+            "name": "Palmyra Atoll"
+          },
+          {
+            "name": "Panama"
+          },
+          {
+            "name": "Papua New Guinea"
+          },
+          {
+            "name": "Paracel Islands"
+          },
+          {
+            "name": "Paraguay"
+          },
+          {
+            "name": "Peru"
+          },
+          {
+            "name": "Philippines"
+          },
+          {
+            "name": "Pitcairn Islands"
+          },
+          {
+            "name": "Poland"
+          },
+          {
+            "name": "Portugal"
+          },
+          {
+            "name": "Puerto Rico"
+          },
+          {
+            "name": "Qatar"
+          },
+          {
+            "name": "Republic of the Congo"
+          },
+          {
+            "name": "Reunion"
+          },
+          {
+            "name": "Romania"
+          },
+          {
+            "name": "Ross Sea"
+          },
+          {
+            "name": "Russia"
+          },
+          {
+            "name": "Rwanda"
+          },
+          {
+            "name": "Saint Barthelemy"
+          },
+          {
+            "name": "Saint Helena"
+          },
+          {
+            "name": "Saint Kitts and Nevis"
+          },
+          {
+            "name": "Saint Lucia"
+          },
+          {
+            "name": "Saint Martin"
+          },
+          {
+            "name": "Saint Pierre and Miquelon"
+          },
+          {
+            "name": "Saint Vincent and the Grenadines"
+          },
+          {
+            "name": "Samoa"
+          },
+          {
+            "name": "San Marino"
+          },
+          {
+            "name": "Sao Tome and Principe"
+          },
+          {
+            "name": "Saudi Arabia"
+          },
+          {
+            "name": "Senegal"
+          },
+          {
+            "name": "Serbia"
+          },
+          {
+            "name": "Seychelles"
+          },
+          {
+            "name": "Sierra Leone"
+          },
+          {
+            "name": "Singapore"
+          },
+          {
+            "name": "Sint Maarten"
+          },
+          {
+            "name": "Slovakia"
+          },
+          {
+            "name": "Slovenia"
+          },
+          {
+            "name": "Solomon Islands"
+          },
+          {
+            "name": "Somalia"
+          },
+          {
+            "name": "South Africa"
+          },
+          {
+            "name": "South Georgia and the South Sandwich Islands"
+          },
+          {
+            "name": "South Korea"
+          },
+          {
+            "name": "South Sudan"
+          },
+          {
+            "name": "Southern Ocean"
+          },
+          {
+            "name": "Spain"
+          },
+          {
+            "name": "Spratly Islands"
+          },
+          {
+            "name": "Sri Lanka"
+          },
+          {
+            "name": "State of Palestine"
+          },
+          {
+            "name": "Sudan"
+          },
+          {
+            "name": "Suriname"
+          },
+          {
+            "name": "Svalbard"
+          },
+          {
+            "name": "Sweden"
+          },
+          {
+            "name": "Switzerland"
+          },
+          {
+            "name": "Syria"
+          },
+          {
+            "name": "Taiwan"
+          },
+          {
+            "name": "Tajikistan"
+          },
+          {
+            "name": "Tanzania"
+          },
+          {
+            "name": "Tasman Sea"
+          },
+          {
+            "name": "Thailand"
+          },
+          {
+            "name": "Timor-Leste"
+          },
+          {
+            "name": "Togo"
+          },
+          {
+            "name": "Tokelau"
+          },
+          {
+            "name": "Tonga"
+          },
+          {
+            "name": "Trinidad and Tobago"
+          },
+          {
+            "name": "Tromelin Island"
+          },
+          {
+            "name": "Tunisia"
+          },
+          {
+            "name": "Turkey"
+          },
+          {
+            "name": "Turkmenistan"
+          },
+          {
+            "name": "Turks and Caicos Islands"
+          },
+          {
+            "name": "Tuvalu"
+          },
+          {
+            "name": "Uganda"
+          },
+          {
+            "name": "Ukraine"
+          },
+          {
+            "name": "United Arab Emirates"
+          },
+          {
+            "name": "United Kingdom"
+          },
+          {
+            "name": "Uruguay"
+          },
+          {
+            "name": "USA"
+          },
+          {
+            "name": "Uzbekistan"
+          },
+          {
+            "name": "Vanuatu"
+          },
+          {
+            "name": "Venezuela"
+          },
+          {
+            "name": "Viet Nam"
+          },
+          {
+            "name": "Virgin Islands"
+          },
+          {
+            "name": "Wake Island"
+          },
+          {
+            "name": "Wallis and Futuna"
+          },
+          {
+            "name": "West Bank"
+          },
+          {
+            "name": "Western Sahara"
+          },
+          {
+            "name": "Yemen"
+          },
+          {
+            "name": "Zambia"
+          },
+          {
+            "name": "Zimbabwe"
+          },
+          {
+            "name": "Belgian Congo"
+          },
+          {
+            "name": "British Guiana"
+          },
+          {
+            "name": "Burma"
+          },
+          {
+            "name": "Czechoslovakia"
+          },
+          {
+            "name": "Czech Republic"
+          },
+          {
+            "name": "East Timor"
+          },
+          {
+            "name": "Korea"
+          },
+          {
+            "name": "Macedonia"
+          },
+          {
+            "name": "Micronesia"
+          },
+          {
+            "name": "Netherlands Antilles"
+          },
+          {
+            "name": "Serbia and Montenegro"
+          },
+          {
+            "name": "Siam"
+          },
+          {
+            "name": "Swaziland"
+          },
+          {
+            "name": "The former Yugoslav Republic of Macedonia"
+          },
+          {
+            "name": "USSR"
+          },
+          {
+            "name": "Yugoslavia"
+          },
+          {
+            "name": "Zaire"
+          }
+        ],
+        "required": true
+      },
+      {
+        "definition": "The date on which the sample was collected.",
+        "displayName": "Collection date",
+        "example": "2020-03-15",
+        "guidance": "Please format the date as `YYYY-MM-DD`. If day is unknown, use `YYYY-MM` (e.g., `2020-03`). If both day and month are unknown, use `YYYY` (e.g., `2020`). If only a range is known please supply the range in ISO format `date_lower/date_upper` where `date_lower` and `date_upper` are in the format `YYYY-MM-DD`, `YYYY-MM` or `YYYY`. Please provide at least a year.",
+        "name": "sampleCollectionDate",
+        "required": true
+      },
+      {
+        "definition": "A de-identified ID for the sample the sequence was obtained from.",
+        "desired": true,
+        "displayName": "Isolate name",
+        "example": "Isolate 1",
+        "name": "specimenCollectorSampleId"
+      }
+    ],
+    "loadSequencesAutomatically": true,
+    "metadata": [
+      {
+        "definition": "The Loculus `accession` and `version`, uniquely identifying the specific version of the sequence record (e.g. `LOC_000001.1`).",
+        "displayName": "Accession version",
+        "header": "Other",
+        "hideOnSequenceDetailsPage": true,
+        "includeInDownloadsByDefault": true,
+        "name": "accessionVersion",
+        "notSearchable": true,
+        "type": "string"
+      },
+      {
+        "definition": "A unique identifier assigned to the sequence record by Loculus (e.g. `LOC_000001`).",
+        "displayName": "Accession",
+        "header": "Other",
+        "hideOnSequenceDetailsPage": true,
+        "name": "accession",
+        "notSearchable": true,
+        "type": "string"
+      },
+      {
+        "definition": "The version number of the sequence record, incremented each time the sequence is revised.",
+        "displayName": "Version",
+        "header": "Other",
+        "hideOnSequenceDetailsPage": true,
+        "name": "version",
+        "type": "int"
+      },
+      {
+        "definition": "The sample identifier provided by the submitter.",
+        "displayName": "Submission ID",
+        "header": "Submission details",
+        "includeInDownloadsByDefault": true,
+        "name": "submissionId",
+        "orderOnDetailsPage": 5000,
+        "substringSearch": true,
+        "type": "string"
+      },
+      {
+        "autocomplete": true,
+        "definition": "Indicator of whether the sequence record is revoked.",
+        "displayName": "Is revocation",
+        "header": "Other",
+        "hideOnSequenceDetailsPage": true,
+        "name": "isRevocation",
+        "type": "boolean"
+      },
+      {
+        "autocomplete": true,
+        "definition": "Name of the Loculus user who submitted the sequence record.",
+        "displayName": "Submitter",
+        "header": "Submission details",
+        "hideOnSequenceDetailsPage": true,
+        "name": "submitter",
+        "orderOnDetailsPage": 5010,
+        "type": "string"
+      },
+      {
+        "autocomplete": true,
+        "customDisplay": {
+          "displayGroup": "group",
+          "type": "submittingGroup"
+        },
+        "definition": "Name of the group that submitted the sequence record.",
+        "displayName": "Submitting group",
+        "header": "Submission details",
+        "includeInDownloadsByDefault": true,
+        "name": "groupName",
+        "orderOnDetailsPage": 5020,
+        "type": "string"
+      },
+      {
+        "autocomplete": true,
+        "customDisplay": {
+          "displayGroup": "group",
+          "type": "submittingGroup"
+        },
+        "definition": "Numeric ID of the group that submitted the sequence record.",
+        "displayName": "Submitting group (numeric ID)",
+        "header": "Submission details",
+        "name": "groupId",
+        "orderOnDetailsPage": 5030,
+        "type": "int"
+      },
+      {
+        "definition": "Date and time on which the sequence record was submitted to Loculus.",
+        "displayName": "Date submitted",
+        "header": "Submission details",
+        "name": "submittedAtTimestamp",
+        "orderOnDetailsPage": 5040,
+        "rangeSearch": true,
+        "type": "timestamp"
+      },
+      {
+        "autocomplete": true,
+        "definition": "Date on which the sequence record was submitted to Loculus.",
+        "displayName": "Date submitted (exact)",
+        "header": "Other",
+        "hideOnSequenceDetailsPage": true,
+        "name": "submittedDate",
+        "orderOnDetailsPage": 5050,
+        "type": "string"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date and time on which the sequence record was released on Loculus.",
+        "displayName": "Date released",
+        "header": "Submission details",
+        "name": "releasedAtTimestamp",
+        "orderOnDetailsPage": 5060,
+        "rangeSearch": true,
+        "type": "timestamp"
+      },
+      {
+        "autocomplete": true,
+        "columnWidth": 100,
+        "definition": "Date on which the sequence record was released on Loculus.",
+        "displayName": "Date released (exact)",
+        "header": "Other",
+        "hideOnSequenceDetailsPage": true,
+        "name": "releasedDate",
+        "orderOnDetailsPage": 5070,
+        "type": "string"
+      },
+      {
+        "autocomplete": true,
+        "customDisplay": {
+          "type": "dataUseTerms"
+        },
+        "definition": "The terms under which the sequence record may be used; either `OPEN` or `RESTRICTED`.",
+        "displayName": "Data use terms",
+        "header": "Data use terms",
+        "includeInDownloadsByDefault": true,
+        "initiallyVisible": true,
+        "name": "dataUseTerms",
+        "orderInSearchDisplay": 10,
+        "orderOnDetailsPage": 610,
+        "type": "string"
+      },
+      {
+        "definition": "The date until which the sequence record is restricted use.",
+        "displayName": "Data use terms restricted until",
+        "header": "Data use terms",
+        "hideOnSequenceDetailsPage": true,
+        "name": "dataUseTermsRestrictedUntil",
+        "orderOnDetailsPage": 620,
+        "rangeSearch": true,
+        "type": "date"
+      },
+      {
+        "definition": "The date on which the sequence record transitioned from restricted to open access.",
+        "displayName": "Date data became open",
+        "header": "Data use terms",
+        "hideOnSequenceDetailsPage": true,
+        "name": "dataBecameOpenAt",
+        "orderOnDetailsPage": 625,
+        "rangeSearch": true,
+        "type": "date"
+      },
+      {
+        "customDisplay": {
+          "type": "link",
+          "url": "__value__"
+        },
+        "definition": "Link to the full text of the data use terms applicable to the sequence record.",
+        "displayName": "Data use terms URL",
+        "header": "Data use terms",
+        "includeInDownloadsByDefault": true,
+        "name": "dataUseTermsUrl",
+        "notSearchable": true,
+        "orderOnDetailsPage": 630,
+        "type": "string"
+      },
+      {
+        "autocomplete": true,
+        "definition": "Indicates whether this is the latest version of the sequence record (`LATEST_VERSION`), an earlier version (`REVISED`), or has been revoked (`REVOKED`).",
+        "displayName": "Version status",
+        "header": "Other",
+        "hideOnSequenceDetailsPage": true,
+        "name": "versionStatus",
+        "type": "string"
+      },
+      {
+        "definition": "Reason for revising sequences, or other general comments concerning a specific version.",
+        "displayName": "Version comment",
+        "header": "Submission details",
+        "name": "versionComment",
+        "orderOnDetailsPage": 5000,
+        "type": "string"
+      },
+      {
+        "definition": "The version of the processing pipeline used to process the sequence record.",
+        "displayName": "Pipeline version",
+        "header": "Other",
+        "hideOnSequenceDetailsPage": true,
+        "name": "pipelineVersion",
+        "notSearchable": true,
+        "type": "int"
+      },
+      {
+        "definition": "List of author affiliations.",
+        "displayName": "Author affiliations",
+        "header": "Authors",
+        "includeInDownloadsByDefault": true,
+        "name": "authorAffiliations",
+        "orderOnDetailsPage": 820,
+        "substringSearch": true,
+        "type": "string"
+      },
+      {
+        "columnWidth": 140,
+        "definition": "List of authors who should be listed on the sample.",
+        "displayName": "Authors",
+        "header": "Authors",
+        "includeInDownloadsByDefault": true,
+        "name": "authors",
+        "order": 40,
+        "orderOnDetailsPage": 800,
+        "substringSearch": true,
+        "type": "authors"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg1",
+          "label": "Length seg1",
+          "type": "lengthCompleteness"
+        },
+        "definition": "Fraction of reference positions covered by the sequence (0.0 to 1.0).",
+        "displayName": "Completeness seg1",
+        "header": "Alignment and QC metrics seg1",
+        "isSequenceFilter": true,
+        "name": "completeness_seg1",
+        "orderOnDetailsPage": 2860,
+        "percentage": true,
+        "rangeSearch": true,
+        "relatesToSegment": "seg1",
+        "type": "float"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg2",
+          "label": "Length seg2",
+          "type": "lengthCompleteness"
+        },
+        "definition": "Fraction of reference positions covered by the sequence (0.0 to 1.0).",
+        "displayName": "Completeness seg2",
+        "header": "Alignment and QC metrics seg2",
+        "isSequenceFilter": true,
+        "name": "completeness_seg2",
+        "orderOnDetailsPage": 2860,
+        "percentage": true,
+        "rangeSearch": true,
+        "relatesToSegment": "seg2",
+        "type": "float"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg3",
+          "label": "Length seg3",
+          "type": "lengthCompleteness"
+        },
+        "definition": "Fraction of reference positions covered by the sequence (0.0 to 1.0).",
+        "displayName": "Completeness seg3",
+        "header": "Alignment and QC metrics seg3",
+        "isSequenceFilter": true,
+        "name": "completeness_seg3",
+        "orderOnDetailsPage": 2860,
+        "percentage": true,
+        "rangeSearch": true,
+        "relatesToSegment": "seg3",
+        "type": "float"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg4",
+          "label": "Length seg4",
+          "type": "lengthCompleteness"
+        },
+        "definition": "Fraction of reference positions covered by the sequence (0.0 to 1.0).",
+        "displayName": "Completeness seg4",
+        "header": "Alignment and QC metrics seg4",
+        "isSequenceFilter": true,
+        "name": "completeness_seg4",
+        "orderOnDetailsPage": 2860,
+        "percentage": true,
+        "rangeSearch": true,
+        "relatesToSegment": "seg4",
+        "type": "float"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg5",
+          "label": "Length seg5",
+          "type": "lengthCompleteness"
+        },
+        "definition": "Fraction of reference positions covered by the sequence (0.0 to 1.0).",
+        "displayName": "Completeness seg5",
+        "header": "Alignment and QC metrics seg5",
+        "isSequenceFilter": true,
+        "name": "completeness_seg5",
+        "orderOnDetailsPage": 2860,
+        "percentage": true,
+        "rangeSearch": true,
+        "relatesToSegment": "seg5",
+        "type": "float"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg6",
+          "label": "Length seg6",
+          "type": "lengthCompleteness"
+        },
+        "definition": "Fraction of reference positions covered by the sequence (0.0 to 1.0).",
+        "displayName": "Completeness seg6",
+        "header": "Alignment and QC metrics seg6",
+        "isSequenceFilter": true,
+        "name": "completeness_seg6",
+        "orderOnDetailsPage": 2860,
+        "percentage": true,
+        "rangeSearch": true,
+        "relatesToSegment": "seg6",
+        "type": "float"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg7",
+          "label": "Length seg7",
+          "type": "lengthCompleteness"
+        },
+        "definition": "Fraction of reference positions covered by the sequence (0.0 to 1.0).",
+        "displayName": "Completeness seg7",
+        "header": "Alignment and QC metrics seg7",
+        "isSequenceFilter": true,
+        "name": "completeness_seg7",
+        "orderOnDetailsPage": 2860,
+        "percentage": true,
+        "rangeSearch": true,
+        "relatesToSegment": "seg7",
+        "type": "float"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg8",
+          "label": "Length seg8",
+          "type": "lengthCompleteness"
+        },
+        "definition": "Fraction of reference positions covered by the sequence (0.0 to 1.0).",
+        "displayName": "Completeness seg8",
+        "header": "Alignment and QC metrics seg8",
+        "isSequenceFilter": true,
+        "name": "completeness_seg8",
+        "orderOnDetailsPage": 2860,
+        "percentage": true,
+        "rangeSearch": true,
+        "relatesToSegment": "seg8",
+        "type": "float"
+      },
+      {
+        "definition": "Frame-shifting insertions or deletions detected in CDS regions.",
+        "displayName": "Frame shifts seg1",
+        "header": "Alignment and QC metrics seg1",
+        "isSequenceFilter": true,
+        "name": "frameShifts_seg1",
+        "orderOnDetailsPage": 2840,
+        "relatesToSegment": "seg1",
+        "type": "string"
+      },
+      {
+        "definition": "Frame-shifting insertions or deletions detected in CDS regions.",
+        "displayName": "Frame shifts seg2",
+        "header": "Alignment and QC metrics seg2",
+        "isSequenceFilter": true,
+        "name": "frameShifts_seg2",
+        "orderOnDetailsPage": 2840,
+        "relatesToSegment": "seg2",
+        "type": "string"
+      },
+      {
+        "definition": "Frame-shifting insertions or deletions detected in CDS regions.",
+        "displayName": "Frame shifts seg3",
+        "header": "Alignment and QC metrics seg3",
+        "isSequenceFilter": true,
+        "name": "frameShifts_seg3",
+        "orderOnDetailsPage": 2840,
+        "relatesToSegment": "seg3",
+        "type": "string"
+      },
+      {
+        "definition": "Frame-shifting insertions or deletions detected in CDS regions.",
+        "displayName": "Frame shifts seg4",
+        "header": "Alignment and QC metrics seg4",
+        "isSequenceFilter": true,
+        "name": "frameShifts_seg4",
+        "orderOnDetailsPage": 2840,
+        "relatesToSegment": "seg4",
+        "type": "string"
+      },
+      {
+        "definition": "Frame-shifting insertions or deletions detected in CDS regions.",
+        "displayName": "Frame shifts seg5",
+        "header": "Alignment and QC metrics seg5",
+        "isSequenceFilter": true,
+        "name": "frameShifts_seg5",
+        "orderOnDetailsPage": 2840,
+        "relatesToSegment": "seg5",
+        "type": "string"
+      },
+      {
+        "definition": "Frame-shifting insertions or deletions detected in CDS regions.",
+        "displayName": "Frame shifts seg6",
+        "header": "Alignment and QC metrics seg6",
+        "isSequenceFilter": true,
+        "name": "frameShifts_seg6",
+        "orderOnDetailsPage": 2840,
+        "relatesToSegment": "seg6",
+        "type": "string"
+      },
+      {
+        "definition": "Frame-shifting insertions or deletions detected in CDS regions.",
+        "displayName": "Frame shifts seg7",
+        "header": "Alignment and QC metrics seg7",
+        "isSequenceFilter": true,
+        "name": "frameShifts_seg7",
+        "orderOnDetailsPage": 2840,
+        "relatesToSegment": "seg7",
+        "type": "string"
+      },
+      {
+        "definition": "Frame-shifting insertions or deletions detected in CDS regions.",
+        "displayName": "Frame shifts seg8",
+        "header": "Alignment and QC metrics seg8",
+        "isSequenceFilter": true,
+        "name": "frameShifts_seg8",
+        "orderOnDetailsPage": 2840,
+        "relatesToSegment": "seg8",
+        "type": "string"
+      },
+      {
+        "autocomplete": true,
+        "customDisplay": {
+          "displayGroup": "geoLocation",
+          "label": "Sampling location",
+          "type": "geoLocation"
+        },
+        "definition": "A local administrative region from which the sample was collected (ex: Province, State, Canton).",
+        "displayName": "Collection subdivision level 1",
+        "header": "Sample details",
+        "initiallyVisible": true,
+        "name": "geoLocAdmin1",
+        "order": 30,
+        "orderOnDetailsPage": 460,
+        "type": "string"
+      },
+      {
+        "autocomplete": true,
+        "customDisplay": {
+          "displayGroup": "geoLocation",
+          "label": "Sampling location",
+          "type": "geoLocation"
+        },
+        "definition": "The country from which the sample was collected.",
+        "displayName": "Collection country",
+        "header": "Sample details",
+        "includeInDownloadsByDefault": true,
+        "initiallyVisible": true,
+        "name": "geoLocCountry",
+        "order": 20,
+        "orderOnDetailsPage": 400,
+        "type": "string"
+      },
+      {
+        "autocomplete": true,
+        "customDisplay": {
+          "displayGroup": "hostSpecies",
+          "label": "Host",
+          "type": "hostSpecies"
+        },
+        "definition": "The scientific name of the host from which the sample was collected.",
+        "displayName": "Host name - scientific",
+        "header": "Host",
+        "name": "hostNameScientific",
+        "orderOnDetailsPage": 1560,
+        "type": "string"
+      },
+      {
+        "autocomplete": true,
+        "customDisplay": {
+          "displayGroup": "hostSpecies",
+          "label": "Host",
+          "type": "hostSpecies"
+        },
+        "definition": "Taxon ID for the host.",
+        "displayName": "Host species",
+        "header": "Host",
+        "name": "hostTaxonId",
+        "orderOnDetailsPage": 1540,
+        "type": "string"
+      },
+      {
+        "definition": "The base accession assigned by the INSDC (GenBank/ENA/DDBJ) for this sequence, without the version number.",
+        "displayName": "INSDC accession base seg1",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcAccessionBase_seg1",
+        "relatesToSegment": "seg1",
+        "type": "string"
+      },
+      {
+        "definition": "The base accession assigned by the INSDC (GenBank/ENA/DDBJ) for this sequence, without the version number.",
+        "displayName": "INSDC accession base seg2",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcAccessionBase_seg2",
+        "relatesToSegment": "seg2",
+        "type": "string"
+      },
+      {
+        "definition": "The base accession assigned by the INSDC (GenBank/ENA/DDBJ) for this sequence, without the version number.",
+        "displayName": "INSDC accession base seg3",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcAccessionBase_seg3",
+        "relatesToSegment": "seg3",
+        "type": "string"
+      },
+      {
+        "definition": "The base accession assigned by the INSDC (GenBank/ENA/DDBJ) for this sequence, without the version number.",
+        "displayName": "INSDC accession base seg4",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcAccessionBase_seg4",
+        "relatesToSegment": "seg4",
+        "type": "string"
+      },
+      {
+        "definition": "The base accession assigned by the INSDC (GenBank/ENA/DDBJ) for this sequence, without the version number.",
+        "displayName": "INSDC accession base seg5",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcAccessionBase_seg5",
+        "relatesToSegment": "seg5",
+        "type": "string"
+      },
+      {
+        "definition": "The base accession assigned by the INSDC (GenBank/ENA/DDBJ) for this sequence, without the version number.",
+        "displayName": "INSDC accession base seg6",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcAccessionBase_seg6",
+        "relatesToSegment": "seg6",
+        "type": "string"
+      },
+      {
+        "definition": "The base accession assigned by the INSDC (GenBank/ENA/DDBJ) for this sequence, without the version number.",
+        "displayName": "INSDC accession base seg7",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcAccessionBase_seg7",
+        "relatesToSegment": "seg7",
+        "type": "string"
+      },
+      {
+        "definition": "The base accession assigned by the INSDC (GenBank/ENA/DDBJ) for this sequence, without the version number.",
+        "displayName": "INSDC accession base seg8",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcAccessionBase_seg8",
+        "relatesToSegment": "seg8",
+        "type": "string"
+      },
+      {
+        "customDisplay": {
+          "linkMenuItems": [
+            {
+              "name": "View in NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/__value__"
+            },
+            {
+              "name": "View in ENA",
+              "url": "https://www.ebi.ac.uk/ena/browser/view/__value__"
+            },
+            {
+              "name": "View in DDBJ",
+              "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/__value__"
+            }
+          ],
+          "type": "linkWithMenu"
+        },
+        "definition": "The full versioned INSDC accession (base accession plus version number), searchable across GenBank, ENA, and DDBJ.",
+        "displayName": "INSDC accession seg1",
+        "header": "INSDC",
+        "name": "insdcAccessionFull_seg1",
+        "orderOnDetailsPage": 1040,
+        "relatesToSegment": "seg1",
+        "type": "string"
+      },
+      {
+        "customDisplay": {
+          "linkMenuItems": [
+            {
+              "name": "View in NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/__value__"
+            },
+            {
+              "name": "View in ENA",
+              "url": "https://www.ebi.ac.uk/ena/browser/view/__value__"
+            },
+            {
+              "name": "View in DDBJ",
+              "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/__value__"
+            }
+          ],
+          "type": "linkWithMenu"
+        },
+        "definition": "The full versioned INSDC accession (base accession plus version number), searchable across GenBank, ENA, and DDBJ.",
+        "displayName": "INSDC accession seg2",
+        "header": "INSDC",
+        "name": "insdcAccessionFull_seg2",
+        "orderOnDetailsPage": 1040,
+        "relatesToSegment": "seg2",
+        "type": "string"
+      },
+      {
+        "customDisplay": {
+          "linkMenuItems": [
+            {
+              "name": "View in NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/__value__"
+            },
+            {
+              "name": "View in ENA",
+              "url": "https://www.ebi.ac.uk/ena/browser/view/__value__"
+            },
+            {
+              "name": "View in DDBJ",
+              "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/__value__"
+            }
+          ],
+          "type": "linkWithMenu"
+        },
+        "definition": "The full versioned INSDC accession (base accession plus version number), searchable across GenBank, ENA, and DDBJ.",
+        "displayName": "INSDC accession seg3",
+        "header": "INSDC",
+        "name": "insdcAccessionFull_seg3",
+        "orderOnDetailsPage": 1040,
+        "relatesToSegment": "seg3",
+        "type": "string"
+      },
+      {
+        "customDisplay": {
+          "linkMenuItems": [
+            {
+              "name": "View in NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/__value__"
+            },
+            {
+              "name": "View in ENA",
+              "url": "https://www.ebi.ac.uk/ena/browser/view/__value__"
+            },
+            {
+              "name": "View in DDBJ",
+              "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/__value__"
+            }
+          ],
+          "type": "linkWithMenu"
+        },
+        "definition": "The full versioned INSDC accession (base accession plus version number), searchable across GenBank, ENA, and DDBJ.",
+        "displayName": "INSDC accession seg4",
+        "header": "INSDC",
+        "name": "insdcAccessionFull_seg4",
+        "orderOnDetailsPage": 1040,
+        "relatesToSegment": "seg4",
+        "type": "string"
+      },
+      {
+        "customDisplay": {
+          "linkMenuItems": [
+            {
+              "name": "View in NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/__value__"
+            },
+            {
+              "name": "View in ENA",
+              "url": "https://www.ebi.ac.uk/ena/browser/view/__value__"
+            },
+            {
+              "name": "View in DDBJ",
+              "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/__value__"
+            }
+          ],
+          "type": "linkWithMenu"
+        },
+        "definition": "The full versioned INSDC accession (base accession plus version number), searchable across GenBank, ENA, and DDBJ.",
+        "displayName": "INSDC accession seg5",
+        "header": "INSDC",
+        "name": "insdcAccessionFull_seg5",
+        "orderOnDetailsPage": 1040,
+        "relatesToSegment": "seg5",
+        "type": "string"
+      },
+      {
+        "customDisplay": {
+          "linkMenuItems": [
+            {
+              "name": "View in NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/__value__"
+            },
+            {
+              "name": "View in ENA",
+              "url": "https://www.ebi.ac.uk/ena/browser/view/__value__"
+            },
+            {
+              "name": "View in DDBJ",
+              "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/__value__"
+            }
+          ],
+          "type": "linkWithMenu"
+        },
+        "definition": "The full versioned INSDC accession (base accession plus version number), searchable across GenBank, ENA, and DDBJ.",
+        "displayName": "INSDC accession seg6",
+        "header": "INSDC",
+        "name": "insdcAccessionFull_seg6",
+        "orderOnDetailsPage": 1040,
+        "relatesToSegment": "seg6",
+        "type": "string"
+      },
+      {
+        "customDisplay": {
+          "linkMenuItems": [
+            {
+              "name": "View in NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/__value__"
+            },
+            {
+              "name": "View in ENA",
+              "url": "https://www.ebi.ac.uk/ena/browser/view/__value__"
+            },
+            {
+              "name": "View in DDBJ",
+              "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/__value__"
+            }
+          ],
+          "type": "linkWithMenu"
+        },
+        "definition": "The full versioned INSDC accession (base accession plus version number), searchable across GenBank, ENA, and DDBJ.",
+        "displayName": "INSDC accession seg7",
+        "header": "INSDC",
+        "name": "insdcAccessionFull_seg7",
+        "orderOnDetailsPage": 1040,
+        "relatesToSegment": "seg7",
+        "type": "string"
+      },
+      {
+        "customDisplay": {
+          "linkMenuItems": [
+            {
+              "name": "View in NCBI",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/__value__"
+            },
+            {
+              "name": "View in ENA",
+              "url": "https://www.ebi.ac.uk/ena/browser/view/__value__"
+            },
+            {
+              "name": "View in DDBJ",
+              "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/__value__"
+            }
+          ],
+          "type": "linkWithMenu"
+        },
+        "definition": "The full versioned INSDC accession (base accession plus version number), searchable across GenBank, ENA, and DDBJ.",
+        "displayName": "INSDC accession seg8",
+        "header": "INSDC",
+        "name": "insdcAccessionFull_seg8",
+        "orderOnDetailsPage": 1040,
+        "relatesToSegment": "seg8",
+        "type": "string"
+      },
+      {
+        "definition": "The version number of the INSDC record, incremented each time the sequence record is updated.",
+        "displayName": "INSDC version seg1",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcVersion_seg1",
+        "relatesToSegment": "seg1",
+        "type": "int"
+      },
+      {
+        "definition": "The version number of the INSDC record, incremented each time the sequence record is updated.",
+        "displayName": "INSDC version seg2",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcVersion_seg2",
+        "relatesToSegment": "seg2",
+        "type": "int"
+      },
+      {
+        "definition": "The version number of the INSDC record, incremented each time the sequence record is updated.",
+        "displayName": "INSDC version seg3",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcVersion_seg3",
+        "relatesToSegment": "seg3",
+        "type": "int"
+      },
+      {
+        "definition": "The version number of the INSDC record, incremented each time the sequence record is updated.",
+        "displayName": "INSDC version seg4",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcVersion_seg4",
+        "relatesToSegment": "seg4",
+        "type": "int"
+      },
+      {
+        "definition": "The version number of the INSDC record, incremented each time the sequence record is updated.",
+        "displayName": "INSDC version seg5",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcVersion_seg5",
+        "relatesToSegment": "seg5",
+        "type": "int"
+      },
+      {
+        "definition": "The version number of the INSDC record, incremented each time the sequence record is updated.",
+        "displayName": "INSDC version seg6",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcVersion_seg6",
+        "relatesToSegment": "seg6",
+        "type": "int"
+      },
+      {
+        "definition": "The version number of the INSDC record, incremented each time the sequence record is updated.",
+        "displayName": "INSDC version seg7",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcVersion_seg7",
+        "relatesToSegment": "seg7",
+        "type": "int"
+      },
+      {
+        "definition": "The version number of the INSDC record, incremented each time the sequence record is updated.",
+        "displayName": "INSDC version seg8",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "insdcVersion_seg8",
+        "relatesToSegment": "seg8",
+        "type": "int"
+      },
+      {
+        "autocomplete": true,
+        "definition": "If a laboratory host (e.g. cultured cell line) was used to propagate the sample.",
+        "displayName": "Lab host",
+        "header": "Host",
+        "name": "isLabHost",
+        "orderOnDetailsPage": 1920,
+        "type": "boolean"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg1",
+          "label": "Length seg1",
+          "type": "lengthCompleteness"
+        },
+        "definition": "The length of the sequence.",
+        "displayName": "Length seg1",
+        "header": "Alignment and QC metrics seg1",
+        "initiallyVisible": true,
+        "isSequenceFilter": true,
+        "name": "length_seg1",
+        "orderOnDetailsPage": 2700,
+        "rangeSearch": true,
+        "relatesToSegment": "seg1",
+        "type": "int"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg2",
+          "label": "Length seg2",
+          "type": "lengthCompleteness"
+        },
+        "definition": "The length of the sequence.",
+        "displayName": "Length seg2",
+        "header": "Alignment and QC metrics seg2",
+        "initiallyVisible": true,
+        "isSequenceFilter": true,
+        "name": "length_seg2",
+        "orderOnDetailsPage": 2700,
+        "rangeSearch": true,
+        "relatesToSegment": "seg2",
+        "type": "int"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg3",
+          "label": "Length seg3",
+          "type": "lengthCompleteness"
+        },
+        "definition": "The length of the sequence.",
+        "displayName": "Length seg3",
+        "header": "Alignment and QC metrics seg3",
+        "initiallyVisible": true,
+        "isSequenceFilter": true,
+        "name": "length_seg3",
+        "orderOnDetailsPage": 2700,
+        "rangeSearch": true,
+        "relatesToSegment": "seg3",
+        "type": "int"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg4",
+          "label": "Length seg4",
+          "type": "lengthCompleteness"
+        },
+        "definition": "The length of the sequence.",
+        "displayName": "Length seg4",
+        "header": "Alignment and QC metrics seg4",
+        "initiallyVisible": true,
+        "isSequenceFilter": true,
+        "name": "length_seg4",
+        "orderOnDetailsPage": 2700,
+        "rangeSearch": true,
+        "relatesToSegment": "seg4",
+        "type": "int"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg5",
+          "label": "Length seg5",
+          "type": "lengthCompleteness"
+        },
+        "definition": "The length of the sequence.",
+        "displayName": "Length seg5",
+        "header": "Alignment and QC metrics seg5",
+        "initiallyVisible": true,
+        "isSequenceFilter": true,
+        "name": "length_seg5",
+        "orderOnDetailsPage": 2700,
+        "rangeSearch": true,
+        "relatesToSegment": "seg5",
+        "type": "int"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg6",
+          "label": "Length seg6",
+          "type": "lengthCompleteness"
+        },
+        "definition": "The length of the sequence.",
+        "displayName": "Length seg6",
+        "header": "Alignment and QC metrics seg6",
+        "initiallyVisible": true,
+        "isSequenceFilter": true,
+        "name": "length_seg6",
+        "orderOnDetailsPage": 2700,
+        "rangeSearch": true,
+        "relatesToSegment": "seg6",
+        "type": "int"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg7",
+          "label": "Length seg7",
+          "type": "lengthCompleteness"
+        },
+        "definition": "The length of the sequence.",
+        "displayName": "Length seg7",
+        "header": "Alignment and QC metrics seg7",
+        "initiallyVisible": true,
+        "isSequenceFilter": true,
+        "name": "length_seg7",
+        "orderOnDetailsPage": 2700,
+        "rangeSearch": true,
+        "relatesToSegment": "seg7",
+        "type": "int"
+      },
+      {
+        "customDisplay": {
+          "displayGroup": "lengthCompleteness_seg8",
+          "label": "Length seg8",
+          "type": "lengthCompleteness"
+        },
+        "definition": "The length of the sequence.",
+        "displayName": "Length seg8",
+        "header": "Alignment and QC metrics seg8",
+        "initiallyVisible": true,
+        "isSequenceFilter": true,
+        "name": "length_seg8",
+        "orderOnDetailsPage": 2700,
+        "rangeSearch": true,
+        "relatesToSegment": "seg8",
+        "type": "int"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date the viral nucleotide accession was first released on the INSDC.",
+        "displayName": "NCBI release date",
+        "header": "INSDC",
+        "name": "ncbiReleaseDate",
+        "orderOnDetailsPage": 1000,
+        "rangeSearch": true,
+        "type": "date"
+      },
+      {
+        "autocomplete": true,
+        "definition": "Indicates if the source of the viral nucleotide record is from a GenBank submitter or from NCBI-derived curation (RefSeq).",
+        "displayName": "NCBI source DB",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "ncbiSourceDb",
+        "type": "string"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date the viral nucleotide accession was last updated on the INSDC.",
+        "displayName": "NCBI update date seg1",
+        "header": "INSDC",
+        "name": "ncbiUpdateDate_seg1",
+        "orderOnDetailsPage": 1020,
+        "rangeSearch": true,
+        "relatesToSegment": "seg1",
+        "type": "date"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date the viral nucleotide accession was last updated on the INSDC.",
+        "displayName": "NCBI update date seg2",
+        "header": "INSDC",
+        "name": "ncbiUpdateDate_seg2",
+        "orderOnDetailsPage": 1020,
+        "rangeSearch": true,
+        "relatesToSegment": "seg2",
+        "type": "date"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date the viral nucleotide accession was last updated on the INSDC.",
+        "displayName": "NCBI update date seg3",
+        "header": "INSDC",
+        "name": "ncbiUpdateDate_seg3",
+        "orderOnDetailsPage": 1020,
+        "rangeSearch": true,
+        "relatesToSegment": "seg3",
+        "type": "date"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date the viral nucleotide accession was last updated on the INSDC.",
+        "displayName": "NCBI update date seg4",
+        "header": "INSDC",
+        "name": "ncbiUpdateDate_seg4",
+        "orderOnDetailsPage": 1020,
+        "rangeSearch": true,
+        "relatesToSegment": "seg4",
+        "type": "date"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date the viral nucleotide accession was last updated on the INSDC.",
+        "displayName": "NCBI update date seg5",
+        "header": "INSDC",
+        "name": "ncbiUpdateDate_seg5",
+        "orderOnDetailsPage": 1020,
+        "rangeSearch": true,
+        "relatesToSegment": "seg5",
+        "type": "date"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date the viral nucleotide accession was last updated on the INSDC.",
+        "displayName": "NCBI update date seg6",
+        "header": "INSDC",
+        "name": "ncbiUpdateDate_seg6",
+        "orderOnDetailsPage": 1020,
+        "rangeSearch": true,
+        "relatesToSegment": "seg6",
+        "type": "date"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date the viral nucleotide accession was last updated on the INSDC.",
+        "displayName": "NCBI update date seg7",
+        "header": "INSDC",
+        "name": "ncbiUpdateDate_seg7",
+        "orderOnDetailsPage": 1020,
+        "rangeSearch": true,
+        "relatesToSegment": "seg7",
+        "type": "date"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "Date the viral nucleotide accession was last updated on the INSDC.",
+        "displayName": "NCBI update date seg8",
+        "header": "INSDC",
+        "name": "ncbiUpdateDate_seg8",
+        "orderOnDetailsPage": 1020,
+        "rangeSearch": true,
+        "relatesToSegment": "seg8",
+        "type": "date"
+      },
+      {
+        "autocomplete": true,
+        "definition": "Scientific name for the organism from the NCBI Taxonomy.",
+        "displayName": "NCBI Virus name",
+        "header": "INSDC",
+        "hideOnSequenceDetailsPage": true,
+        "name": "ncbiVirusName",
+        "type": "string"
+      },
+      {
+        "columnWidth": 100,
+        "definition": "The date on which the sample was collected.",
+        "displayName": "Collection date",
+        "header": "Sample details",
+        "includeInDownloadsByDefault": true,
+        "name": "sampleCollectionDate",
+        "notSearchable": true,
+        "order": 10,
+        "orderOnDetailsPage": 200,
+        "type": "string"
+      },
+      {
+        "definition": "A de-identified ID for the sample the sequence was obtained from.",
+        "displayName": "Isolate name",
+        "header": "Sample details",
+        "name": "specimenCollectorSampleId",
+        "orderOnDetailsPage": 600,
+        "substringSearch": true,
+        "type": "string"
+      },
+      {
+        "definition": "Total count of ambiguous nucleotides (not A, C, G, T, or N).",
+        "displayName": "Total ambiguous nucs seg1",
+        "header": "Alignment and QC metrics seg1",
+        "isSequenceFilter": true,
+        "name": "totalAmbiguousNucs_seg1",
+        "orderOnDetailsPage": 2780,
+        "rangeSearch": true,
+        "relatesToSegment": "seg1",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of ambiguous nucleotides (not A, C, G, T, or N).",
+        "displayName": "Total ambiguous nucs seg2",
+        "header": "Alignment and QC metrics seg2",
+        "isSequenceFilter": true,
+        "name": "totalAmbiguousNucs_seg2",
+        "orderOnDetailsPage": 2780,
+        "rangeSearch": true,
+        "relatesToSegment": "seg2",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of ambiguous nucleotides (not A, C, G, T, or N).",
+        "displayName": "Total ambiguous nucs seg3",
+        "header": "Alignment and QC metrics seg3",
+        "isSequenceFilter": true,
+        "name": "totalAmbiguousNucs_seg3",
+        "orderOnDetailsPage": 2780,
+        "rangeSearch": true,
+        "relatesToSegment": "seg3",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of ambiguous nucleotides (not A, C, G, T, or N).",
+        "displayName": "Total ambiguous nucs seg4",
+        "header": "Alignment and QC metrics seg4",
+        "isSequenceFilter": true,
+        "name": "totalAmbiguousNucs_seg4",
+        "orderOnDetailsPage": 2780,
+        "rangeSearch": true,
+        "relatesToSegment": "seg4",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of ambiguous nucleotides (not A, C, G, T, or N).",
+        "displayName": "Total ambiguous nucs seg5",
+        "header": "Alignment and QC metrics seg5",
+        "isSequenceFilter": true,
+        "name": "totalAmbiguousNucs_seg5",
+        "orderOnDetailsPage": 2780,
+        "rangeSearch": true,
+        "relatesToSegment": "seg5",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of ambiguous nucleotides (not A, C, G, T, or N).",
+        "displayName": "Total ambiguous nucs seg6",
+        "header": "Alignment and QC metrics seg6",
+        "isSequenceFilter": true,
+        "name": "totalAmbiguousNucs_seg6",
+        "orderOnDetailsPage": 2780,
+        "rangeSearch": true,
+        "relatesToSegment": "seg6",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of ambiguous nucleotides (not A, C, G, T, or N).",
+        "displayName": "Total ambiguous nucs seg7",
+        "header": "Alignment and QC metrics seg7",
+        "isSequenceFilter": true,
+        "name": "totalAmbiguousNucs_seg7",
+        "orderOnDetailsPage": 2780,
+        "rangeSearch": true,
+        "relatesToSegment": "seg7",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of ambiguous nucleotides (not A, C, G, T, or N).",
+        "displayName": "Total ambiguous nucs seg8",
+        "header": "Alignment and QC metrics seg8",
+        "isSequenceFilter": true,
+        "name": "totalAmbiguousNucs_seg8",
+        "orderOnDetailsPage": 2780,
+        "rangeSearch": true,
+        "relatesToSegment": "seg8",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of deleted nucleotide positions.",
+        "displayName": "Total deleted nucs seg1",
+        "header": "Alignment and QC metrics seg1",
+        "isSequenceFilter": true,
+        "name": "totalDeletedNucs_seg1",
+        "orderOnDetailsPage": 2760,
+        "rangeSearch": true,
+        "relatesToSegment": "seg1",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of deleted nucleotide positions.",
+        "displayName": "Total deleted nucs seg2",
+        "header": "Alignment and QC metrics seg2",
+        "isSequenceFilter": true,
+        "name": "totalDeletedNucs_seg2",
+        "orderOnDetailsPage": 2760,
+        "rangeSearch": true,
+        "relatesToSegment": "seg2",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of deleted nucleotide positions.",
+        "displayName": "Total deleted nucs seg3",
+        "header": "Alignment and QC metrics seg3",
+        "isSequenceFilter": true,
+        "name": "totalDeletedNucs_seg3",
+        "orderOnDetailsPage": 2760,
+        "rangeSearch": true,
+        "relatesToSegment": "seg3",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of deleted nucleotide positions.",
+        "displayName": "Total deleted nucs seg4",
+        "header": "Alignment and QC metrics seg4",
+        "isSequenceFilter": true,
+        "name": "totalDeletedNucs_seg4",
+        "orderOnDetailsPage": 2760,
+        "rangeSearch": true,
+        "relatesToSegment": "seg4",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of deleted nucleotide positions.",
+        "displayName": "Total deleted nucs seg5",
+        "header": "Alignment and QC metrics seg5",
+        "isSequenceFilter": true,
+        "name": "totalDeletedNucs_seg5",
+        "orderOnDetailsPage": 2760,
+        "rangeSearch": true,
+        "relatesToSegment": "seg5",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of deleted nucleotide positions.",
+        "displayName": "Total deleted nucs seg6",
+        "header": "Alignment and QC metrics seg6",
+        "isSequenceFilter": true,
+        "name": "totalDeletedNucs_seg6",
+        "orderOnDetailsPage": 2760,
+        "rangeSearch": true,
+        "relatesToSegment": "seg6",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of deleted nucleotide positions.",
+        "displayName": "Total deleted nucs seg7",
+        "header": "Alignment and QC metrics seg7",
+        "isSequenceFilter": true,
+        "name": "totalDeletedNucs_seg7",
+        "orderOnDetailsPage": 2760,
+        "rangeSearch": true,
+        "relatesToSegment": "seg7",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of deleted nucleotide positions.",
+        "displayName": "Total deleted nucs seg8",
+        "header": "Alignment and QC metrics seg8",
+        "isSequenceFilter": true,
+        "name": "totalDeletedNucs_seg8",
+        "orderOnDetailsPage": 2760,
+        "rangeSearch": true,
+        "relatesToSegment": "seg8",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of detected frame shifts.",
+        "displayName": "Total frame shifts seg1",
+        "header": "Alignment and QC metrics seg1",
+        "isSequenceFilter": true,
+        "name": "totalFrameShifts_seg1",
+        "orderOnDetailsPage": 2820,
+        "rangeSearch": true,
+        "relatesToSegment": "seg1",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of detected frame shifts.",
+        "displayName": "Total frame shifts seg2",
+        "header": "Alignment and QC metrics seg2",
+        "isSequenceFilter": true,
+        "name": "totalFrameShifts_seg2",
+        "orderOnDetailsPage": 2820,
+        "rangeSearch": true,
+        "relatesToSegment": "seg2",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of detected frame shifts.",
+        "displayName": "Total frame shifts seg3",
+        "header": "Alignment and QC metrics seg3",
+        "isSequenceFilter": true,
+        "name": "totalFrameShifts_seg3",
+        "orderOnDetailsPage": 2820,
+        "rangeSearch": true,
+        "relatesToSegment": "seg3",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of detected frame shifts.",
+        "displayName": "Total frame shifts seg4",
+        "header": "Alignment and QC metrics seg4",
+        "isSequenceFilter": true,
+        "name": "totalFrameShifts_seg4",
+        "orderOnDetailsPage": 2820,
+        "rangeSearch": true,
+        "relatesToSegment": "seg4",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of detected frame shifts.",
+        "displayName": "Total frame shifts seg5",
+        "header": "Alignment and QC metrics seg5",
+        "isSequenceFilter": true,
+        "name": "totalFrameShifts_seg5",
+        "orderOnDetailsPage": 2820,
+        "rangeSearch": true,
+        "relatesToSegment": "seg5",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of detected frame shifts.",
+        "displayName": "Total frame shifts seg6",
+        "header": "Alignment and QC metrics seg6",
+        "isSequenceFilter": true,
+        "name": "totalFrameShifts_seg6",
+        "orderOnDetailsPage": 2820,
+        "rangeSearch": true,
+        "relatesToSegment": "seg6",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of detected frame shifts.",
+        "displayName": "Total frame shifts seg7",
+        "header": "Alignment and QC metrics seg7",
+        "isSequenceFilter": true,
+        "name": "totalFrameShifts_seg7",
+        "orderOnDetailsPage": 2820,
+        "rangeSearch": true,
+        "relatesToSegment": "seg7",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of detected frame shifts.",
+        "displayName": "Total frame shifts seg8",
+        "header": "Alignment and QC metrics seg8",
+        "isSequenceFilter": true,
+        "name": "totalFrameShifts_seg8",
+        "orderOnDetailsPage": 2820,
+        "rangeSearch": true,
+        "relatesToSegment": "seg8",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of inserted nucleotide positions.",
+        "displayName": "Total inserted nucs seg1",
+        "header": "Alignment and QC metrics seg1",
+        "isSequenceFilter": true,
+        "name": "totalInsertedNucs_seg1",
+        "orderOnDetailsPage": 2740,
+        "rangeSearch": true,
+        "relatesToSegment": "seg1",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of inserted nucleotide positions.",
+        "displayName": "Total inserted nucs seg2",
+        "header": "Alignment and QC metrics seg2",
+        "isSequenceFilter": true,
+        "name": "totalInsertedNucs_seg2",
+        "orderOnDetailsPage": 2740,
+        "rangeSearch": true,
+        "relatesToSegment": "seg2",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of inserted nucleotide positions.",
+        "displayName": "Total inserted nucs seg3",
+        "header": "Alignment and QC metrics seg3",
+        "isSequenceFilter": true,
+        "name": "totalInsertedNucs_seg3",
+        "orderOnDetailsPage": 2740,
+        "rangeSearch": true,
+        "relatesToSegment": "seg3",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of inserted nucleotide positions.",
+        "displayName": "Total inserted nucs seg4",
+        "header": "Alignment and QC metrics seg4",
+        "isSequenceFilter": true,
+        "name": "totalInsertedNucs_seg4",
+        "orderOnDetailsPage": 2740,
+        "rangeSearch": true,
+        "relatesToSegment": "seg4",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of inserted nucleotide positions.",
+        "displayName": "Total inserted nucs seg5",
+        "header": "Alignment and QC metrics seg5",
+        "isSequenceFilter": true,
+        "name": "totalInsertedNucs_seg5",
+        "orderOnDetailsPage": 2740,
+        "rangeSearch": true,
+        "relatesToSegment": "seg5",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of inserted nucleotide positions.",
+        "displayName": "Total inserted nucs seg6",
+        "header": "Alignment and QC metrics seg6",
+        "isSequenceFilter": true,
+        "name": "totalInsertedNucs_seg6",
+        "orderOnDetailsPage": 2740,
+        "rangeSearch": true,
+        "relatesToSegment": "seg6",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of inserted nucleotide positions.",
+        "displayName": "Total inserted nucs seg7",
+        "header": "Alignment and QC metrics seg7",
+        "isSequenceFilter": true,
+        "name": "totalInsertedNucs_seg7",
+        "orderOnDetailsPage": 2740,
+        "rangeSearch": true,
+        "relatesToSegment": "seg7",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of inserted nucleotide positions.",
+        "displayName": "Total inserted nucs seg8",
+        "header": "Alignment and QC metrics seg8",
+        "isSequenceFilter": true,
+        "name": "totalInsertedNucs_seg8",
+        "orderOnDetailsPage": 2740,
+        "rangeSearch": true,
+        "relatesToSegment": "seg8",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of nucleotide substitutions.",
+        "displayName": "Total SNPs seg1",
+        "header": "Alignment and QC metrics seg1",
+        "isSequenceFilter": true,
+        "name": "totalSnps_seg1",
+        "orderOnDetailsPage": 2720,
+        "rangeSearch": true,
+        "relatesToSegment": "seg1",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of nucleotide substitutions.",
+        "displayName": "Total SNPs seg2",
+        "header": "Alignment and QC metrics seg2",
+        "isSequenceFilter": true,
+        "name": "totalSnps_seg2",
+        "orderOnDetailsPage": 2720,
+        "rangeSearch": true,
+        "relatesToSegment": "seg2",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of nucleotide substitutions.",
+        "displayName": "Total SNPs seg3",
+        "header": "Alignment and QC metrics seg3",
+        "isSequenceFilter": true,
+        "name": "totalSnps_seg3",
+        "orderOnDetailsPage": 2720,
+        "rangeSearch": true,
+        "relatesToSegment": "seg3",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of nucleotide substitutions.",
+        "displayName": "Total SNPs seg4",
+        "header": "Alignment and QC metrics seg4",
+        "isSequenceFilter": true,
+        "name": "totalSnps_seg4",
+        "orderOnDetailsPage": 2720,
+        "rangeSearch": true,
+        "relatesToSegment": "seg4",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of nucleotide substitutions.",
+        "displayName": "Total SNPs seg5",
+        "header": "Alignment and QC metrics seg5",
+        "isSequenceFilter": true,
+        "name": "totalSnps_seg5",
+        "orderOnDetailsPage": 2720,
+        "rangeSearch": true,
+        "relatesToSegment": "seg5",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of nucleotide substitutions.",
+        "displayName": "Total SNPs seg6",
+        "header": "Alignment and QC metrics seg6",
+        "isSequenceFilter": true,
+        "name": "totalSnps_seg6",
+        "orderOnDetailsPage": 2720,
+        "rangeSearch": true,
+        "relatesToSegment": "seg6",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of nucleotide substitutions.",
+        "displayName": "Total SNPs seg7",
+        "header": "Alignment and QC metrics seg7",
+        "isSequenceFilter": true,
+        "name": "totalSnps_seg7",
+        "orderOnDetailsPage": 2720,
+        "rangeSearch": true,
+        "relatesToSegment": "seg7",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of nucleotide substitutions.",
+        "displayName": "Total SNPs seg8",
+        "header": "Alignment and QC metrics seg8",
+        "isSequenceFilter": true,
+        "name": "totalSnps_seg8",
+        "orderOnDetailsPage": 2720,
+        "rangeSearch": true,
+        "relatesToSegment": "seg8",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of missing (N) nucleotides.",
+        "displayName": "Total unknown nucs seg1",
+        "header": "Alignment and QC metrics seg1",
+        "isSequenceFilter": true,
+        "name": "totalUnknownNucs_seg1",
+        "orderOnDetailsPage": 2800,
+        "rangeSearch": true,
+        "relatesToSegment": "seg1",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of missing (N) nucleotides.",
+        "displayName": "Total unknown nucs seg2",
+        "header": "Alignment and QC metrics seg2",
+        "isSequenceFilter": true,
+        "name": "totalUnknownNucs_seg2",
+        "orderOnDetailsPage": 2800,
+        "rangeSearch": true,
+        "relatesToSegment": "seg2",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of missing (N) nucleotides.",
+        "displayName": "Total unknown nucs seg3",
+        "header": "Alignment and QC metrics seg3",
+        "isSequenceFilter": true,
+        "name": "totalUnknownNucs_seg3",
+        "orderOnDetailsPage": 2800,
+        "rangeSearch": true,
+        "relatesToSegment": "seg3",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of missing (N) nucleotides.",
+        "displayName": "Total unknown nucs seg4",
+        "header": "Alignment and QC metrics seg4",
+        "isSequenceFilter": true,
+        "name": "totalUnknownNucs_seg4",
+        "orderOnDetailsPage": 2800,
+        "rangeSearch": true,
+        "relatesToSegment": "seg4",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of missing (N) nucleotides.",
+        "displayName": "Total unknown nucs seg5",
+        "header": "Alignment and QC metrics seg5",
+        "isSequenceFilter": true,
+        "name": "totalUnknownNucs_seg5",
+        "orderOnDetailsPage": 2800,
+        "rangeSearch": true,
+        "relatesToSegment": "seg5",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of missing (N) nucleotides.",
+        "displayName": "Total unknown nucs seg6",
+        "header": "Alignment and QC metrics seg6",
+        "isSequenceFilter": true,
+        "name": "totalUnknownNucs_seg6",
+        "orderOnDetailsPage": 2800,
+        "rangeSearch": true,
+        "relatesToSegment": "seg6",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of missing (N) nucleotides.",
+        "displayName": "Total unknown nucs seg7",
+        "header": "Alignment and QC metrics seg7",
+        "isSequenceFilter": true,
+        "name": "totalUnknownNucs_seg7",
+        "orderOnDetailsPage": 2800,
+        "rangeSearch": true,
+        "relatesToSegment": "seg7",
+        "type": "int"
+      },
+      {
+        "definition": "Total count of missing (N) nucleotides.",
+        "displayName": "Total unknown nucs seg8",
+        "header": "Alignment and QC metrics seg8",
+        "isSequenceFilter": true,
+        "name": "totalUnknownNucs_seg8",
+        "orderOnDetailsPage": 2800,
+        "rangeSearch": true,
+        "relatesToSegment": "seg8",
+        "type": "int"
+      }
+    ],
+    "multiFieldSearches": [
+      {
+        "displayName": "Sample Identifier",
+        "fields": [
+          "accessionVersion",
+          "submissionId",
+          "insdcAccessionFull_seg1",
+          "insdcAccessionFull_seg2",
+          "insdcAccessionFull_seg3",
+          "insdcAccessionFull_seg4",
+          "insdcAccessionFull_seg5",
+          "insdcAccessionFull_seg6",
+          "insdcAccessionFull_seg7",
+          "insdcAccessionFull_seg8"
+        ],
+        "name": "identifier",
+        "orderInSearchDisplay": -10000
+      },
+      {
+        "displayName": "Contributor",
+        "fields": [
+          "authors",
+          "authorAffiliations",
+          "submitter",
+          "groupName"
+        ],
+        "name": "contributor",
+        "orderInSearchDisplay": -9999
+      }
+    ],
+    "organismName": "Influenza A/H5N1",
+    "primaryKey": "accessionVersion",
+    "richFastaHeaderFields": [
+      "accessionVersion"
+    ],
+    "submissionDataTypes": {
+      "consensusSequences": true,
+      "maxSequencesPerEntry": 8
+    },
+    "tableColumns": [
+      "sampleCollectionDate",
+      "ncbiReleaseDate",
+      "authors",
+      "authorAffiliations",
+      "geoLocCountry",
+      "geoLocAdmin1"
+    ]
+  }
+}

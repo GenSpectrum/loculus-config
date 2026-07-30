@@ -1,0 +1,3 @@
+organisms: ["h5n1","rsv-a"]
+backend_url: http://backend:8079
+keycloak_token_url: http://keycloak:8080/realms/loculus/protocol/openid-connect/token

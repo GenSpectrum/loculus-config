@@ -1,174 +1,532 @@
+organism: rsv-a
 batch_size: 100
-genes:
-  - "F"
-  - "G"
-  - "L"
-  - "M"
-  - "N"
-  - "NS1"
-  - "NS2"
-  - "P"
-  - "SH"
+create_embl_file: false
 log_level: DEBUG
-nextclade_dataset_name: nextstrain/rsv/a
+molecule_type: genomic RNA
+nextclade_dataset_server: https://data.clades.nextstrain.org/v3
+scientific_name: Human respiratory syncytial virus A
+segments:
+- name: main
+  references:
+  - genes:
+    - F
+    - G
+    - L
+    - M
+    - N
+    - NS1
+    - NS2
+    - P
+    - SH
+    name: singleReference
+    nextclade_dataset_name: nextstrain/rsv/a
+taxon_id: 208893
+max_sequences_per_entry: 1
 processing_spec:
-  author_affiliations:
+  authorAffiliations:
     function: identity
     inputs:
-      input: author_affiliations
+      input: authorAffiliations
+    args: null
   authors:
-    function: identity
+    function: check_authors
     inputs:
-      input: authors
-  bioproject_accessions:
-    function: identity
-    inputs:
-      input: bioproject_accessions
-  biosample_accession:
-    function: identity
-    inputs:
-      input: biosample_accession
-  completeness:
+      authors: authors
     args:
-      type: float
+      type: authors
+  bioprojectAccession:
+    function: identity
+    inputs:
+      input: bioprojectAccession
+    args: null
+  biosampleAccession:
+    function: identity
+    inputs:
+      input: biosampleAccession
+    args: null
+  completeness:
     function: identity
     inputs:
       input: nextclade.coverage
-  frame_shifts:
+    args:
+      type: float
+    no_input: true
+  frameShifts:
     function: identity
     inputs:
       input: nextclade.frameShifts
-  geo_loc_admin_1:
+    args: null
+    no_input: true
+  geoLocAdmin1:
     function: identity
     inputs:
-      input: geo_loc_admin_1
-  geo_loc_country:
+      input: geoLocAdmin1
+    args: null
+  geoLocCountry:
+    function: process_options
+    inputs:
+      input: geoLocCountry
+    args:
+      options:
+      - Afghanistan
+      - Albania
+      - Algeria
+      - American Samoa
+      - Andorra
+      - Angola
+      - Anguilla
+      - Antarctica
+      - Antigua and Barbuda
+      - Arctic Ocean
+      - Argentina
+      - Armenia
+      - Aruba
+      - Ashmore and Cartier Islands
+      - Atlantic Ocean
+      - Australia
+      - Austria
+      - Azerbaijan
+      - Bahamas
+      - Bahrain
+      - Baltic Sea
+      - Baker Island
+      - Bangladesh
+      - Barbados
+      - Bassas da India
+      - Belarus
+      - Belgium
+      - Belize
+      - Benin
+      - Bermuda
+      - Bhutan
+      - Bolivia
+      - Borneo
+      - Bosnia and Herzegovina
+      - Botswana
+      - Bouvet Island
+      - Brazil
+      - British Virgin Islands
+      - Brunei
+      - Bulgaria
+      - Burkina Faso
+      - Burundi
+      - Cambodia
+      - Cameroon
+      - Canada
+      - Cape Verde
+      - Cayman Islands
+      - Central African Republic
+      - Chad
+      - Chile
+      - China
+      - Christmas Island
+      - Clipperton Island
+      - Cocos Islands
+      - Colombia
+      - Comoros
+      - Cook Islands
+      - Coral Sea Islands
+      - Costa Rica
+      - Cote d'Ivoire
+      - Croatia
+      - Cuba
+      - Curacao
+      - Cyprus
+      - Czechia
+      - Democratic Republic of the Congo
+      - Denmark
+      - Djibouti
+      - Dominica
+      - Dominican Republic
+      - Ecuador
+      - Egypt
+      - El Salvador
+      - Equatorial Guinea
+      - Eritrea
+      - Estonia
+      - Eswatini
+      - Ethiopia
+      - Europa Island
+      - Falkland Islands (Islas Malvinas)
+      - Faroe Islands
+      - Fiji
+      - Finland
+      - France
+      - French Guiana
+      - French Polynesia
+      - French Southern and Antarctic Lands
+      - Gabon
+      - Gambia
+      - Gaza Strip
+      - Georgia
+      - Germany
+      - Ghana
+      - Gibraltar
+      - Glorioso Islands
+      - Greece
+      - Greenland
+      - Grenada
+      - Guadeloupe
+      - Guam
+      - Guatemala
+      - Guernsey
+      - Guinea
+      - Guinea-Bissau
+      - Guyana
+      - Haiti
+      - Heard Island and McDonald Islands
+      - Honduras
+      - Hong Kong
+      - Howland Island
+      - Hungary
+      - Iceland
+      - India
+      - Indian Ocean
+      - Indonesia
+      - Iran
+      - Iraq
+      - Ireland
+      - Isle of Man
+      - Israel
+      - Italy
+      - Jamaica
+      - Jan Mayen
+      - Japan
+      - Jarvis Island
+      - Jersey
+      - Johnston Atoll
+      - Jordan
+      - Juan de Nova Island
+      - Kazakhstan
+      - Kenya
+      - Kerguelen Archipelago
+      - Kingman Reef
+      - Kiribati
+      - Kosovo
+      - Kuwait
+      - Kyrgyzstan
+      - Laos
+      - Latvia
+      - Lebanon
+      - Lesotho
+      - Liberia
+      - Libya
+      - Liechtenstein
+      - Line Islands
+      - Lithuania
+      - Luxembourg
+      - Macau
+      - Madagascar
+      - Malawi
+      - Malaysia
+      - Maldives
+      - Mali
+      - Malta
+      - Marshall Islands
+      - Martinique
+      - Mauritania
+      - Mauritius
+      - Mayotte
+      - Mediterranean Sea
+      - Mexico
+      - Micronesia, Federated States of
+      - Midway Islands
+      - Moldova
+      - Monaco
+      - Mongolia
+      - Montenegro
+      - Montserrat
+      - Morocco
+      - Mozambique
+      - Myanmar
+      - Namibia
+      - Nauru
+      - Navassa Island
+      - Nepal
+      - Netherlands
+      - New Caledonia
+      - New Zealand
+      - Nicaragua
+      - Niger
+      - Nigeria
+      - Niue
+      - Norfolk Island
+      - North Korea
+      - North Macedonia
+      - North Sea
+      - Northern Mariana Islands
+      - Norway
+      - Oman
+      - Pacific Ocean
+      - Pakistan
+      - Palau
+      - Palmyra Atoll
+      - Panama
+      - Papua New Guinea
+      - Paracel Islands
+      - Paraguay
+      - Peru
+      - Philippines
+      - Pitcairn Islands
+      - Poland
+      - Portugal
+      - Puerto Rico
+      - Qatar
+      - Republic of the Congo
+      - Reunion
+      - Romania
+      - Ross Sea
+      - Russia
+      - Rwanda
+      - Saint Barthelemy
+      - Saint Helena
+      - Saint Kitts and Nevis
+      - Saint Lucia
+      - Saint Martin
+      - Saint Pierre and Miquelon
+      - Saint Vincent and the Grenadines
+      - Samoa
+      - San Marino
+      - Sao Tome and Principe
+      - Saudi Arabia
+      - Senegal
+      - Serbia
+      - Seychelles
+      - Sierra Leone
+      - Singapore
+      - Sint Maarten
+      - Slovakia
+      - Slovenia
+      - Solomon Islands
+      - Somalia
+      - South Africa
+      - South Georgia and the South Sandwich Islands
+      - South Korea
+      - South Sudan
+      - Southern Ocean
+      - Spain
+      - Spratly Islands
+      - Sri Lanka
+      - State of Palestine
+      - Sudan
+      - Suriname
+      - Svalbard
+      - Sweden
+      - Switzerland
+      - Syria
+      - Taiwan
+      - Tajikistan
+      - Tanzania
+      - Tasman Sea
+      - Thailand
+      - Timor-Leste
+      - Togo
+      - Tokelau
+      - Tonga
+      - Trinidad and Tobago
+      - Tromelin Island
+      - Tunisia
+      - Turkey
+      - Turkmenistan
+      - Turks and Caicos Islands
+      - Tuvalu
+      - Uganda
+      - Ukraine
+      - United Arab Emirates
+      - United Kingdom
+      - Uruguay
+      - USA
+      - Uzbekistan
+      - Vanuatu
+      - Venezuela
+      - Viet Nam
+      - Virgin Islands
+      - Wake Island
+      - Wallis and Futuna
+      - West Bank
+      - Western Sahara
+      - Yemen
+      - Zambia
+      - Zimbabwe
+      - Belgian Congo
+      - British Guiana
+      - Burma
+      - Czechoslovakia
+      - Czech Republic
+      - East Timor
+      - Korea
+      - Macedonia
+      - Micronesia
+      - Netherlands Antilles
+      - Serbia and Montenegro
+      - Siam
+      - Swaziland
+      - The former Yugoslav Republic of Macedonia
+      - USSR
+      - Yugoslavia
+      - Zaire
+    required: true
+  hostNameScientific:
     function: identity
     inputs:
-      input: geo_loc_country
-  host_name_scientific:
+      input: hostNameScientific
+    args: null
+    no_input: true
+  hostTaxonId:
     function: identity
     inputs:
-      input: host_name_scientific
-  host_taxon_id:
+      input: hostTaxonId
     args:
       type: int
+    no_input: true
+  insdcAccessionBase:
     function: identity
     inputs:
-      input: host_taxon_id
-  insdc_accession_base:
+      input: insdcAccessionBase
+    args: null
+    no_input: true
+  insdcAccessionFull:
     function: identity
     inputs:
-      input: insdc_accession_base
-  insdc_accession_full:
+      input: insdcAccessionFull
+    args: null
+    no_input: true
+  insdcRawReadsAccession:
     function: identity
     inputs:
-      input: insdc_accession_full
-  insdc_version:
+      input: insdcRawReadsAccession
+    args: null
+  insdcVersion:
+    function: identity
+    inputs:
+      input: insdcVersion
     args:
       type: int
-    function: identity
-    inputs:
-      input: insdc_version
+    no_input: true
   length:
-    args:
-      type: int
     function: identity
     inputs:
       input: length
+    args:
+      type: int
+    no_input: true
   lineage:
     function: identity
     inputs:
       input: nextclade.clade
-  ncbi_completeness:
+    args: null
+    no_input: true
+  ncbiCompleteness:
     function: identity
     inputs:
-      input: ncbi_completeness
-  ncbi_protein_count:
+      input: ncbiCompleteness
+    args: null
+    no_input: true
+  ncbiProteinCount:
+    function: identity
+    inputs:
+      input: ncbiProteinCount
     args:
       type: int
-    function: identity
-    inputs:
-      input: ncbi_protein_count
-  ncbi_release_date:
+    no_input: true
+  ncbiReleaseDate:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_release_date
-  ncbi_sourcedb:
+      timestamp: ncbiReleaseDate
+    args:
+      type: date
+    no_input: true
+  ncbiSourceDb:
     function: identity
     inputs:
-      input: ncbi_sourcedb
-  ncbi_update_date:
+      input: ncbiSourceDb
+    args: null
+    no_input: true
+  ncbiUpdateDate:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_update_date
-  ncbi_virus_name:
+      timestamp: ncbiUpdateDate
+    args:
+      type: date
+    no_input: true
+  ncbiVirusName:
     function: identity
     inputs:
-      input: ncbi_virus_name
-  ncbi_virus_tax_id:
+      input: ncbiVirusName
+    args: null
+    no_input: true
+  ncbiVirusTaxId:
+    function: identity
+    inputs:
+      input: ncbiVirusTaxId
     args:
       type: int
+    no_input: true
+  sampleCollectionDate:
+    function: parse_date_into_range
+    inputs:
+      date: sampleCollectionDate
+      releaseDate: ncbiReleaseDate
+    args:
+      fieldType: dateRangeString
+    required: true
+  specimenCollectorSampleId:
     function: identity
     inputs:
-      input: ncbi_virus_tax_id
-  sample_collection_date:
-    function: process_date
-    inputs:
-      date: sample_collection_date
-      release_date: ncbi_release_date
-  specimen_collector_sample_id:
-    function: identity
-    inputs:
-      input: specimen_collector_sample_id
-  sra_run_accession:
-    function: identity
-    inputs:
-      input: sra_run_accession
-  stop_codons:
+      input: specimenCollectorSampleId
+    args: null
+  stopCodons:
     function: identity
     inputs:
       input: nextclade.qc.stopCodons.stopCodons
-  total_ambiguous_nucs:
-    args:
-      type: int
+    args: null
+    no_input: true
+  totalAmbiguousNucs:
     function: identity
     inputs:
       input: nextclade.totalNonACGTNs
-  total_deleted_nucs:
     args:
       type: int
+    no_input: true
+  totalDeletedNucs:
     function: identity
     inputs:
       input: nextclade.totalDeletions
-  total_frame_shifts:
     args:
       type: int
+    no_input: true
+  totalFrameShifts:
     function: identity
     inputs:
       input: nextclade.totalFrameShifts
-  total_inserted_nucs:
     args:
       type: int
+    no_input: true
+  totalInsertedNucs:
     function: identity
     inputs:
       input: nextclade.totalInsertions
-  total_snps:
     args:
       type: int
+    no_input: true
+  totalSnps:
     function: identity
     inputs:
       input: nextclade.totalSubstitutions
-  total_stop_codons:
     args:
       type: int
+    no_input: true
+  totalStopCodons:
     function: identity
     inputs:
       input: nextclade.qc.stopCodons.totalStopCodons
-  total_unknown_nucs:
     args:
       type: int
+    no_input: true
+  totalUnknownNucs:
     function: identity
     inputs:
       input: nextclade.totalMissing
-organism: rsv-a
+    args:
+      type: int
+    no_input: true

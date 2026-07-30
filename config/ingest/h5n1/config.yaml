@@ -1,51 +1,54 @@
-taxon_id: 197911
+segment_identification:
+  method: align
+  # Every segment is listed in nextclade_dataset_name_map below, so this prefix is
+  # never used. It must still be set: the ingest Snakefile builds the per-segment
+  # fallback (nextclade_dataset_name + "/" + segment) as an eagerly evaluated
+  # dict.get() default, which raises a TypeError on None even when the map matches.
+  nextclade_dataset_name: unused
+  nextclade_dataset_name_map:
+    seg1: nextstrain/flu/h1n1pdm/pb2
+    seg2: nextstrain/flu/h1n1pdm/pb1
+    seg3: nextstrain/flu/h1n1pdm/pa
+    seg4: community/moncla-lab/iav-h5/ha/all-clades
+    seg5: nextstrain/flu/h1n1pdm/np
+    seg6: nextstrain/flu/h1n1pdm/na
+    seg7: nextstrain/flu/h1n1pdm/mp
+    seg8: nextstrain/flu/h1n1pdm/ns
+  nextclade_dataset_server: https://data.clades.nextstrain.org/v3
+# 102793 is the NCBI "H5N1 subtype" node; taxon queries are subtree-inclusive, so this
+# pulls every H5N1 strain taxon beneath it (~31k sequences) and needs no extra filtering.
+# It deliberately is not 197911 (the Alphainfluenzavirus genus): that is all ~1.6M
+# influenza A sequences, a download NCBI aborts and a nextclade run this host cannot do.
+# Caveat: NCBI stopped filing new influenza submissions under subtype nodes, so this
+# subtree is mostly pre-2020. See README for how to widen the H5N1 scope.
+taxon_id: 102793
+nucleotide_sequences:
+- seg1
+- seg2
+- seg3
+- seg4
+- seg5
+- seg6
+- seg7
+- seg8
+verify_loculus_version_is: commit-52e855d
+check_ena_deposition: false
 organism: h5n1
 backend_url: http://backend:8079
 keycloak_token_url: http://keycloak:8080/realms/loculus/protocol/openid-connect/token
 rename:
-  bioprojects: bioproject_accessions
-  country: geo_loc_country
-  division: geo_loc_admin_1
-  genbank_accession: insdc_accession_full
-  ncbi_collection_date: sample_collection_date
-  ncbi_host_name: host_name_scientific
-  ncbi_host_tax_id: host_taxon_id
-  ncbi_is_lab_host: is_lab_host
-  ncbi_isolate_name: specimen_collector_sample_id
-  ncbi_sra_accessions: sra_run_accession
-  ncbi_submitter_affiliation: author_affiliations
-  ncbi_submitter_names: authors
-filter_fasta_headers: (H5N1)
-nextclade_dataset_name: community/genspectrum/flu/h5n1
-nextclade_dataset_server: https://raw.githubusercontent.com/anna-parker/nextclade_data/h5n1/data_output
-nucleotide_sequences:
-  - seg1
-  - seg2
-  - seg3
-  - seg4
-  - seg5
-  - seg6
-  - seg7
-  - seg8
-segment_specific_fields:
-  - sra_run_accession
-  - ncbi_protein_count
-  - ncbi_virus_tax_id
-  - insdc_accession_base
-  - insdc_version
-  - insdc_accession_full
-shared_fields:
-  - bioproject_accessions
-  - biosample_accession
-  - geo_loc_country
-  - geo_loc_admin_1
-  - sample_collection_date
-  - host_name_scientific
-  - host_taxon_id
-  - is_lab_host
-  - specimen_collector_sample_id
-  - author_affiliations
-  - authors
-  - ncbi_release_date
-username: "insdc_ingest_user"
-password: "unsecure"
+  country: geoLocCountry
+  division: geoLocAdmin1
+  genbankAccession: insdcAccessionFull
+  ncbiCollectionDate: sampleCollectionDate
+  ncbiHostName: hostNameScientific
+  ncbiHostTaxId: hostTaxonId
+  ncbiIsLabHost: isLabHost
+  ncbiIsolateName: specimenCollectorSampleId
+  ncbiSubmitterAffiliation: authorAffiliations
+  ncbiSubmitterNames: authors
+insdc_segment_specific_fields:
+- insdcAccessionBase
+- insdcAccessionFull
+- insdcVersion
+- ncbiUpdateDate

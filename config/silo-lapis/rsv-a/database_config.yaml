@@ -1,80 +1,120 @@
 schema:
-  instanceName: "RSV A"
+  instanceName: RSV A
   opennessLevel: OPEN
   metadata:
-    - name: author_affiliations
-      type: string
-      generateIndex: true
-    - name: authors
-      type: string
-    - name: bioproject_accessions
-      type: string
-    - name: biosample_accession
-      type: string
-    - name: completeness
-      type: float
-    - name: frame_shifts
-      type: string
-    - name: geo_loc_admin_1
-      type: string
-      generateIndex: true
-    - name: geo_loc_country
-      type: string
-      generateIndex: true
-    - name: host_name_scientific
-      type: string
-      generateIndex: true
-    - name: host_taxon_id
-      type: int
-    - name: insdc_accession_base
-      type: string
-    - name: insdc_accession_full
-      type: string
-    - name: insdc_version
-      type: int
-    - name: length
-      type: int
-    - name: lineage
-      type: string
-      generateIndex: true
-    - name: ncbi_completeness
-      type: string
-      generateIndex: true
-    - name: ncbi_protein_count
-      type: int
-    - name: ncbi_release_date
-      type: date
-    - name: ncbi_sourcedb
-      type: string
-      generateIndex: true
-    - name: ncbi_update_date
-      type: date
-    - name: ncbi_virus_name
-      type: string
-      generateIndex: true
-    - name: ncbi_virus_tax_id
-      type: int
-    - name: sample_collection_date
-      type: date
-    - name: specimen_collector_sample_id
-      type: string
-    - name: sra_run_accession
-      type: string
-    - name: stop_codons
-      type: string
-    - name: total_ambiguous_nucs
-      type: int
-    - name: total_deleted_nucs
-      type: int
-    - name: total_frame_shifts
-      type: int
-    - name: total_inserted_nucs
-      type: int
-    - name: total_snps
-      type: int
-    - name: total_stop_codons
-      type: int
-    - name: total_unknown_nucs
-      type: int
-  primaryKey: insdc_accession_full
-  dateToSortBy: sample_collection_date
+  - type: string
+    name: accessionVersion
+  - type: string
+    name: accession
+  - type: int
+    name: version
+  - type: string
+    name: submissionId
+  - type: boolean
+    name: isRevocation
+  - type: string
+    generateIndex: true
+    name: submitter
+  - type: string
+    generateIndex: true
+    name: groupName
+  - type: int
+    name: groupId
+  - type: int
+    name: submittedAtTimestamp
+  - type: string
+    generateIndex: true
+    name: submittedDate
+  - type: int
+    name: releasedAtTimestamp
+  - type: string
+    generateIndex: true
+    name: releasedDate
+  - type: string
+    generateIndex: true
+    name: dataUseTerms
+  - type: date
+    name: dataUseTermsRestrictedUntil
+  - type: date
+    name: dataBecameOpenAt
+  - type: string
+    name: dataUseTermsUrl
+  - type: string
+    name: versionStatus
+  - type: int
+    name: pipelineVersion
+  - type: string
+    name: authorAffiliations
+  - type: string
+    name: authors
+  - type: string
+    name: bioprojectAccession
+  - type: string
+    name: biosampleAccession
+  - type: float
+    name: completeness
+  - type: string
+    name: frameShifts
+  - type: string
+    generateIndex: true
+    name: geoLocAdmin1
+  - type: string
+    generateIndex: true
+    name: geoLocCountry
+  - type: string
+    generateIndex: true
+    name: hostNameScientific
+  - type: string
+    name: hostTaxonId
+  - type: string
+    name: insdcAccessionBase
+  - type: string
+    name: insdcAccessionFull
+  - type: string
+    name: insdcRawReadsAccession
+  - type: int
+    name: insdcVersion
+  - type: int
+    name: length
+  - type: string
+    generateIndex: true
+    name: lineage
+  - type: string
+    name: ncbiCompleteness
+  - type: int
+    name: ncbiProteinCount
+  - type: date
+    name: ncbiReleaseDate
+  - type: string
+    generateIndex: true
+    name: ncbiSourceDb
+  - type: date
+    name: ncbiUpdateDate
+  - type: string
+    generateIndex: true
+    name: ncbiVirusName
+  - type: int
+    name: ncbiVirusTaxId
+  - type: string
+    name: sampleCollectionDate
+  - type: string
+    name: specimenCollectorSampleId
+  - type: string
+    name: stopCodons
+  - type: int
+    name: totalAmbiguousNucs
+  - type: int
+    name: totalDeletedNucs
+  - type: int
+    name: totalFrameShifts
+  - type: int
+    name: totalInsertedNucs
+  - type: int
+    name: totalSnps
+  - type: int
+    name: totalStopCodons
+  - type: int
+    name: totalUnknownNucs
+  primaryKey: accessionVersion
+  features:
+  - name: generalizedAdvancedQuery

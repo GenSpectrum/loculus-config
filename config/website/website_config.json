@@ -1,0 +1,64 @@
+{
+  "accessionPrefix": "LOC_",
+  "bannerMessage": "This is a demonstration environment. It may contain non-accurate test data and should not be used for real-world applications. Data will be deleted regularly.",
+  "dateFieldForGroupGraph": null,
+  "enableDataUseTerms": true,
+  "enableLoginNavigationItem": true,
+  "enableSeqSets": true,
+  "enableSubmissionNavigationItem": true,
+  "enableSubmissionPages": true,
+  "gitHubEditLink": "https://github.com/loculus-project/loculus/edit/main/monorepo/website/",
+  "gitHubIssuesUrl": "https://github.com/loculus-project/loculus/issues",
+  "gitHubMainUrl": "https://github.com/loculus-project/loculus",
+  "issuesEmail": "noreply@loculus.org",
+  "logo": {
+    "height": 100,
+    "url": "/favicon.svg",
+    "width": 100
+  },
+  "name": "Loculus",
+  "organisms": {},
+  "readOnlyMode": false,
+  "seqSetsFieldsToDisplay": [
+    {
+      "displayName": "Country",
+      "field": "geoLocCountry"
+    },
+    {
+      "displayName": "Collection Date",
+      "field": "sampleCollectionDate"
+    },
+    {
+      "displayName": "Authors",
+      "field": "authors"
+    }
+  ],
+  "seqSetsGraphs": [
+    {
+      "displayName": "Sample collection dates",
+      "fields": [
+        "sampleCollectionDate",
+        "date"
+      ],
+      "name": "sampleCollectionDates",
+      "type": "date"
+    },
+    {
+      "displayName": "Sample collection countries",
+      "fields": [
+        "geoLocCountry",
+        "country"
+      ],
+      "name": "sampleCollectionCountries",
+      "type": "category"
+    },
+    {
+      "displayName": "Data use terms",
+      "fields": [
+        "dataUseTerms"
+      ],
+      "name": "dataUseTerms",
+      "type": "category"
+    }
+  ]
+}

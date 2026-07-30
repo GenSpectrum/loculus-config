@@ -1,2 +1,4 @@
+inputDirectory: /preprocessing/input
+outputDirectory: /preprocessing/output
 ndjsonInputFilename: data.ndjson.zst
 referenceGenomeFilename: reference_genomes.json

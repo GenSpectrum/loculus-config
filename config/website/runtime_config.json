@@ -1,0 +1,21 @@
+{
+  "name": "Loculus",
+  "insecureCookies": true,
+  "serverSide": {
+    "backendUrl": "http://backend:8079",
+    "lapisUrls": {
+      "h5n1": "http://lapis-h5n1:8080",
+      "rsv-a": "http://lapis-rsv-a:8080"
+    },
+    "keycloakUrl": "http://keycloak:8080"
+  },
+  "public": {
+    "backendUrl": "http://localhost:8079",
+    "lapisUrls": {
+      "h5n1": "http://localhost:8080/h5n1",
+      "rsv-a": "http://localhost:8080/rsv-a"
+    },
+    "keycloakUrl": "http://localhost:8083"
+  },
+  "backendKeycloakClientSecret": "loculus-compose-backend-client-secret"
+}

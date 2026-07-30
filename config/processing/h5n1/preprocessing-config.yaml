@@ -1,39 +1,74 @@
 organism: h5n1
 batch_size: 100
-genes:
-  - PB2
-  - PB1
-  - PA
-  - PAX
-  - HA
-  - NA
-  - NP
-  - M1
-  - M2
-  - NS1
-  - NS2
+create_embl_file: false
 log_level: DEBUG
-nextclade_dataset_name: community/genspectrum/flu/h5n1
-nextclade_dataset_server: https://raw.githubusercontent.com/anna-parker/nextclade_data/h5n1/data_output
-nucleotideSequences:
-  - seg1
-  - seg2
-  - seg3
-  - seg4
-  - seg5
-  - seg6
-  - seg7
-  - seg8
+molecule_type: viral cRNA
+nextclade_dataset_server: https://data.clades.nextstrain.org/v3
+scientific_name: Influenza A virus (A/goose/Guangdong/1/1996(H5N1))
+segments:
+- name: seg1
+  references:
+  - genes:
+    - PB2
+    name: singleReference
+    nextclade_dataset_name: nextstrain/flu/h1n1pdm/pb2
+- name: seg2
+  references:
+  - genes:
+    - PB1
+    name: singleReference
+    nextclade_dataset_name: nextstrain/flu/h1n1pdm/pb1
+- name: seg3
+  references:
+  - genes:
+    - PA
+    - PA-X
+    name: singleReference
+    nextclade_dataset_name: nextstrain/flu/h1n1pdm/pa
+- name: seg4
+  references:
+  - genes:
+    - HA
+    name: singleReference
+    nextclade_dataset_name: community/moncla-lab/iav-h5/ha/all-clades
+- name: seg5
+  references:
+  - genes:
+    - NP
+    name: singleReference
+    nextclade_dataset_name: nextstrain/flu/h1n1pdm/np
+- name: seg6
+  references:
+  - genes:
+    - NA
+    name: singleReference
+    nextclade_dataset_name: nextstrain/flu/h1n1pdm/na
+- name: seg7
+  references:
+  - genes:
+    - M1
+    - M2
+    name: singleReference
+    nextclade_dataset_name: nextstrain/flu/h1n1pdm/mp
+- name: seg8
+  references:
+  - genes:
+    - NS1
+    - NEP
+    name: singleReference
+    nextclade_dataset_name: nextstrain/flu/h1n1pdm/ns
+taxon_id: 102793
+max_sequences_per_entry: 8
 processing_spec:
-  author_affiliations:
+  authorAffiliations:
     function: identity
     inputs:
-      input: author_affiliations
+      input: authorAffiliations
     args: null
   authors:
-    function: identity
+    function: check_authors
     inputs:
-      input: authors
+      authors: authors
     args:
       type: authors
   completeness_seg1:
@@ -43,6 +78,7 @@ processing_spec:
     args:
       segment: seg1
       type: float
+    no_input: true
   completeness_seg2:
     function: identity
     inputs:
@@ -50,6 +86,7 @@ processing_spec:
     args:
       segment: seg2
       type: float
+    no_input: true
   completeness_seg3:
     function: identity
     inputs:
@@ -57,6 +94,7 @@ processing_spec:
     args:
       segment: seg3
       type: float
+    no_input: true
   completeness_seg4:
     function: identity
     inputs:
@@ -64,6 +102,7 @@ processing_spec:
     args:
       segment: seg4
       type: float
+    no_input: true
   completeness_seg5:
     function: identity
     inputs:
@@ -71,6 +110,7 @@ processing_spec:
     args:
       segment: seg5
       type: float
+    no_input: true
   completeness_seg6:
     function: identity
     inputs:
@@ -78,6 +118,7 @@ processing_spec:
     args:
       segment: seg6
       type: float
+    no_input: true
   completeness_seg7:
     function: identity
     inputs:
@@ -85,6 +126,7 @@ processing_spec:
     args:
       segment: seg7
       type: float
+    no_input: true
   completeness_seg8:
     function: identity
     inputs:
@@ -92,233 +134,568 @@ processing_spec:
     args:
       segment: seg8
       type: float
-  frame_shifts_seg1:
+    no_input: true
+  frameShifts_seg1:
     function: identity
     inputs:
       input: nextclade.frameShifts
     args:
       segment: seg1
-  frame_shifts_seg2:
+    no_input: true
+  frameShifts_seg2:
     function: identity
     inputs:
       input: nextclade.frameShifts
     args:
       segment: seg2
-  frame_shifts_seg3:
+    no_input: true
+  frameShifts_seg3:
     function: identity
     inputs:
       input: nextclade.frameShifts
     args:
       segment: seg3
-  frame_shifts_seg4:
+    no_input: true
+  frameShifts_seg4:
     function: identity
     inputs:
       input: nextclade.frameShifts
     args:
       segment: seg4
-  frame_shifts_seg5:
+    no_input: true
+  frameShifts_seg5:
     function: identity
     inputs:
       input: nextclade.frameShifts
     args:
       segment: seg5
-  frame_shifts_seg6:
+    no_input: true
+  frameShifts_seg6:
     function: identity
     inputs:
       input: nextclade.frameShifts
     args:
       segment: seg6
-  frame_shifts_seg7:
+    no_input: true
+  frameShifts_seg7:
     function: identity
     inputs:
       input: nextclade.frameShifts
     args:
       segment: seg7
-  frame_shifts_seg8:
+    no_input: true
+  frameShifts_seg8:
     function: identity
     inputs:
       input: nextclade.frameShifts
     args:
       segment: seg8
-  geo_loc_admin_1:
+    no_input: true
+  geoLocAdmin1:
     function: identity
     inputs:
-      input: geo_loc_admin_1
+      input: geoLocAdmin1
     args: null
-  geo_loc_country:
-    function: identity
+  geoLocCountry:
+    function: process_options
     inputs:
-      input: geo_loc_country
-    args: null
+      input: geoLocCountry
+    args:
+      options:
+      - Afghanistan
+      - Albania
+      - Algeria
+      - American Samoa
+      - Andorra
+      - Angola
+      - Anguilla
+      - Antarctica
+      - Antigua and Barbuda
+      - Arctic Ocean
+      - Argentina
+      - Armenia
+      - Aruba
+      - Ashmore and Cartier Islands
+      - Atlantic Ocean
+      - Australia
+      - Austria
+      - Azerbaijan
+      - Bahamas
+      - Bahrain
+      - Baltic Sea
+      - Baker Island
+      - Bangladesh
+      - Barbados
+      - Bassas da India
+      - Belarus
+      - Belgium
+      - Belize
+      - Benin
+      - Bermuda
+      - Bhutan
+      - Bolivia
+      - Borneo
+      - Bosnia and Herzegovina
+      - Botswana
+      - Bouvet Island
+      - Brazil
+      - British Virgin Islands
+      - Brunei
+      - Bulgaria
+      - Burkina Faso
+      - Burundi
+      - Cambodia
+      - Cameroon
+      - Canada
+      - Cape Verde
+      - Cayman Islands
+      - Central African Republic
+      - Chad
+      - Chile
+      - China
+      - Christmas Island
+      - Clipperton Island
+      - Cocos Islands
+      - Colombia
+      - Comoros
+      - Cook Islands
+      - Coral Sea Islands
+      - Costa Rica
+      - Cote d'Ivoire
+      - Croatia
+      - Cuba
+      - Curacao
+      - Cyprus
+      - Czechia
+      - Democratic Republic of the Congo
+      - Denmark
+      - Djibouti
+      - Dominica
+      - Dominican Republic
+      - Ecuador
+      - Egypt
+      - El Salvador
+      - Equatorial Guinea
+      - Eritrea
+      - Estonia
+      - Eswatini
+      - Ethiopia
+      - Europa Island
+      - Falkland Islands (Islas Malvinas)
+      - Faroe Islands
+      - Fiji
+      - Finland
+      - France
+      - French Guiana
+      - French Polynesia
+      - French Southern and Antarctic Lands
+      - Gabon
+      - Gambia
+      - Gaza Strip
+      - Georgia
+      - Germany
+      - Ghana
+      - Gibraltar
+      - Glorioso Islands
+      - Greece
+      - Greenland
+      - Grenada
+      - Guadeloupe
+      - Guam
+      - Guatemala
+      - Guernsey
+      - Guinea
+      - Guinea-Bissau
+      - Guyana
+      - Haiti
+      - Heard Island and McDonald Islands
+      - Honduras
+      - Hong Kong
+      - Howland Island
+      - Hungary
+      - Iceland
+      - India
+      - Indian Ocean
+      - Indonesia
+      - Iran
+      - Iraq
+      - Ireland
+      - Isle of Man
+      - Israel
+      - Italy
+      - Jamaica
+      - Jan Mayen
+      - Japan
+      - Jarvis Island
+      - Jersey
+      - Johnston Atoll
+      - Jordan
+      - Juan de Nova Island
+      - Kazakhstan
+      - Kenya
+      - Kerguelen Archipelago
+      - Kingman Reef
+      - Kiribati
+      - Kosovo
+      - Kuwait
+      - Kyrgyzstan
+      - Laos
+      - Latvia
+      - Lebanon
+      - Lesotho
+      - Liberia
+      - Libya
+      - Liechtenstein
+      - Line Islands
+      - Lithuania
+      - Luxembourg
+      - Macau
+      - Madagascar
+      - Malawi
+      - Malaysia
+      - Maldives
+      - Mali
+      - Malta
+      - Marshall Islands
+      - Martinique
+      - Mauritania
+      - Mauritius
+      - Mayotte
+      - Mediterranean Sea
+      - Mexico
+      - Micronesia, Federated States of
+      - Midway Islands
+      - Moldova
+      - Monaco
+      - Mongolia
+      - Montenegro
+      - Montserrat
+      - Morocco
+      - Mozambique
+      - Myanmar
+      - Namibia
+      - Nauru
+      - Navassa Island
+      - Nepal
+      - Netherlands
+      - New Caledonia
+      - New Zealand
+      - Nicaragua
+      - Niger
+      - Nigeria
+      - Niue
+      - Norfolk Island
+      - North Korea
+      - North Macedonia
+      - North Sea
+      - Northern Mariana Islands
+      - Norway
+      - Oman
+      - Pacific Ocean
+      - Pakistan
+      - Palau
+      - Palmyra Atoll
+      - Panama
+      - Papua New Guinea
+      - Paracel Islands
+      - Paraguay
+      - Peru
+      - Philippines
+      - Pitcairn Islands
+      - Poland
+      - Portugal
+      - Puerto Rico
+      - Qatar
+      - Republic of the Congo
+      - Reunion
+      - Romania
+      - Ross Sea
+      - Russia
+      - Rwanda
+      - Saint Barthelemy
+      - Saint Helena
+      - Saint Kitts and Nevis
+      - Saint Lucia
+      - Saint Martin
+      - Saint Pierre and Miquelon
+      - Saint Vincent and the Grenadines
+      - Samoa
+      - San Marino
+      - Sao Tome and Principe
+      - Saudi Arabia
+      - Senegal
+      - Serbia
+      - Seychelles
+      - Sierra Leone
+      - Singapore
+      - Sint Maarten
+      - Slovakia
+      - Slovenia
+      - Solomon Islands
+      - Somalia
+      - South Africa
+      - South Georgia and the South Sandwich Islands
+      - South Korea
+      - South Sudan
+      - Southern Ocean
+      - Spain
+      - Spratly Islands
+      - Sri Lanka
+      - State of Palestine
+      - Sudan
+      - Suriname
+      - Svalbard
+      - Sweden
+      - Switzerland
+      - Syria
+      - Taiwan
+      - Tajikistan
+      - Tanzania
+      - Tasman Sea
+      - Thailand
+      - Timor-Leste
+      - Togo
+      - Tokelau
+      - Tonga
+      - Trinidad and Tobago
+      - Tromelin Island
+      - Tunisia
+      - Turkey
+      - Turkmenistan
+      - Turks and Caicos Islands
+      - Tuvalu
+      - Uganda
+      - Ukraine
+      - United Arab Emirates
+      - United Kingdom
+      - Uruguay
+      - USA
+      - Uzbekistan
+      - Vanuatu
+      - Venezuela
+      - Viet Nam
+      - Virgin Islands
+      - Wake Island
+      - Wallis and Futuna
+      - West Bank
+      - Western Sahara
+      - Yemen
+      - Zambia
+      - Zimbabwe
+      - Belgian Congo
+      - British Guiana
+      - Burma
+      - Czechoslovakia
+      - Czech Republic
+      - East Timor
+      - Korea
+      - Macedonia
+      - Micronesia
+      - Netherlands Antilles
+      - Serbia and Montenegro
+      - Siam
+      - Swaziland
+      - The former Yugoslav Republic of Macedonia
+      - USSR
+      - Yugoslavia
+      - Zaire
     required: true
-  host_name_scientific:
+  hostNameScientific:
     function: identity
     inputs:
-      input: host_name_scientific
+      input: hostNameScientific
     args: null
-  host_taxon_id:
+    no_input: true
+  hostTaxonId:
     function: identity
     inputs:
-      input: host_taxon_id
+      input: hostTaxonId
     args:
       type: int
-  insdc_accession_base_seg1:
+    no_input: true
+  insdcAccessionBase_seg1:
     function: identity
     inputs:
-      input: insdc_accession_base_seg1
+      input: insdcAccessionBase_seg1
     args:
       segment: seg1
-  insdc_accession_base_seg2:
+    no_input: true
+  insdcAccessionBase_seg2:
     function: identity
     inputs:
-      input: insdc_accession_base_seg2
+      input: insdcAccessionBase_seg2
     args:
       segment: seg2
-  insdc_accession_base_seg3:
+    no_input: true
+  insdcAccessionBase_seg3:
     function: identity
     inputs:
-      input: insdc_accession_base_seg3
+      input: insdcAccessionBase_seg3
     args:
       segment: seg3
-  insdc_accession_base_seg4:
+    no_input: true
+  insdcAccessionBase_seg4:
     function: identity
     inputs:
-      input: insdc_accession_base_seg4
+      input: insdcAccessionBase_seg4
     args:
       segment: seg4
-  insdc_accession_base_seg5:
+    no_input: true
+  insdcAccessionBase_seg5:
     function: identity
     inputs:
-      input: insdc_accession_base_seg5
+      input: insdcAccessionBase_seg5
     args:
       segment: seg5
-  insdc_accession_base_seg6:
+    no_input: true
+  insdcAccessionBase_seg6:
     function: identity
     inputs:
-      input: insdc_accession_base_seg6
+      input: insdcAccessionBase_seg6
     args:
       segment: seg6
-  insdc_accession_base_seg7:
+    no_input: true
+  insdcAccessionBase_seg7:
     function: identity
     inputs:
-      input: insdc_accession_base_seg7
+      input: insdcAccessionBase_seg7
     args:
       segment: seg7
-  insdc_accession_base_seg8:
+    no_input: true
+  insdcAccessionBase_seg8:
     function: identity
     inputs:
-      input: insdc_accession_base_seg8
+      input: insdcAccessionBase_seg8
     args:
       segment: seg8
-  insdc_accession_full_seg1:
+    no_input: true
+  insdcAccessionFull_seg1:
     function: identity
     inputs:
-      input: insdc_accession_full_seg1
+      input: insdcAccessionFull_seg1
     args:
       segment: seg1
-  insdc_accession_full_seg2:
+    no_input: true
+  insdcAccessionFull_seg2:
     function: identity
     inputs:
-      input: insdc_accession_full_seg2
+      input: insdcAccessionFull_seg2
     args:
       segment: seg2
-  insdc_accession_full_seg3:
+    no_input: true
+  insdcAccessionFull_seg3:
     function: identity
     inputs:
-      input: insdc_accession_full_seg3
+      input: insdcAccessionFull_seg3
     args:
       segment: seg3
-  insdc_accession_full_seg4:
+    no_input: true
+  insdcAccessionFull_seg4:
     function: identity
     inputs:
-      input: insdc_accession_full_seg4
+      input: insdcAccessionFull_seg4
     args:
       segment: seg4
-  insdc_accession_full_seg5:
+    no_input: true
+  insdcAccessionFull_seg5:
     function: identity
     inputs:
-      input: insdc_accession_full_seg5
+      input: insdcAccessionFull_seg5
     args:
       segment: seg5
-  insdc_accession_full_seg6:
+    no_input: true
+  insdcAccessionFull_seg6:
     function: identity
     inputs:
-      input: insdc_accession_full_seg6
+      input: insdcAccessionFull_seg6
     args:
       segment: seg6
-  insdc_accession_full_seg7:
+    no_input: true
+  insdcAccessionFull_seg7:
     function: identity
     inputs:
-      input: insdc_accession_full_seg7
+      input: insdcAccessionFull_seg7
     args:
       segment: seg7
-  insdc_accession_full_seg8:
+    no_input: true
+  insdcAccessionFull_seg8:
     function: identity
     inputs:
-      input: insdc_accession_full_seg8
+      input: insdcAccessionFull_seg8
     args:
       segment: seg8
-  insdc_version_seg1:
+    no_input: true
+  insdcVersion_seg1:
     function: identity
     inputs:
-      input: insdc_version_seg1
+      input: insdcVersion_seg1
     args:
       segment: seg1
       type: int
-  insdc_version_seg2:
+    no_input: true
+  insdcVersion_seg2:
     function: identity
     inputs:
-      input: insdc_version_seg2
+      input: insdcVersion_seg2
     args:
       segment: seg2
       type: int
-  insdc_version_seg3:
+    no_input: true
+  insdcVersion_seg3:
     function: identity
     inputs:
-      input: insdc_version_seg3
+      input: insdcVersion_seg3
     args:
       segment: seg3
       type: int
-  insdc_version_seg4:
+    no_input: true
+  insdcVersion_seg4:
     function: identity
     inputs:
-      input: insdc_version_seg4
+      input: insdcVersion_seg4
     args:
       segment: seg4
       type: int
-  insdc_version_seg5:
+    no_input: true
+  insdcVersion_seg5:
     function: identity
     inputs:
-      input: insdc_version_seg5
+      input: insdcVersion_seg5
     args:
       segment: seg5
       type: int
-  insdc_version_seg6:
+    no_input: true
+  insdcVersion_seg6:
     function: identity
     inputs:
-      input: insdc_version_seg6
+      input: insdcVersion_seg6
     args:
       segment: seg6
       type: int
-  insdc_version_seg7:
+    no_input: true
+  insdcVersion_seg7:
     function: identity
     inputs:
-      input: insdc_version_seg7
+      input: insdcVersion_seg7
     args:
       segment: seg7
       type: int
-  insdc_version_seg8:
+    no_input: true
+  insdcVersion_seg8:
     function: identity
     inputs:
-      input: insdc_version_seg8
+      input: insdcVersion_seg8
     args:
       segment: seg8
       type: int
-  is_lab_host:
+    no_input: true
+  isLabHost:
     function: identity
     inputs:
-      input: is_lab_host
-    args: null
+      input: isLabHost
+    args:
+      type: boolean
+    no_input: true
   length_seg1:
     function: identity
     inputs:
@@ -326,6 +703,7 @@ processing_spec:
     args:
       segment: seg1
       type: int
+    no_input: true
   length_seg2:
     function: identity
     inputs:
@@ -333,6 +711,7 @@ processing_spec:
     args:
       segment: seg2
       type: int
+    no_input: true
   length_seg3:
     function: identity
     inputs:
@@ -340,6 +719,7 @@ processing_spec:
     args:
       segment: seg3
       type: int
+    no_input: true
   length_seg4:
     function: identity
     inputs:
@@ -347,6 +727,7 @@ processing_spec:
     args:
       segment: seg4
       type: int
+    no_input: true
   length_seg5:
     function: identity
     inputs:
@@ -354,6 +735,7 @@ processing_spec:
     args:
       segment: seg5
       type: int
+    no_input: true
   length_seg6:
     function: identity
     inputs:
@@ -361,6 +743,7 @@ processing_spec:
     args:
       segment: seg6
       type: int
+    no_input: true
   length_seg7:
     function: identity
     inputs:
@@ -368,6 +751,7 @@ processing_spec:
     args:
       segment: seg7
       type: int
+    no_input: true
   length_seg8:
     function: identity
     inputs:
@@ -375,479 +759,484 @@ processing_spec:
     args:
       segment: seg8
       type: int
-  ncbi_release_date:
+    no_input: true
+  ncbiReleaseDate:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_release_date
+      timestamp: ncbiReleaseDate
     args:
       type: date
-  ncbi_sourcedb:
+    no_input: true
+  ncbiSourceDb:
     function: identity
     inputs:
-      input: ncbi_sourcedb
+      input: ncbiSourceDb
     args: null
-  ncbi_update_date_seg1:
+    no_input: true
+  ncbiUpdateDate_seg1:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_update_date
+      timestamp: ncbiUpdateDate
     args:
       segment: seg1
       type: date
-  ncbi_update_date_seg2:
+    no_input: true
+  ncbiUpdateDate_seg2:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_update_date
+      timestamp: ncbiUpdateDate
     args:
       segment: seg2
       type: date
-  ncbi_update_date_seg3:
+    no_input: true
+  ncbiUpdateDate_seg3:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_update_date
+      timestamp: ncbiUpdateDate
     args:
       segment: seg3
       type: date
-  ncbi_update_date_seg4:
+    no_input: true
+  ncbiUpdateDate_seg4:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_update_date
+      timestamp: ncbiUpdateDate
     args:
       segment: seg4
       type: date
-  ncbi_update_date_seg5:
+    no_input: true
+  ncbiUpdateDate_seg5:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_update_date
+      timestamp: ncbiUpdateDate
     args:
       segment: seg5
       type: date
-  ncbi_update_date_seg6:
+    no_input: true
+  ncbiUpdateDate_seg6:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_update_date
+      timestamp: ncbiUpdateDate
     args:
       segment: seg6
       type: date
-  ncbi_update_date_seg7:
+    no_input: true
+  ncbiUpdateDate_seg7:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_update_date
+      timestamp: ncbiUpdateDate
     args:
       segment: seg7
       type: date
-  ncbi_update_date_seg8:
+    no_input: true
+  ncbiUpdateDate_seg8:
     function: parse_timestamp
     inputs:
-      timestamp: ncbi_update_date
+      timestamp: ncbiUpdateDate
     args:
       segment: seg8
       type: date
-  ncbi_virus_name:
+    no_input: true
+  ncbiVirusName:
     function: identity
     inputs:
-      input: ncbi_virus_name
+      input: ncbiVirusName
     args: null
-  ncbi_virus_tax_id_seg1:
-    function: identity
+    no_input: true
+  sampleCollectionDate:
+    function: parse_date_into_range
     inputs:
-      input: ncbi_virus_tax_id_seg1
+      date: sampleCollectionDate
+      releaseDate: ncbiReleaseDate
     args:
-      segment: seg1
-      type: int
-  ncbi_virus_tax_id_seg2:
-    function: identity
-    inputs:
-      input: ncbi_virus_tax_id_seg2
-    args:
-      segment: seg2
-      type: int
-  ncbi_virus_tax_id_seg3:
-    function: identity
-    inputs:
-      input: ncbi_virus_tax_id_seg3
-    args:
-      segment: seg3
-      type: int
-  ncbi_virus_tax_id_seg4:
-    function: identity
-    inputs:
-      input: ncbi_virus_tax_id_seg4
-    args:
-      segment: seg4
-      type: int
-  ncbi_virus_tax_id_seg5:
-    function: identity
-    inputs:
-      input: ncbi_virus_tax_id_seg5
-    args:
-      segment: seg5
-      type: int
-  ncbi_virus_tax_id_seg6:
-    function: identity
-    inputs:
-      input: ncbi_virus_tax_id_seg6
-    args:
-      segment: seg6
-      type: int
-  ncbi_virus_tax_id_seg7:
-    function: identity
-    inputs:
-      input: ncbi_virus_tax_id_seg7
-    args:
-      segment: seg7
-      type: int
-  ncbi_virus_tax_id_seg8:
-    function: identity
-    inputs:
-      input: ncbi_virus_tax_id_seg8
-    args:
-      segment: seg8
-      type: int
-  sample_collection_date:
-    function: process_date
-    inputs:
-      date: sample_collection_date
-    args:
-      type: date
+      fieldType: dateRangeString
     required: true
-  specimen_collector_sample_id:
+  specimenCollectorSampleId:
     function: identity
     inputs:
-      input: specimen_collector_sample_id
+      input: specimenCollectorSampleId
     args: null
-  total_ambiguous_nucs_seg1:
+  totalAmbiguousNucs_seg1:
     function: identity
     inputs:
       input: nextclade.totalNonACGTNs
     args:
       segment: seg1
       type: int
-  total_ambiguous_nucs_seg2:
+    no_input: true
+  totalAmbiguousNucs_seg2:
     function: identity
     inputs:
       input: nextclade.totalNonACGTNs
     args:
       segment: seg2
       type: int
-  total_ambiguous_nucs_seg3:
+    no_input: true
+  totalAmbiguousNucs_seg3:
     function: identity
     inputs:
       input: nextclade.totalNonACGTNs
     args:
       segment: seg3
       type: int
-  total_ambiguous_nucs_seg4:
+    no_input: true
+  totalAmbiguousNucs_seg4:
     function: identity
     inputs:
       input: nextclade.totalNonACGTNs
     args:
       segment: seg4
       type: int
-  total_ambiguous_nucs_seg5:
+    no_input: true
+  totalAmbiguousNucs_seg5:
     function: identity
     inputs:
       input: nextclade.totalNonACGTNs
     args:
       segment: seg5
       type: int
-  total_ambiguous_nucs_seg6:
+    no_input: true
+  totalAmbiguousNucs_seg6:
     function: identity
     inputs:
       input: nextclade.totalNonACGTNs
     args:
       segment: seg6
       type: int
-  total_ambiguous_nucs_seg7:
+    no_input: true
+  totalAmbiguousNucs_seg7:
     function: identity
     inputs:
       input: nextclade.totalNonACGTNs
     args:
       segment: seg7
       type: int
-  total_ambiguous_nucs_seg8:
+    no_input: true
+  totalAmbiguousNucs_seg8:
     function: identity
     inputs:
       input: nextclade.totalNonACGTNs
     args:
       segment: seg8
       type: int
-  total_deleted_nucs_seg1:
+    no_input: true
+  totalDeletedNucs_seg1:
     function: identity
     inputs:
       input: nextclade.totalDeletions
     args:
       segment: seg1
       type: int
-  total_deleted_nucs_seg2:
+    no_input: true
+  totalDeletedNucs_seg2:
     function: identity
     inputs:
       input: nextclade.totalDeletions
     args:
       segment: seg2
       type: int
-  total_deleted_nucs_seg3:
+    no_input: true
+  totalDeletedNucs_seg3:
     function: identity
     inputs:
       input: nextclade.totalDeletions
     args:
       segment: seg3
       type: int
-  total_deleted_nucs_seg4:
+    no_input: true
+  totalDeletedNucs_seg4:
     function: identity
     inputs:
       input: nextclade.totalDeletions
     args:
       segment: seg4
       type: int
-  total_deleted_nucs_seg5:
+    no_input: true
+  totalDeletedNucs_seg5:
     function: identity
     inputs:
       input: nextclade.totalDeletions
     args:
       segment: seg5
       type: int
-  total_deleted_nucs_seg6:
+    no_input: true
+  totalDeletedNucs_seg6:
     function: identity
     inputs:
       input: nextclade.totalDeletions
     args:
       segment: seg6
       type: int
-  total_deleted_nucs_seg7:
+    no_input: true
+  totalDeletedNucs_seg7:
     function: identity
     inputs:
       input: nextclade.totalDeletions
     args:
       segment: seg7
       type: int
-  total_deleted_nucs_seg8:
+    no_input: true
+  totalDeletedNucs_seg8:
     function: identity
     inputs:
       input: nextclade.totalDeletions
     args:
       segment: seg8
       type: int
-  total_frame_shifts_seg1:
+    no_input: true
+  totalFrameShifts_seg1:
     function: identity
     inputs:
       input: nextclade.totalFrameShifts
     args:
       segment: seg1
       type: int
-  total_frame_shifts_seg2:
+    no_input: true
+  totalFrameShifts_seg2:
     function: identity
     inputs:
       input: nextclade.totalFrameShifts
     args:
       segment: seg2
       type: int
-  total_frame_shifts_seg3:
+    no_input: true
+  totalFrameShifts_seg3:
     function: identity
     inputs:
       input: nextclade.totalFrameShifts
     args:
       segment: seg3
       type: int
-  total_frame_shifts_seg4:
+    no_input: true
+  totalFrameShifts_seg4:
     function: identity
     inputs:
       input: nextclade.totalFrameShifts
     args:
       segment: seg4
       type: int
-  total_frame_shifts_seg5:
+    no_input: true
+  totalFrameShifts_seg5:
     function: identity
     inputs:
       input: nextclade.totalFrameShifts
     args:
       segment: seg5
       type: int
-  total_frame_shifts_seg6:
+    no_input: true
+  totalFrameShifts_seg6:
     function: identity
     inputs:
       input: nextclade.totalFrameShifts
     args:
       segment: seg6
       type: int
-  total_frame_shifts_seg7:
+    no_input: true
+  totalFrameShifts_seg7:
     function: identity
     inputs:
       input: nextclade.totalFrameShifts
     args:
       segment: seg7
       type: int
-  total_frame_shifts_seg8:
+    no_input: true
+  totalFrameShifts_seg8:
     function: identity
     inputs:
       input: nextclade.totalFrameShifts
     args:
       segment: seg8
       type: int
-  total_inserted_nucs_seg1:
+    no_input: true
+  totalInsertedNucs_seg1:
     function: identity
     inputs:
       input: nextclade.totalInsertions
     args:
       segment: seg1
       type: int
-  total_inserted_nucs_seg2:
+    no_input: true
+  totalInsertedNucs_seg2:
     function: identity
     inputs:
       input: nextclade.totalInsertions
     args:
       segment: seg2
       type: int
-  total_inserted_nucs_seg3:
+    no_input: true
+  totalInsertedNucs_seg3:
     function: identity
     inputs:
       input: nextclade.totalInsertions
     args:
       segment: seg3
       type: int
-  total_inserted_nucs_seg4:
+    no_input: true
+  totalInsertedNucs_seg4:
     function: identity
     inputs:
       input: nextclade.totalInsertions
     args:
       segment: seg4
       type: int
-  total_inserted_nucs_seg5:
+    no_input: true
+  totalInsertedNucs_seg5:
     function: identity
     inputs:
       input: nextclade.totalInsertions
     args:
       segment: seg5
       type: int
-  total_inserted_nucs_seg6:
+    no_input: true
+  totalInsertedNucs_seg6:
     function: identity
     inputs:
       input: nextclade.totalInsertions
     args:
       segment: seg6
       type: int
-  total_inserted_nucs_seg7:
+    no_input: true
+  totalInsertedNucs_seg7:
     function: identity
     inputs:
       input: nextclade.totalInsertions
     args:
       segment: seg7
       type: int
-  total_inserted_nucs_seg8:
+    no_input: true
+  totalInsertedNucs_seg8:
     function: identity
     inputs:
       input: nextclade.totalInsertions
     args:
       segment: seg8
       type: int
-  total_snps_seg1:
+    no_input: true
+  totalSnps_seg1:
     function: identity
     inputs:
       input: nextclade.totalSubstitutions
     args:
       segment: seg1
       type: int
-  total_snps_seg2:
+    no_input: true
+  totalSnps_seg2:
     function: identity
     inputs:
       input: nextclade.totalSubstitutions
     args:
       segment: seg2
       type: int
-  total_snps_seg3:
+    no_input: true
+  totalSnps_seg3:
     function: identity
     inputs:
       input: nextclade.totalSubstitutions
     args:
       segment: seg3
       type: int
-  total_snps_seg4:
+    no_input: true
+  totalSnps_seg4:
     function: identity
     inputs:
       input: nextclade.totalSubstitutions
     args:
       segment: seg4
       type: int
-  total_snps_seg5:
+    no_input: true
+  totalSnps_seg5:
     function: identity
     inputs:
       input: nextclade.totalSubstitutions
     args:
       segment: seg5
       type: int
-  total_snps_seg6:
+    no_input: true
+  totalSnps_seg6:
     function: identity
     inputs:
       input: nextclade.totalSubstitutions
     args:
       segment: seg6
       type: int
-  total_snps_seg7:
+    no_input: true
+  totalSnps_seg7:
     function: identity
     inputs:
       input: nextclade.totalSubstitutions
     args:
       segment: seg7
       type: int
-  total_snps_seg8:
+    no_input: true
+  totalSnps_seg8:
     function: identity
     inputs:
       input: nextclade.totalSubstitutions
     args:
       segment: seg8
       type: int
-  total_unknown_nucs_seg1:
+    no_input: true
+  totalUnknownNucs_seg1:
     function: identity
     inputs:
       input: nextclade.totalMissing
     args:
       segment: seg1
       type: int
-  total_unknown_nucs_seg2:
+    no_input: true
+  totalUnknownNucs_seg2:
     function: identity
     inputs:
       input: nextclade.totalMissing
     args:
       segment: seg2
       type: int
-  total_unknown_nucs_seg3:
+    no_input: true
+  totalUnknownNucs_seg3:
     function: identity
     inputs:
       input: nextclade.totalMissing
     args:
       segment: seg3
       type: int
-  total_unknown_nucs_seg4:
+    no_input: true
+  totalUnknownNucs_seg4:
     function: identity
     inputs:
       input: nextclade.totalMissing
     args:
       segment: seg4
       type: int
-  total_unknown_nucs_seg5:
+    no_input: true
+  totalUnknownNucs_seg5:
     function: identity
     inputs:
       input: nextclade.totalMissing
     args:
       segment: seg5
       type: int
-  total_unknown_nucs_seg6:
+    no_input: true
+  totalUnknownNucs_seg6:
     function: identity
     inputs:
       input: nextclade.totalMissing
     args:
       segment: seg6
       type: int
-  total_unknown_nucs_seg7:
+    no_input: true
+  totalUnknownNucs_seg7:
     function: identity
     inputs:
       input: nextclade.totalMissing
     args:
       segment: seg7
       type: int
-  total_unknown_nucs_seg8:
+    no_input: true
+  totalUnknownNucs_seg8:
     function: identity
     inputs:
       input: nextclade.totalMissing
     args:
       segment: seg8
       type: int
+    no_input: true

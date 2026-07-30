@@ -1,0 +1,287 @@
+x-preprocessing-service: &preprocessing_service
+  image: ghcr.io/loculus-project/preprocessing-nextclade:${LOCULUS_VERSION:-commit-52e855d}
+  restart: unless-stopped
+  depends_on:
+    backend:
+      condition: service_started
+    keycloak:
+      condition: service_started
+  environment:
+    KEYCLOAK_PASSWORD: preprocessing_pipeline
+  entrypoint: ["/usr/local/bin/_entrypoint.sh", "/bin/sh", "/usr/local/bin/run-preprocessing.sh"]
+  volumes:
+    - ./config/bin/run-preprocessing.sh:/usr/local/bin/run-preprocessing.sh:ro
+    - ./config/bin/wait-for-http.sh:/usr/local/bin/wait-for-http.sh:ro
+    - ./config/processing:/config:ro
+
+x-ingest-service: &ingest_service
+  image: ghcr.io/loculus-project/ingest:${LOCULUS_VERSION:-commit-52e855d}
+  user: root
+  restart: unless-stopped
+  depends_on:
+    backend:
+      condition: service_started
+    keycloak:
+      condition: service_started
+  environment:
+    INGEST_INTERVAL_SECONDS: "7200"
+    KEYCLOAK_INGEST_PASSWORD: insdc_ingest_user
+    NCBI_API_KEY: ${NCBI_API_KEY:-}
+    SLACK_HOOK: ${SLACK_HOOK:-}
+  entrypoint: ["/usr/local/bin/_entrypoint.sh", "/bin/sh", "/usr/local/bin/run-ingest-loop.sh"]
+
+x-silo-api-service: &silo_api_service
+  image: ghcr.io/loculus-project/loculus-silo:${LOCULUS_VERSION:-commit-52e855d}
+  restart: unless-stopped
+  entrypoint: ["/usr/local/bin/silo"]
+  command: ["api"]
+  environment:
+    SILO_DATA_DIRECTORY: /data/
+
+x-silo-importer-service: &silo_importer_service
+  image: ghcr.io/loculus-project/loculus-silo:${LOCULUS_VERSION:-commit-52e855d}
+  restart: unless-stopped
+  depends_on:
+    backend:
+      condition: service_started
+  environment:
+    HARD_REFRESH_INTERVAL: "3600"
+    PATH_TO_SILO_BINARY: /usr/local/bin/silo
+    PREPROCESSING_CONFIG: /app/preprocessing_config.yaml
+    SILO_IMPORT_POLL_INTERVAL_SECONDS: "30"
+    SILO_RUN_TIMEOUT_SECONDS: "3600"
+  entrypoint: ["/bin/sh", "/usr/local/bin/run-silo-importer.sh"]
+
+x-lapis-service: &lapis_service
+  image: ghcr.io/genspectrum/lapis:v0.8.0@sha256:4da71d94aceb36b7ea5963aa2e7b0566567c6423fe7fdd39448e69aebda2a8bb
+  restart: unless-stopped
+  entrypoint: ["/bin/sh", "/usr/local/bin/run-lapis.sh"]
+  volumes:
+    - ./config/bin/run-lapis.sh:/usr/local/bin/run-lapis.sh:ro
+    - ./config/silo-lapis:/config:ro
+
+services:
+  keycloak-theme-init:
+    image: ghcr.io/loculus-project/keycloakify:${LOCULUS_VERSION:-commit-52e855d}
+    restart: "no"
+    volumes:
+      - keycloak-theme:/destination
+
+  keycloak-db:
+    image: postgres:15.12
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_PASSWORD: ${KEYCLOAK_DB_PASSWORD:-unsecure}
+      POSTGRES_USER: postgres
+    volumes:
+      - keycloak-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d keycloak"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0
+    restart: unless-stopped
+    depends_on:
+      keycloak-db:
+        condition: service_healthy
+      keycloak-theme-init:
+        condition: service_completed_successfully
+    environment:
+      KC_DB: postgres
+      KC_DB_PASSWORD: ${KEYCLOAK_DB_PASSWORD:-unsecure}
+      KC_DB_URL_DATABASE: keycloak
+      KC_DB_URL_HOST: keycloak-db
+      KC_DB_URL_PORT: "5432"
+      KC_DB_USERNAME: postgres
+      KC_FEATURES: declarative-user-profile
+      KC_HEALTH_ENABLED: "true"
+      KC_HOSTNAME_ADMIN_URL: http://localhost:8083
+      KC_HOSTNAME_URL: http://localhost:8083
+      KC_PROXY: edge
+      KC_RUN_IN_CONTAINER: "true"
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:-admin}
+      PROJECT_NAME: Loculus
+      PROXY_ADDRESS_FORWARDING: "true"
+      REGISTRATION_TERMS_MESSAGE: ""
+    command: ["start", "--import-realm", "--cache=local"]
+    ports:
+      - "127.0.0.1:${KEYCLOAK_PORT:-8083}:8080"
+    volumes:
+      - ./config/keycloak/keycloak-config.json:/opt/keycloak/data/import/keycloak-config.json:ro
+      - keycloak-theme:/opt/keycloak/providers
+
+  loculus-db:
+    image: postgres:15.12
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: loculus
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-unsecure}
+      POSTGRES_USER: postgres
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - loculus-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d loculus"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  backend:
+    image: ghcr.io/loculus-project/backend:${LOCULUS_VERSION:-commit-52e855d}
+    restart: unless-stopped
+    depends_on:
+      keycloak:
+        condition: service_started
+      loculus-db:
+        condition: service_healthy
+    command:
+      - --loculus.enable-seqsets=true
+      - --keycloak.password=backend
+      - --keycloak.realm=loculus
+      - --keycloak.client=backend-client
+      - --keycloak.url=http://keycloak:8080
+      - --keycloak.user=backend
+      - --spring.datasource.password=${POSTGRES_PASSWORD:-unsecure}
+      - --spring.datasource.url=jdbc:postgresql://loculus-db:5432/loculus
+      - --spring.datasource.username=postgres
+      - --spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8080/realms/loculus/protocol/openid-connect/certs
+      - --loculus.cleanup.task.reset-stale-in-processing-after-seconds=600
+      - --loculus.pipeline-version-upgrade-check.interval-seconds=10
+      - --loculus.s3.enabled=false
+      - --loculus.debug-mode=true
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-8079}:8079"
+    volumes:
+      - ./config/backend:/config:ro
+
+  website:
+    image: ghcr.io/loculus-project/website:${LOCULUS_VERSION:-commit-52e855d}
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_started
+      keycloak:
+        condition: service_started
+    ports:
+      - "127.0.0.1:${WEBSITE_PORT:-3000}:3000"
+    volumes:
+      - ./config/website:/config:ro
+
+  preprocessing-h5n1:
+    <<: *preprocessing_service
+    command: ["h5n1"]
+
+  preprocessing-rsv-a:
+    <<: *preprocessing_service
+    command: ["rsv-a"]
+
+  ingest-h5n1:
+    <<: *ingest_service
+    command: ["h5n1", "0"]
+    volumes:
+      - ./config/bin/run-ingest-loop.sh:/usr/local/bin/run-ingest-loop.sh:ro
+      - ./config/bin/wait-for-http.sh:/usr/local/bin/wait-for-http.sh:ro
+      - ./config/ingest:/config:ro
+      - ingest-h5n1-work:/package/.snakemake
+
+  ingest-rsv-a:
+    <<: *ingest_service
+    command: ["rsv-a", "0"]
+    volumes:
+      - ./config/bin/run-ingest-loop.sh:/usr/local/bin/run-ingest-loop.sh:ro
+      - ./config/bin/wait-for-http.sh:/usr/local/bin/wait-for-http.sh:ro
+      - ./config/ingest:/config:ro
+      - ingest-rsv-a-work:/package/.snakemake
+
+  autoapprove:
+    image: ghcr.io/loculus-project/ingest:${LOCULUS_VERSION:-commit-52e855d}
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_started
+      keycloak:
+        condition: service_started
+    environment:
+      KEYCLOAK_INGEST_PASSWORD: insdc_ingest_user
+    volumes:
+      - ./config/autoapprove/config.yaml:/package/config/config.yaml:ro
+      - ./config/bin/wait-for-http.sh:/usr/local/bin/wait-for-http.sh:ro
+    entrypoint:
+      - /usr/local/bin/_entrypoint.sh
+      - /bin/sh
+      - -c
+      - |
+        /bin/sh /usr/local/bin/wait-for-http.sh http://keycloak:8080/realms/loculus http://backend:8079/actuator/health
+        exec python scripts/autoapprove.py --config-file /package/config/config.yaml
+
+  silo-h5n1:
+    <<: *silo_api_service
+    volumes:
+      - silo-h5n1-data:/data
+
+  silo-importer-h5n1:
+    <<: *silo_importer_service
+    command: ["h5n1"]
+    volumes:
+      - ./config/bin/run-silo-importer.sh:/usr/local/bin/run-silo-importer.sh:ro
+      - ./config/silo-lapis:/config:ro
+      - silo-h5n1-data:/preprocessing/output
+      - silo-h5n1-input:/preprocessing/input
+
+  lapis-h5n1:
+    <<: *lapis_service
+    depends_on:
+      silo-h5n1:
+        condition: service_started
+    command: ["h5n1", "--silo.url=http://silo-h5n1:8081"]
+
+  silo-rsv-a:
+    <<: *silo_api_service
+    volumes:
+      - silo-rsv-a-data:/data
+
+  silo-importer-rsv-a:
+    <<: *silo_importer_service
+    command: ["rsv-a"]
+    volumes:
+      - ./config/bin/run-silo-importer.sh:/usr/local/bin/run-silo-importer.sh:ro
+      - ./config/silo-lapis:/config:ro
+      - silo-rsv-a-data:/preprocessing/output
+      - silo-rsv-a-input:/preprocessing/input
+
+  lapis-rsv-a:
+    <<: *lapis_service
+    depends_on:
+      silo-rsv-a:
+        condition: service_started
+    command: ["rsv-a", "--silo.url=http://silo-rsv-a:8081"]
+
+  lapis:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    depends_on:
+      lapis-h5n1:
+        condition: service_started
+      lapis-rsv-a:
+        condition: service_started
+    ports:
+      - "127.0.0.1:${LAPIS_PORT:-8080}:8080"
+    volumes:
+      - ./config/nginx/lapis-gateway.conf:/etc/nginx/conf.d/default.conf:ro
+
+volumes:
+  ingest-h5n1-work:
+  ingest-rsv-a-work:
+  keycloak-db-data:
+  keycloak-theme:
+  loculus-db-data:
+  silo-h5n1-data:
+  silo-h5n1-input:
+  silo-rsv-a-data:
+  silo-rsv-a-input:

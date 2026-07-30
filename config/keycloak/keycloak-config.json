@@ -2,78 +2,12 @@
   "realm": "loculus",
   "enabled": true,
   "verifyEmail": false,
-  "resetPasswordAllowed": false,
-  "smtpServer": {
-    "host": "{{ '{{' }}$.Values.auth.smtp.host{{ '}}' }}",
-    "port": "{{ '{{' }}$.Values.auth.smtp.port{{ '}}' }}",
-    "from": "{{ '{{' }}$.Values.auth.smtp.from{{ '}}' }}",
-    "fromDisplayName": "{{ '{{' }}$.Values.name{{ '}}' }}",
-    "replyTo": "{{ '{{' }}$.Values.auth.smtp.replyTo{{ '}}' }}",
-    "replyToDisplayName": "{{ '{{' }}$.Values.name{{ '}}' }}",
-    "envelopeFrom": "{{ '{{' }}$.Values.auth.smtp.envelopeFrom{{ '}}' }}",
-    "ssl": "false",
-    "starttls": "true",
-    "auth": "true",
-    "user": "{{ '{{' }}$.Values.auth.smtp.user{{ '}}' }}",
-    "password": "[[smtpPassword]]"
-  },
+  "resetPasswordAllowed": true,
   "registrationAllowed": true,
   "accessTokenLifespan": 36000,
   "ssoSessionIdleTimeout": 36000,
   "actionTokenGeneratedByUserLifespan": 1800,
   "users": [
-    {
-      "username": "testuser",
-      "enabled": true,
-      "email": "testuser@void.o",
-      "emailVerified": true,
-      "firstName": "Test",
-      "lastName": "User",
-      "credentials": [
-        {
-          "type": "password",
-          "value": "unsecure"
-        }
-      ],
-      "realmRoles": [
-        "user",
-        "offline_access"
-      ],
-      "attributes": {
-        "university": "University of Test"
-      },
-      "clientRoles": {
-        "account": [
-          "manage-account"
-        ]
-      }
-    },
-    {
-      "username": "superuser",
-      "enabled": true,
-      "email": "superuser@void.o",
-      "emailVerified": true,
-      "firstName": "Dummy",
-      "lastName": "SuperUser",
-      "credentials": [
-        {
-          "type": "password",
-          "value": "unsecure"
-        }
-      ],
-      "realmRoles": [
-        "super_user",
-        "offline_access"
-      ],
-      "attributes": {
-        "university": "University of Test"
-      },
-      "clientRoles": {
-        "account": [
-          "manage-account"
-        ]
-      }
-    },
     {
       "username": "insdc_ingest_user",
       "enabled": true,
@@ -84,7 +18,7 @@
       "credentials": [
         {
           "type": "password",
-          "value": "unsecure"
+          "value": "insdc_ingest_user"
         }
       ],
       "realmRoles": [
@@ -110,7 +44,7 @@
       "credentials": [
         {
           "type": "password",
-          "value": "unsecure"
+          "value": "preprocessing_pipeline"
         }
       ],
       "realmRoles": [
@@ -127,19 +61,20 @@
       }
     },
     {
-      "username": "silo_import_job",
+      "username": "external_metadata_updater",
       "enabled": true,
-      "email": "silo_import_job@void.o",
+      "email": "external_metadata_updater@void.o",
       "emailVerified": true,
-      "firstName": "SILO",
-      "lastName": "ImportJob",
+      "firstName": "Dummy",
+      "lastName": "INSDC",
       "credentials": [
         {
           "type": "password",
-          "value": "unsecure"
+          "value": "external_metadata_updater"
         }
       ],
       "realmRoles": [
+        "external_metadata_updater",
         "get_released_data",
         "offline_access"
       ],
@@ -165,7 +100,7 @@
       "credentials": [
         {
           "type": "password",
-          "value": "unsecure"
+          "value": "backend"
         }
       ],
       "clientRoles": {
@@ -193,6 +128,10 @@
         "description": "Preprocessing pipeline privileges"
       },
       {
+        "name": "external_metadata_updater",
+        "description": "External Submitter privileges"
+      },
+      {
         "name": "get_released_data",
         "description": "Privileges for getting released data"
       },
@@ -209,7 +148,7 @@
       "publicClient": true,
       "directAccessGrantsEnabled": true,
       "redirectUris": [
-        "*"
+        "http://localhost:3000/*"
       ]
     },
     {
@@ -293,26 +232,7 @@
     ]
   },
   "loginTheme": "loculus",
+  "emailTheme": "loculus",
   "identityProviders": [],
-  "identityProviderMappers": [
-    {
-      "name": "username mapper",
-      "identityProviderAlias": "orcid",
-      "identityProviderMapper": "hardcoded-attribute-idp-mapper",
-      "config": {
-        "syncMode": "IMPORT",
-        "attribute": "username"
-      }
-    },
-    {
-      "name": "orcid",
-      "identityProviderAlias": "orcid",
-      "identityProviderMapper": "orcid-user-attribute-mapper",
-      "config": {
-        "syncMode": "INHERIT",
-        "jsonField": "orcid-identifier",
-        "userAttribute": "orcid.path"
-      }
-    }
-  ]
+  "identityProviderMappers": []
 }
